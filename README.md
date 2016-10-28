@@ -1,1 +1,2 @@
-# m.c._site A testing ground portfolio site
+# m.c._site 
+m.c. site testing grounds
