@@ -1,6 +1,6 @@
 .center
 {
-  text-align: center
+  /*text-align: center;*/
   vertical-align: middle;
 }
 
@@ -16,7 +16,12 @@ body {
     background-repeat: repeat;
 }
 
+p
+{
+  color: white;
+}
+
 #centerImg
 {
-  
+  text-align: center;
 }
