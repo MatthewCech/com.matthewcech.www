@@ -1,5 +1,6 @@
 .center
 {
+  text-align: center
   vertical-align: middle;
 }
 
@@ -13,4 +14,9 @@ body {
     line-height: 200px;
     background-image: url("media/bg.png");
     background-repeat: repeat;
+}
+
+#centerImg
+{
+  
 }
