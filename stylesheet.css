@@ -1,1 +1,23 @@
+.center
+{
+  /* Using flex-style alignment, set up for divs inside of this one.*/
+  display: -webkit-flex;
+  display:    -moz-flex;
+  display:         flex;
+  -webkit-align-items: center;
+     -moz-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+     -moz-justify-content: center;
+          justify-content: center;
+}
 
+.desc
+{
+  font-family: sans-serif; 
+}
+
+body {
+    background-image: url("media/bg.png");
+    background-repeat: repeat-y;
+}
