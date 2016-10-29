@@ -31,6 +31,6 @@ p
 .verticalBuffer
 {
   display: inline-block;
-  height: 100vh;
+  height: 100%;
   vertical-align: middle;
 }
