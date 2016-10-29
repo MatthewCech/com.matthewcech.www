@@ -24,5 +24,6 @@ p
 
 #centerImg
 {
+  border:5px solid #EFEFEF;
   text-align: center;
 }
