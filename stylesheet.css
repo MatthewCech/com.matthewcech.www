@@ -1,5 +1,6 @@
 .center
 {
+  height: 100%;
   text-align: center;
   /*vertical-align: middle;*/
 }
@@ -22,8 +23,15 @@ p
   color: white;
 }
 
-#centerImg
+.centerImg
 {
   border:5px solid #EFEFEF;
   text-align: center;
+}
+
+.verticalBuffer
+{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
