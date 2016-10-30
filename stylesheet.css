@@ -26,6 +26,7 @@ p
 #centerImg
 {
   border:7px solid #DDDDED;
+  box-shadow: 6px 6px 3px #888888;
 }
 
 .verticalBuffer
