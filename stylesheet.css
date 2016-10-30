@@ -1,6 +1,6 @@
 .center
 {
-  height: 35vh;
+  height: 30vh;
   text-align: center;
   /*vertical-align: middle;*/
 }
@@ -25,7 +25,7 @@ p
 
 #centerImg
 {
-  border:5px solid #EFEFEF;
+  border:7px solid #DDDDED;
 }
 
 .verticalBuffer
