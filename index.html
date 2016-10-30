@@ -29,6 +29,7 @@
     "
     ];
 
+  // Function to select random text
   function GetRandText() {
     var randNum= Math.floor(Math.random() * randomTopText.length);
     document.getElementById('ShowText').innerHTML=randomTopText[randNum];
@@ -36,8 +37,8 @@
   
   // Change text every few seconds
   window.setInterval(function(){
-    GetRandText()
-  }, 5000);
+    GetRandText();
+  }, 3000);
   
   // Handle function call on load
   //onload = function() { GetRandText(); }
