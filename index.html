@@ -14,12 +14,32 @@
     <!-- Title -->
     <title>Home</title>
   </head>
+  
+  <!-- Random text script -->
+  <script type='text/javascript'>
+     var randomTopText = [ 
+		"C++ Sculptor", 
+		"Caffiene to Code Conversion Unit",
+    "Aspiring Digital Sorcerer",
+		"C++ Game Engine Wrestler",
+		"Programatic Storyteller",
+		"C++ Cyber Creative"
+     ];
+    
+    function GetRandText() {
+  		var randNum= Math.floor(Math.random() * randomTopText.length);
+  		document.getElementById('ShowText').innerHTML=randomTopText[randNum];
+    }
+    
+    onload = function() { GetRandText(); }
+	</script>
+  
   <body>
     <div class="center">
       <span class="verticalBuffer"></span>
       <div>
       <img id="centerImg" src="media\hs.jpg" alt="No image today apparently" />
-      <p class="desc"> C++ Sculptor </p>
+      <p id="ShowText" class="desc"> C++ Sculptor </p>
       </div>
       <br/>
     </div>
