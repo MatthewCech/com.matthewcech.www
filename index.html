@@ -27,10 +27,15 @@
     "Jack of Some Trades",
     "Deprecated Code Archaeologist",
     ];
-
+  
+  var randNum = 0;
+  var prev = 0;
   // Function to select random text
   function GetRandText() {
-    var randNum= Math.floor(Math.random() * randomTopText.length);
+    prev = randNum;
+    while(randNum == prev){
+      randNum = Math.floor(Math.random() * randomTopText.length);
+    }
     document.getElementById('ShowText').innerHTML=randomTopText[randNum];
   }
   
