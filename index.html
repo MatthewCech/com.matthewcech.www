@@ -8,8 +8,11 @@
     <!-- Handle mobile viewports -->
     <meta name="viewport" content="width=device-width, initial-scale=.75">
     
-    <!-- Stylesheets and favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="media\logo32px.ico">
+    
+    <!-- Async stylesheet loading -->
+    <link rel="preload" href="defaults.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="stylesheet.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" type="text/css" href="defaults.css">
