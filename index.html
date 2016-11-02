@@ -8,7 +8,12 @@
     
     <!-- Stylesheets and favicon -->
     <link rel="icon" type="image/png" href="media\logo32px.ico">
-
+    <link rel="preload" href="path/to/mystylesheet.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" type="text/css" href="defaults.css">
+      <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </noscript>
+    
     <!-- Title -->
     <title>Matthew's Bazaar</title>
   </head>
@@ -56,8 +61,9 @@
       <br/>
     </div>
     
-    <!-- Google reccomended differed style sheet loading to remove blocking stylesheets files -->
-    <!-- Code snippet via https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#example -->
+    <!-- 
+    Google reccomended differed style sheet loading to remove blocking stylesheets files 
+    Code snippet via https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#example
     <noscript id="deferred-styles">
       <link rel="preload" rel="stylesheet" type="text/css" href="defaults.css">
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -74,6 +80,6 @@
           webkitRequestAnimationFrame || msRequestAnimationFrame;
       if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
       else window.addEventListener('load', loadDeferredStyles);
-    </script>
+    </script>-->
   </body>
 </html>
