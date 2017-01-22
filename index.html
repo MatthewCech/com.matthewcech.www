@@ -3,20 +3,24 @@
   <head>
     <!-- Establish meta information -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Homepage">
-    
-    <!-- Handle mobile viewports -->
-    <meta name="viewport" content="width=device-width, initial-scale=.75">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="media\logo32px.ico">
+    <link rel="icon" type="image/png" href="/assets/logo32px.ico">
     
-    <!-- Async stylesheet loading -->
-    <link rel="stylesheet" type="text/css" href="defaults.css">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- Stylesheet loading -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/defaults.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
     
     <!-- Title -->
     <title>Matthew's Bazaar</title>
+
+        <!-- External and associated -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
   </head>
   
   <!-- Random text script -->
@@ -53,18 +57,41 @@
   </script>
   
   <body>
-    <div class="center">
+    <div class="text-center center">
       <span class="verticalBuffer"></span>
+
       <div>
-      <a href="mailto:contact@matthewcech.com"><img class="socialLinks" src="media\email.png" alt="email link"/></a>
-      <a href="https://www.linkedin.com/in/matthew-cech-019b265b"><img class="socialLinks" src="media\linkedin.png" alt="linkedin link"/></a>
-      <a href="https://github.com/MatthewCech"><img class="socialLinks" src="media\github.png" alt="facebook link"/></a>
-      <br/>
-      <br/>
-      <img id="centerImg" src="media\hs.jpg" alt="No image today apparently" />
-      <p id="ShowText" class="desc"> C++ Programmer </p>
+        <div>
+          <a class="btn btn-success btn-mod-primary btn-xl shadeImage" role="button" href="mailto:contact@matthewcech.com"><i class="fa fa-envelope fa-lg" aria-hidden="true "></i></a>
+          <a class="btn btn-success btn-mod-primary btn-xl shadeImage" href="https://www.linkedin.com/in/matthew-cech-019b265b"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+          <a class="btn btn-success btn-mod-primary btn-xl shadeImage" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+          <br/>
+          <br/>
+        </div>
+
+        </div>
+          <img class="centerImg shadeImage" src="/assets/hs.jpg" alt="No image today apparently" />
+          <p id="ShowText" class="desc"> C++ Programmer </p>
+        </div>
       </div>
+
       <br/>
     </div>
+
+
+
+    <!-- =========== Start Bootstrap core JavaScript =========== -->
+    
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- =========== End Bootstrap core JavaScript =========== -->
+
+
+
   </body>
 </html>

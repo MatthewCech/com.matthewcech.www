@@ -1,0 +1,56 @@
+.center {
+  height: 20vh;
+  /*vertical-align: middle;*/
+}
+
+.desc {
+  margin-top: 15px;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 2em;
+}
+
+
+.btn-mod-primary {
+  color:#fff;
+  text-align: center;
+  
+  padding: 6px 0;
+  font-size: 12px;
+
+}
+
+.btn-mod-primary.btn-xl {
+  width: 70px;
+  height: 70px;
+
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 2;
+    border-radius: 10px;
+}
+
+
+body {
+    /*line-height: 200px;*/
+    background-image: url("/assets/bg.png");
+    background-repeat: repeat;
+}
+
+p {
+  color: white;
+}
+
+.centerImg {
+  border-radius: 150px;
+  /*border:7px solid #DDDDED;*/
+}
+
+.shadeImage {
+  box-shadow: 3px 3px 4px #282835;
+}
+
+.verticalBuffer {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
