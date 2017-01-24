@@ -16,6 +16,12 @@ body {
   height: 13vh;
   /*vertical-align: middle;*/
 }
+@media (max-width: 768px)
+{
+  .center {
+    height: 0vh;
+  }
+}
 
 /* Correctly positions bootstrap colums, removing horizontal scrolling. */
 .width-fix {
@@ -35,7 +41,7 @@ body {
 .desc {
   margin-top: 15px;
   /*font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;*/
-  font-size: 2.25em;
+  font-size: 2em
 }
 
 
