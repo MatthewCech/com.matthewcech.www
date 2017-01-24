@@ -1,17 +1,45 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+/* Fix the bottom border of the navbar being off by 1px*/
+.navbar-fixed-top {
+  border-width: 0;
+}
+
+/* The offset I use to define being vertically "centered." */
 .center {
-  height: 20vh;
+  height: 17vh;
   /*vertical-align: middle;*/
+}
+
+/* Correctly positions bootstrap colums, removing horizontal scrolling. */
+.width-fix {
+    margin: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* For correcting the vertical height between elements, useful for mobile. */
+.vertical-margin {
+  margin-top: 40px;
+}
+.vertical-margin.next-section {
+  margin-top: 25px; /* this is 40 - the standard 15 that is the margin/padding) */
 }
 
 .desc {
   margin-top: 15px;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-  font-size: 2em;
+  /*font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;*/
+  font-size: 2.25em;
 }
 
 
 .btn-mod-primary {
-  color:#fff;
   text-align: center;
   
   padding: 6px 0;
@@ -32,7 +60,7 @@
 
 body {
     /*line-height: 200px;*/
-    background-image: url("/assets/bg.png");
+    background-image: url("/assets/squairy_light.png");
     background-repeat: repeat;
 }
 
@@ -40,17 +68,16 @@ p {
   color: white;
 }
 
-.centerImg {
+.center-img {
   border-radius: 150px;
   /*border:5px solid #FFF;*/
 }
 
-.shadeImage {
-  box-shadow: 3px 3px 4px #282835;
+.shade-image {
+  /*box-shadow: 3px 3px 4px #282835;*/
 }
 
-.verticalBuffer {
+.vertical-buffer {
   display: inline-block;
   height: 100%;
-  vertical-align: middle;
 }

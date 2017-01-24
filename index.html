@@ -8,90 +8,123 @@
     <meta name="description" content="Homepage">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/logo32px.ico">
+    <link rel="icon" type="image/png" href="/assets/favicon-folder-open.ico">
     
     <!-- Stylesheet loading -->
     <link rel="stylesheet" type="text/css" href="/assets/css/defaults.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
     
     <!-- Title -->
-    <title>Matthew's Bazaar</title>
+    <title>Matthew Cech</title>
 
-        <!-- External and associated -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <!-- External and associated -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
   </head>
   
   <!-- Random text script -->
   <script type='text/javascript'>
+  
+  // Titles to cycle through
   var randomTopText = [ 
-    "C++ Sculptor", 
-    "Caffeine to Code Conversion Unit",
+    "Game and Application Programmer",
+    "Code Sculptor",
+    "Networking Experimentalist",
     "Aspiring Digital Sorcerer",
-    "C++ Game Engine Wrestler",
-    "Programatic Storyteller",
-    "Cyber Creative",
-    "Jack of Some Trades",
-    "Deprecated Code Archaeologist",
+    "Game Engine Wrestler",
+    "Digital Storyteller",
+    "Jack of Increasingly More Trades",
+    "Code Comment Enthusaist"
     ];
   
-  var randNum = 0;
-  var prev = 0;
+  var randNum = 0;             // Current random number, expose in case access is needed.
+  var prev = 0;                // Previous to prevent same from displaying twice.
+  var titleSwapDelayMS = 4000; // Delay between cycling the titles below the image, in milliseconds
+
+
   // Function to select random text
   function GetRandText() {
     prev = randNum;
     while(randNum == prev){
       randNum = Math.floor(Math.random() * randomTopText.length);
     }
-    document.getElementById('ShowText').innerHTML=randomTopText[randNum];
+    document.getElementById('rotating-text').innerHTML=randomTopText[randNum];
   }
   
   // Change text every few seconds
   window.setInterval(function(){
     GetRandText();
-  }, 4000);
+  }, titleSwapDelayMS);
   
-  // Handle function call on load
+  // Handle function call on load.
+  // Not set with onload because I want the initial message to show first before the slightly
+  // less serious titles.
   //onload = function() { GetRandText(); }
   </script>
   
+
+
   <body>
-    <div class="text-center center">
-      <span class="verticalBuffer"></span>
-
-      <div>
-        <div>
-          <a class="btn btn-success btn-mod-primary btn-xl shadeImage" role="button" href="mailto:contact@matthewcech.com"><i class="fa fa-envelope fa-lg" aria-hidden="true "></i></a>
-          <a class="btn btn-success btn-mod-primary btn-xl shadeImage" href="https://www.linkedin.com/in/matthew-cech-019b265b"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-          <a class="btn btn-success btn-mod-primary btn-xl shadeImage" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-          <br/>
-          <br/>
+    <!--===[ NAVBAR: ]============================================-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">Matthew Cech</a>
         </div>
-
-        </div>
-          <img class="centerImg shadeImage" src="/assets/hs.jpg" alt="No image today apparently" />
-          <p id="ShowText" class="desc"> C++ Programmer </p>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/index.html">Home</a></li>
+            <!--<li class=""><a href="/media/index.html">Projects</a></li>-->
+            <li class=""><a href="/skills/index.html">Skills</a></li>
+            <li class=""><a href="/projects/index.html"></a></li>
+            <!--<li class=""><a href="/contact/index.html">Contact</a></li>-->
+          </ul>
         </div>
       </div>
+    </nav>
+    <!--==========================================================-->
 
+    <!--===[ CONTENT: ]===========================================-->
+    <div class="text-center center">
+    <span class="vertical-buffer"></span>
+
+      <!-- Display common link buttons -->
+      <div>
+        <a class="btn btn-success btn-mod-primary btn-xl shade-image" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true "></i></a>
+        <a class="btn btn-success btn-mod-primary btn-xl shade-image" href="https://www.linkedin.com/in/matthew-cech-019b265b"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+        <a class="btn btn-success btn-mod-primary btn-xl shade-image" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        <br/>
+        <br/>
+      </div>
+      
+      <!-- Image and text below -->
+      <div>
+        <img class="center-img shade-image" src="/assets/hs.jpg" alt="No image today apparently" />
+        <h4 id="rotating-text" class="desc text-muted">Game and Application Programmer</h4>
+      </div>
       <br/>
     </div>
+    <!--==========================================================-->
 
 
-
-    <!-- =========== Start Bootstrap core JavaScript =========== -->
-    
+    <!--===[ BOOTSTRAP CORE JS: ]=================================-->    
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
     <script src="/assets/js/bootstrap.min.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- =========== End Bootstrap core JavaScript =========== -->
-
-
+    <!--==========================================================-->
 
   </body>
 </html>
