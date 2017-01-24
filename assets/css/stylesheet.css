@@ -58,21 +58,28 @@ body {
     border-radius: 10px;
 }
 
-
-body {
-    /*line-height: 200px;*/
-    background-image: url("/assets/squairy_light.png");
-    background-repeat: repeat;
+.table-fiddling {
+  margin-left: auto;
+  margin-right: auto;
 }
-
-p {
-  color: white;
+.table-fiddling tr{
+  text-align: left;
+}
+.table-fiddling .left-info{
+  padding-right: 10px;
+}
+body {
+  /*line-height: 200px;*/
+  background-image: url("/assets/squairy_light.png");
+  background-repeat: repeat;
 }
 
 .center-img {
   border-radius: 150px;
   /*border:5px solid #FFF;*/
 }
+
+.
 
 .shade-image {
   /*box-shadow: 3px 3px 4px #282835;*/
