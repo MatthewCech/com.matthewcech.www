@@ -23,12 +23,7 @@ body {
   }
 }
 
-/* Correctly positions bootstrap colums, removing horizontal scrolling. */
-.width-fix {
-    margin: 0px;
-    width: 100%;
-    overflow: hidden;
-}
+
 
 /* For correcting the vertical height between elements, useful for mobile. */
 .vertical-margin {
