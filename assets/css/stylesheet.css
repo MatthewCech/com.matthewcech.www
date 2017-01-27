@@ -23,6 +23,11 @@ body {
   }
 }
 
+.link-padding
+{
+  margin-right: 5px;
+  margin-left: 5px;
+}
 
 
 /* For correcting the vertical height between elements, useful for mobile. */
