@@ -2,22 +2,52 @@
 <html>
 <head>
   <title></title>
+  <script type="text/javascript" src="resume.json"></script>
 </head>
 <script type="text/javascript">
   
+  /*
   // Variables
   let xhttp = new XMLHttpRequest();
+  let parser = new DOMParser();
 
   // Callbacks on change
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("mc-fill").innerHTML = this.responseText;
+      let xmlDoc = parser.parseFromString(this.responseText, "text/xml");
+      document.getElementById("mc-fill").innerHTML = parseProject(xmlDoc.getElementsByTagName("project")[0]);
     }
   };
+  */
+
+  console.log(resumeJSON);
+
+  /*
+  // Parses a specific project. Returns string of parsed project in HTML.
+  function parseProject(project) {
+    let accumulated = "";
+
+    console.log(project);
+
+    for(let i = 0; i < project.childNodes.length; ++i) {
+    }
+  }
+  /*
+      //console.log(project.childNodes[i].nodeValue);
+      
+      switch(project.childNodes[i].nodeValue) {
+        default:
+        console.log(project.childNodes[i].nodeValue);
+        break;
+      }
+      
+    }
+  }
 
   // Running loading code
   xhttp.open("GET", "resume.xml", true);
   xhttp.send();
+  */
 
 </script>
 <body id="mc-fill">
