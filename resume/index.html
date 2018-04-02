@@ -20,18 +20,47 @@
   };
   */
 
-  console.log(resumeJSON);
+  // When the window is loaded, go ahead and then parse the JSON.
+  window.onload = function () { 
+    parseResumeJSON(resumeJSON);
+  }
 
-  /*
-  // Parses a specific project. Returns string of parsed project in HTML.
+  // Parses different possible sections for the resume.
+  function parseResumeJSON(json) {
+    // For every project, parse content.
+    for(let i = 0; i < json.projects.length; i += 1){
+      let newItem = parseProject(json.projects[i]);
+      document.getElementById("mc-fill").innerHTML = document.getElementById("mc-fill").innerHTML + newItem;
+    }
+  }
+
+  // Parses a specific project from the object. 
+  // Returns string of the parsed project in HTML.
+  // Note that this is file-specific!
   function parseProject(project) {
     let accumulated = "";
 
-    console.log(project);
-
-    for(let i = 0; i < project.childNodes.length; ++i) {
+    for(var key in project) {
+      if(project.hasOwnProperty(key)) {
+        switch(key) {
+          case "name":
+            accumulated += parseName(project[key]);
+            break;
+        }
+      }
     }
+
+    return accumulated; 
   }
+
+  function parseName(key_value) {
+    return "<p>" + key_value + "</p>";
+  }
+
+  function parseShort() {
+
+  }
+
   /*
       //console.log(project.childNodes[i].nodeValue);
       
