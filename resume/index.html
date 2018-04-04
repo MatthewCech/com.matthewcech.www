@@ -2,9 +2,49 @@
 <html>
 <head>
   <title>Resume Builder Test</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Scripts and whatnot -->
   <script type="text/javascript" src="resume.json"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
+<style type="text/css">
+  .mc-project {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: rgb(200, 150, 100);
+  }
+  .mc-project-content {
+    margin: 10px;
+    background-color: rgb(200, 100, 100);
+  }
+  .mc-title {
+    font-size: 1.3em;
+    margin-right: 10px;
+    background-color: rgb(100, 100, 200);
+  }
+  .mc-title-bar {
+    background-color: rgb(120, 180, 220);
+    text-align: right;
+    height: 100%; 
+    overflow: auto;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .mc-date {
+    margin-top: 0px;
+    background-color: rgb(100, 150, 200);
+  }
+  .mc-short {
+    float: none;
+    font-family: 'Open Sans', sans-serif;
+  }
+</style>
 <script type="text/javascript">
+  // Store each project
+  var arrayProjects = [];
 
   // When the window is loaded, go ahead and then parse the JSON.
   window.onload = function () { 
@@ -13,66 +53,121 @@
 
   // Parses different possible sections for the resume.
   function parseResumeJSON(json) {
+    let accumulated = '';
+    accumulated += '<div>';
+
+    
     // For every project, parse content.
     for(let i = 0; i < json.projects.length; i += 1){
       let newItem = parseProject(json.projects[i]);
-      document.getElementById("mc-fill").innerHTML = document.getElementById("mc-fill").innerHTML + newItem;
+      arrayProjects[json.projects[i]["name"]] = json.projects[i];
+
+      newItem = '<div class="mc-project">' + newItem + '</div>';
+      accumulated += newItem;
     }
+
+    accumulated += '</div>';
+    document.getElementById('mc-fill').innerHTML = accumulated;
   }
 
   // Parses a specific project from the object. 
   // Returns string of the parsed project in HTML.
   // Note that this is file-specific!
   function parseProject(project) {
-    let accumulated = "";
+    let content = ''
+    + '<div class="mc-project-content">'
+      + '<div class="mc-title-bar">'
+        + '<div style="float: left;">'
+          + '<span class="mc-title">' + get('name') + '</span>'
+        + '</div>'
+        + '<div class="mc-date">'
+          + get('date')
+        + '</div>'
+      + '</div>'
+      + '<span class="mc-short">' + get('short') + '</span>'
+      + '<p>'
+        + '<a href="http://' + get('website') + '</a><a href="' + get('download-url') + '">Download Here</a>'
+      + '</p>'
+    + '</div>';
 
-    for(var key in project) {
+
+    function get(key) {
+      let accumulated = "";
+
       if(project.hasOwnProperty(key)) {
         switch(key) {
-          case "name":
-            accumulated += parseName(project[key]);
-            break;
+          case 'name': accumulated += parseName(project[key]); break;
+          case 'short': accumulated += parseShort(project[key]); break;
+          case 'website': accumulated += parseWebsite(project[key]); break;
+          case 'download-url': accumulated += parseDownloadURL(project[key]); break;
+          case 'date': accumulated += parseDate(project[key]); break;
+          case 'roles': accumulated += parseRoles(project[key]); break;
+          case 'languages': accumulated += parseLanguages(project[key]); break;
+          case 'tools': accumulated += parseTools(project[key]); break;
+          case 'actions': accumulated += parseActions(project[key]); break;
+          case 'description': accumulated += parseDescription(project[key]); break;
+          default:
+            console.log('Key "' + key + '" could not be parsed.');
         }
       }
+
+      return accumulated;
     }
 
-    return accumulated; 
+    return content;
   }
 
-  function parseShort(key_value) {
-    return "<p>" + key_value + "</p>";
-  }
 
-  function parseWebsite(key_value) {
-    return "<p>" + key_value + "</p>";
+  function parseName(key_value) {
+    return key_value;
   }
-
-  function parseDownload-url(key_value) {
-    return "<p>" + key_value + "</p>";
-  }
-
   function parseDate(key_value) {
-    return "<p>" + key_value + "</p>";
+    return key_value;
   }
-
+  function parseShort(key_value) {
+    return key_value;
+  }
+  function parseWebsite(key_value) {
+    return + key_value + '">' + key_value + '</a></p>';
+  }
+  function parseDownloadURL(key_value) {
+    return key_value;
+  }
   function parseRoles(key_value) {
-    return "<p>" + key_value + "</p>";
-  }
+    let accumulated = '';
+    
+    for(let i = 0; i < key_value.length; i += 1)
+      accumulated += '<li>' + key_value[i] + '</li>';
 
+    return accumulated;
+  }
   function parseLanguages(key_value) {
-    return "<p>" + key_value + "</p>";
-  }
+    let accumulated = '';
+    
+    for(let i = 0; i < key_value.length; i += 1)
+      accumulated += '<li>' + key_value[i] + '</li>';
 
+    return accumulated;
+  }
   function parseTools(key_value) {
-    return "<p>" + key_value + "</p>";
-  }
+    let accumulated = '';
+    
+    for(let i = 0; i < key_value.length; i += 1)
+      accumulated += '<li>' + key_value[i] + '</li>';
 
+    return accumulated;
+  }
   function parseActions(key_value) {
-    return "<p>" + key_value + "</p>";
+    let accumulated = '';
+    
+    for(let i = 0; i < key_value.length; i += 1)
+      accumulated += '<li>' + key_value[i] + '</li>';
+
+    return accumulated;
   }
 
   function parseDescription(key_value) {
-    return "<p>" + key_value + "</p>";
+    return key_value;
   }
 
 
