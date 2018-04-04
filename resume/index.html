@@ -1,24 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Resume Builder Test</title>
   <script type="text/javascript" src="resume.json"></script>
 </head>
 <script type="text/javascript">
-  
-  /*
-  // Variables
-  let xhttp = new XMLHttpRequest();
-  let parser = new DOMParser();
-
-  // Callbacks on change
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      let xmlDoc = parser.parseFromString(this.responseText, "text/xml");
-      document.getElementById("mc-fill").innerHTML = parseProject(xmlDoc.getElementsByTagName("project")[0]);
-    }
-  };
-  */
 
   // When the window is loaded, go ahead and then parse the JSON.
   window.onload = function () { 
@@ -53,30 +39,42 @@
     return accumulated; 
   }
 
-  function parseName(key_value) {
+  function parseShort(key_value) {
     return "<p>" + key_value + "</p>";
   }
 
-  function parseShort() {
-
+  function parseWebsite(key_value) {
+    return "<p>" + key_value + "</p>";
   }
 
-  /*
-      //console.log(project.childNodes[i].nodeValue);
-      
-      switch(project.childNodes[i].nodeValue) {
-        default:
-        console.log(project.childNodes[i].nodeValue);
-        break;
-      }
-      
-    }
+  function parseDownload-url(key_value) {
+    return "<p>" + key_value + "</p>";
   }
 
-  // Running loading code
-  xhttp.open("GET", "resume.xml", true);
-  xhttp.send();
-  */
+  function parseDate(key_value) {
+    return "<p>" + key_value + "</p>";
+  }
+
+  function parseRoles(key_value) {
+    return "<p>" + key_value + "</p>";
+  }
+
+  function parseLanguages(key_value) {
+    return "<p>" + key_value + "</p>";
+  }
+
+  function parseTools(key_value) {
+    return "<p>" + key_value + "</p>";
+  }
+
+  function parseActions(key_value) {
+    return "<p>" + key_value + "</p>";
+  }
+
+  function parseDescription(key_value) {
+    return "<p>" + key_value + "</p>";
+  }
+
 
 </script>
 <body id="mc-fill">
