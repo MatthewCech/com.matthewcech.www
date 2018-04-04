@@ -35,7 +35,37 @@ resumeJSON =
 		}, { 
 			"name":"Bittorio2",
 			"short":"3D Competative Puzzle Game",
-			"date":"2016 - 2017",
+			"date":"2013",
+			"website":"bittor.io",
+			"download-url":"https://games.digipen.edu/games/bittorio</downloadurl",
+			"roles":[
+				"Network Programmer",
+				"Tools Programmer",
+				"Systems Programmer"
+			],
+			"languages":[
+				"C#",
+				"JavaScript",
+			],
+			"tools":[
+				"Unity",
+				"Node.js",
+				"Git",
+				"Source Tree",
+				"Sublime Text 3",
+				"AWS",
+				"NGINX"
+			],
+			"actions":[
+				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
+				"Created Menu and Input systems after adjusting to gameplay design changes",
+				"Presented product at PAX, TwitchPDX in Portland, and other outreach events"
+			],
+			"description":"A 3D puzzle fighter made in Unity which went to PAX, was nominated for IGF, and is available for download! I initially designing and implemented online multiplayer using SocketIO and a custom NGINX + Node.js server, tho this was scrapped due to design changes and I moved UI, Tools, and marketing material. Soon available on XBox!",
+		}, { 
+			"name":"Bittorio3",
+			"short":"3D Competative Puzzle Game",
+			"date":"2015",
 			"website":"bittor.io",
 			"download-url":"https://games.digipen.edu/games/bittorio</downloadurl",
 			"roles":[
