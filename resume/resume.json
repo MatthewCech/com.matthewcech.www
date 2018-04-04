@@ -4,9 +4,9 @@ resumeJSON =
 		{ 
 			"name":"Bittorio",
 			"short":"3D Competative Puzzle Game",
-			"website":"bittor.io",
-			"download-url":"https://games.digipen.edu/games/bittorio</downloadurl",
 			"date":"2016 - 2017",
+			"website":"Bittor.io",
+			"download-url":"https://games.digipen.edu/games/bittorio",
 			"roles":[
 				"Network Programmer",
 				"Tools Programmer",
@@ -33,8 +33,9 @@ resumeJSON =
 			"description":"A 3D puzzle fighter made in Unity which went to PAX, was nominated for IGF, and is available for download! I initially designing and implemented online multiplayer using SocketIO and a custom NGINX + Node.js server, tho this was scrapped due to design changes and I moved UI, Tools, and marketing material. Soon available on XBox!",
 			
 		}, { 
-			"name":"Bittorio",
+			"name":"Bittorio2",
 			"short":"3D Competative Puzzle Game",
+			"date":"2016 - 2017",
 			"website":"bittor.io",
 			"download-url":"https://games.digipen.edu/games/bittorio</downloadurl",
 			"roles":[
