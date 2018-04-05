@@ -42,55 +42,102 @@
       float: none;
       font-family: 'Open Sans', sans-serif;
     }
+    .mc-tools {
+      font-size: .7em;
+      font-family: 'Open Sans', sans-serif;
+      background-color: rgb(100, 150, 100);
+      max-width: 150px;
+    }
+    .mc-roles {
+      font-size: .9em;
+      font-family: 'Open Sans', sans-serif;
+      background-color: rgb(150, 120, 150);
+      max-width: 180px;
+    }
+    .mc-links {
+      font-size: .9em;
+      font-family: 'Open Sans', sans-serif;
+    }
   </style>
   <script type="text/javascript">
     // Store each project
     var arrayProjects = [];
+    var allLanguages = new Set();
+    var allRoles = new Set();
+    var allTools = new Set();
 
     // When the window is loaded, go ahead and then parse the JSON.
     window.onload = function () { 
       parseResumeJSON(resumeJSON);
+      var containerEl = document.querySelector('.container');
+      var mixer = mixitup(containerEl);
     }
 
     // Parses different possible sections for the resume.
     function parseResumeJSON(json) {
       let accumulated = '';
-      accumulated += '<div>';
+      accumulated += '<div class="container">';
 
-      
       // For every project, parse content.
       for(let i = 0; i < json.projects.length; i += 1){
         let newItem = parseProject(json.projects[i]);
         arrayProjects[json.projects[i]["name"]] = json.projects[i];
-
-        newItem = '<div class="mc-project">' + newItem + '</div>';
         accumulated += newItem;
       }
 
       accumulated += '</div>';
+
+      console.log(allLanguages);
+      console.log(allRoles);
+      console.log(allTools);
+
       document.getElementById('mc-fill').innerHTML = accumulated;
+      populateLanguages();
+    }
+
+    function populateLanguages() {
+      allLanguages.forEach(function(val) {
+        let val1 = `${val}`;
+        let val2 = `${val}`;
+
+        if(val1 == 'cpp') val2 = 'C++';
+        if(val1 == 'csharp') val2 = 'C#';
+        if(val1 == 'htmlcss') val2 = 'HTML/CSS';
+
+        document.getElementById('mc-lang-dropdown').innerHTML 
+          = document.getElementById('mc-lang-dropdown').innerHTML 
+          + `<button type="button" data-filter=".${val1}">Lang ${val2}</button>`;
+      });
     }
 
     // Parses a specific project from the object. 
     // Returns string of the parsed project in HTML.
     // Note that this is file-specific! A change
     function parseProject(project) {
+
       let content = `
-      <div class="mc-project-content">
-        <div class="mc-title-bar">
-          <div style="float: left;">
-            <span class="mc-title">${get('name')}</span>
+      <div class="item mix ${get('languages')} mc-project" data-date="${get('date')}">
+        <div class="mc-project-content">
+          <div class="mc-title-bar">
+            <div style="float: left;">
+              <span class="mc-title">${get('name')}</span>
+            </div>
+            <div class="mc-date">
+              ${get('date')}
+            </div>
           </div>
-          <div class="mc-date">
-            ${get('date')}
+          <span class="mc-short">${get('short')}</span>
+          <p class="mc-links">
+            <a href="http://${get('website')}">${get('website')}</a> <a href="${get('download-url')}">${get('download-url') ? 'Download Here' : ''}</a>
+          </p>
+          <div class="mc-roles">
+            ${get('roles')}
+          </div>
+          <div class="mc-tools">
+            ${get('tools')}
           </div>
         </div>
-        <span class="mc-short">${get('short')}</span>
-        <p>
-          <a href="http://${get('website')}</a><a href="${get('download-url')}">Download Here</a>
-        </p>
       </div>`
-
 
       function get(key) {
         let accumulated = "";
@@ -123,38 +170,62 @@
       return key_value;
     }
     function parseDate(key_value) {
-      return key_value;
+      let accumulated = '';
+
+      for(let i = 0; i <  key_value.length; i += 1) {
+        if(i == 0)
+          accumulated += key_value[i];
+        else
+          accumulated += ' ' + key_value[i];
+      }
+
+      return accumulated;
     }
     function parseShort(key_value) {
       return key_value;
     }
     function parseWebsite(key_value) {
-      return + key_value + '">' + key_value + '</a></p>';
+      return key_value;
     }
     function parseDownloadURL(key_value) {
       return key_value;
     }
     function parseRoles(key_value) {
       let accumulated = '';
-      
-      for(let i = 0; i < key_value.length; i += 1)
-        accumulated += '<li>' + key_value[i] + '</li>';
+
+      for(let i = 0; i < key_value.length; i += 1) {
+        allRoles.add(key_value[i]);
+        if(i == 0)
+          accumulated += key_value[i];
+        else
+          accumulated += '<br/>' + key_value[i];
+      }
 
       return accumulated;
     }
     function parseLanguages(key_value) {
       let accumulated = '';
       
-      for(let i = 0; i < key_value.length; i += 1)
-        accumulated += '<li>' + key_value[i] + '</li>';
+      for(let i = 0; i <  key_value.length; i += 1) {
+        allLanguages.add(key_value[i]);
+        if(i == 0)
+          accumulated += key_value[i];
+        else
+          accumulated += ' ' + key_value[i];
+      }
 
       return accumulated;
     }
     function parseTools(key_value) {
       let accumulated = '';
       
-      for(let i = 0; i < key_value.length; i += 1)
-        accumulated += '<li>' + key_value[i] + '</li>';
+      for(let i = 0; i < key_value.length; i += 1) {
+        allTools.add(key_value[i]);
+        if(i == 0)
+          accumulated += key_value[i];
+        else
+          accumulated += '<br/>' + key_value[i];
+      }
 
       return accumulated;
     }
@@ -173,12 +244,15 @@
 
 
   </script>
-
   <body>
-    <button type="button" data-sort="default:asc">Sort Ascending</button>
-    <button type="button" data-sort="default:desc">Sort Descending</button>
-    <div id="mc-fill">
-    </div>
-  </body>
 
+    <button type="button" data-sort="date:asc">Sort Date Ascending</button>
+    <button type="button" data-sort="date:desc" class="mixitup-control-active">Sort Date Descending</button>
+    <button type="button" data-filter="all">Show All</button>
+    
+    <div id="mc-lang-dropdown"></div>
+
+    <div id="mc-fill"></div>
+
+  </body>
 </html>
