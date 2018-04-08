@@ -1,42 +1,89 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Resume Builder Test</title>
+    <title>Project master list</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon-folder-open.ico">
 
     <!-- Scripts and whatnot -->
     <script type="text/javascript" src="resume.json"></script>
     <script type="text/javascript" src="mixitup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!-- External and associated -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
   </head>
   <style type="text/css">
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("/assets/squairy_light.png");
+      text-align: center;
+      max-width: 968px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .mc-container {
+      padding: 1rem;
+      text-align: justify;
+      font-size: 100%;
+      display: flex;   
+      flex-wrap: wrap;
+    }
+    .mc-container:after {
+      display: inline-block;
+      width: 100%;
+    }
+    .mix:before {
+      display: inline-block;
+    }
+    .mix {
+       position: relative;
+    }
     .mc-project {
       border: 1px solid black;
+      border-radius: 7px;
       margin: 5px;
-      background-color: rgb(200, 150, 100);
+      /*color: rgb(250, 245, 245);*/
+      background-color: rgba(20, 20, 30, 0.125);
+      max-width: 300px;
+      min-height: 220px;
     }
     .mc-project-content {
       margin: 10px;
-      background-color: rgb(200, 100, 100);
+      text-align: left;
+      /*background-color: rgb(200, 100, 100);*/
     }
     .mc-title {
       font-size: 1.3em;
       margin-right: 10px;
-      background-color: rgb(100, 100, 200);
+      /*background-color: rgb(100, 100, 200);*/
+      margin-left: 5px;
     }
     .mc-title-bar {
-      background-color: rgb(120, 180, 220);
+      /*background-color: rgb(120, 180, 220);*/
       text-align: right;
       height: 100%; 
       overflow: auto;
       font-family: 'Open Sans', sans-serif;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 4px;
     }
     .mc-date {
       margin-top: 0px;
-      background-color: rgb(100, 150, 200);
+      margin-right: 7px;
+      position: relative;
+      top: 50%;
+      transform: translateY(15%);
+      /*background-color: rgb(100, 150, 200);*/
     }
     .mc-short {
       float: none;
@@ -45,19 +92,61 @@
     .mc-tools {
       font-size: .7em;
       font-family: 'Open Sans', sans-serif;
-      background-color: rgb(100, 150, 100);
-      max-width: 150px;
+      /*background-color: rgb(100, 150, 100);*/
+      width: 180px;
+      display: inline-block;
+      margin-top: 5px;
+      text-align: left;
     }
     .mc-roles {
       font-size: .9em;
       font-family: 'Open Sans', sans-serif;
-      background-color: rgb(150, 120, 150);
-      max-width: 180px;
+      /*background-color: rgb(150, 120, 150);*/
+      width: 180px;
+      display: inline-block;
+      margin-top: 5px;
+      text-align: left;
     }
     .mc-links {
       font-size: .9em;
       font-family: 'Open Sans', sans-serif;
     }
+    .mc-subheader {
+      margin-left: 5px;
+    }
+    .mc-proj-body {
+      margin-left: 5px;
+    }
+
+    /* General classes for adjusting in a specific way. */
+    /* Removes the top margin */
+    .mc-notop {
+      vertical-align:top
+    }
+    /* Custom H4 sizing */
+    .mc-h4 {
+      margin: 0px;
+      font-size: 14px;
+    }
+    .mc-category {
+      margin: 0px;
+      margin-top: 4px;
+    }
+    .mc-button {
+      margin: 2px;
+    }
+
+    @media only screen and (max-width: 968px) {
+      body {
+        max-width: 656px;
+        }
+    }
+    @media only screen and (max-width: 656px) {
+      .mc-project {
+        min-width: 100%;
+      }
+    }
+
   </style>
   <script type="text/javascript">
     // Store each project
@@ -66,17 +155,23 @@
     var allRoles = new Set();
     var allTools = new Set();
 
+
+
     // When the window is loaded, go ahead and then parse the JSON.
     window.onload = function () { 
       parseResumeJSON(resumeJSON);
-      var containerEl = document.querySelector('.container');
-      var mixer = mixitup(containerEl);
+      var containerEl = document.querySelector('.mc-container');
+      var mixer = mixitup(containerEl, {
+        selectors: {
+            control: '[data-mixitup-control]'
+            }
+        });
     }
 
     // Parses different possible sections for the resume.
     function parseResumeJSON(json) {
       let accumulated = '';
-      accumulated += '<div class="container">';
+      accumulated += '<div class="mc-container">';
 
       // For every project, parse content.
       for(let i = 0; i < json.projects.length; i += 1){
@@ -93,8 +188,11 @@
 
       document.getElementById('mc-fill').innerHTML = accumulated;
       populateLanguages();
+      populateTools();
+      populateRoles();
     }
 
+    // Takes all the parsed langauges and generates buttons / filters for them
     function populateLanguages() {
       allLanguages.forEach(function(val) {
         let val1 = `${val}`;
@@ -106,35 +204,71 @@
 
         document.getElementById('mc-lang-dropdown').innerHTML 
           = document.getElementById('mc-lang-dropdown').innerHTML 
-          + `<button type="button" data-filter=".${val1}">Lang ${val2}</button>`;
+          + `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+      });
+    }
+
+    // Takes all the parsed tools and generates buttons / filters for them
+    function populateTools() {
+      allTools.forEach(function(val) {
+        let val1 = `${val}`;
+        let val2 = `${val}`;
+
+      document.getElementById('mc-tool-dropdown').innerHTML
+        = document.getElementById('mc-tool-dropdown').innerHTML 
+        + `<button type="button" class="mc-button btn btn-default" class="mc-button" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+      });
+    }
+
+    // Takes all the parsed roles and generates buttons / filters for them
+    function populateRoles() {
+      allRoles.forEach(function(val) {
+        let val1 = `${val}`;
+        let val2 = `${val}`;
+
+      document.getElementById('mc-role-dropdown').innerHTML
+        = document.getElementById('mc-role-dropdown').innerHTML 
+        + `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
       });
     }
 
     // Parses a specific project from the object. 
     // Returns string of the parsed project in HTML.
-    // Note that this is file-specific! A change
+    // Note that this is file-specific!
     function parseProject(project) {
 
       let content = `
-      <div class="item mix ${get('languages')} mc-project" data-date="${get('date')}">
+      <div class="item mix ${get('languages')} ${get('tools')} ${get('roles')} mc-project" data-date="${get('date')}">
         <div class="mc-project-content">
           <div class="mc-title-bar">
             <div style="float: left;">
               <span class="mc-title">${get('name')}</span>
             </div>
             <div class="mc-date">
-              ${get('date')}
+              ${get('date').replace(' ', ' - ')}
             </div>
           </div>
-          <span class="mc-short">${get('short')}</span>
-          <p class="mc-links">
-            <a href="http://${get('website')}">${get('website')}</a> <a href="${get('download-url')}">${get('download-url') ? 'Download Here' : ''}</a>
-          </p>
-          <div class="mc-roles">
-            ${get('roles')}
+          <div class="mc-subheader">
+            <div>
+              <span class="mc-short">${get('short')}</span>
+            </div>
+            <div class="mc-links mc-subheader">
+              <a href="http://${get('website')}">${get('website')}</a> <a href="${get('download-url')}">${get('download-url') ? '<br/>Download Here' : ''}</a>
+            </div>
           </div>
-          <div class="mc-tools">
-            ${get('tools')}
+          <div class="mc-proj-body">
+            <div class="mc-roles mc-notop ">
+              <h4 class="mc-h4">Roles:</h4>
+              <div class="mc-subheader">
+                ${get('roles')}
+              </div>
+            </div>
+            <div class="mc-tools mc-notop">
+              <h4 class="mc-h4">Tools:</h4>
+              <div class="mc-subheader">
+                ${get('tools')}
+              </div>
+            </div>
           </div>
         </div>
       </div>`
@@ -148,6 +282,7 @@
             case 'short': accumulated += parseShort(project[key]); break;
             case 'website': accumulated += parseWebsite(project[key]); break;
             case 'download-url': accumulated += parseDownloadURL(project[key]); break;
+            case 'teamsize': accumulated += parseTeamsize(project[key]); break;
             case 'date': accumulated += parseDate(project[key]); break;
             case 'roles': accumulated += parseRoles(project[key]); break;
             case 'languages': accumulated += parseLanguages(project[key]); break;
@@ -164,7 +299,6 @@
 
       return content;
     }
-
 
     function parseName(key_value) {
       return key_value;
@@ -190,15 +324,19 @@
     function parseDownloadURL(key_value) {
       return key_value;
     }
+    function parseTeamsize (key_value) {
+      return key_value;
+    }
     function parseRoles(key_value) {
       let accumulated = '';
 
       for(let i = 0; i < key_value.length; i += 1) {
-        allRoles.add(key_value[i]);
+        let replaced = key_value[i].replace(' ', '_');
+        allRoles.add(replaced);
         if(i == 0)
-          accumulated += key_value[i];
+          accumulated += replaced;
         else
-          accumulated += '<br/>' + key_value[i];
+          accumulated += ' ' + replaced;
       }
 
       return accumulated;
@@ -220,11 +358,14 @@
       let accumulated = '';
       
       for(let i = 0; i < key_value.length; i += 1) {
-        allTools.add(key_value[i]);
+        let replaced = key_value[i].replace(' ', '_');
+        replaced = replaced.replace('.', '-');
+        
+        allTools.add(replaced);
         if(i == 0)
-          accumulated += key_value[i];
+          accumulated += replaced;
         else
-          accumulated += '<br/>' + key_value[i];
+          accumulated += ' ' + replaced;
       }
 
       return accumulated;
@@ -237,22 +378,55 @@
 
       return accumulated;
     }
-
     function parseDescription(key_value) {
       return key_value;
     }
-
-
+    // function toggleColor(button_id) {
+    //     let filter_button = document.getElementById(button_id);
+    //     if(filter_button.classList.contains("btn-info")) {
+    //       filter_button.classList.remove("btn-info");
+    //       filter_button.classList.add("btn-primary");
+    //     }
+    //     else if(filter_button.classList.contains("btn-primary")) {
+    //       filter_button.classList.remove("btn-primary");
+    //       filter_button.classList.add("btn-info");
+    //     }
+    // }
   </script>
+
+
   <body>
-
-    <button type="button" data-sort="date:asc">Sort Date Ascending</button>
-    <button type="button" data-sort="date:desc" class="mixitup-control-active">Sort Date Descending</button>
-    <button type="button" data-filter="all">Show All</button>
+    <!-- General mixitup controls -->
+    <h2 style="text-align: center; margin-bottom: 10px;">Projects Master List</h1>
+    <div>
+      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:desc" class="mixitup-control-active"><i class="fas fa-sort"></i> Date Descending</button>
+      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:asc"><i class="fas fa-sort"></i> Date Ascending</button>
+      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-filter="all"><i class="fas fa-list"></i> Show All</button>
+    </div>
     
-    <div id="mc-lang-dropdown"></div>
+    <!-- Generated mixitup filters -->
+    <div>
+      <button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fas fa-filter"></i> Language</button>
+      <button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-role-dropdown"><i class="fas fa-filter"></i> Role</button>
+      <button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-tool-dropdown"><i class="fas fa-filter"></i> Tool</button>
+    </div>
+    <div id="mc-lang-dropdown" class="collapse"></div>
+    <div id="mc-role-dropdown" class="collapse"></div>
+    <div id="mc-tool-dropdown" class="collapse"></div>
 
+    <!-- Body to fill with tiles of projects -->
     <div id="mc-fill"></div>
 
+    <!--===[ BOOTSTRAP CORE JS: ]=================================-->    
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!--==========================================================-->
   </body>
+
+
 </html>
