@@ -4,26 +4,31 @@ resumeJSON =
 		{ 
 			"name":"Bittorio",
 			"short":"3D Competative Puzzle Game",
-			"date":"2016 - 2017",
+			"date":[
+				"2016",
+				"2017"
+			],
 			"website":"Bittor.io",
 			"download-url":"https://games.digipen.edu/games/bittorio",
+			"teamsize":9,
 			"roles":[
+				"Systems Programmer",
 				"Network Programmer",
 				"Tools Programmer",
-				"Systems Programmer"
 			],
 			"languages":[
-				"C#",
+				"cpp",
+				"csharp",
 				"JavaScript",
 			],
 			"tools":[
 				"Unity",
+				"Visual Studio",
 				"Node.js",
 				"Git",
-				"Source Tree",
-				"Sublime Text 3",
+				"Sublime Text",
 				"AWS",
-				"NGINX"
+				"NGINX",
 			],
 			"actions":[
 				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
@@ -32,66 +37,106 @@ resumeJSON =
 			],
 			"description":"A 3D puzzle fighter made in Unity which went to PAX, was nominated for IGF, and is available for download! I initially designing and implemented online multiplayer using SocketIO and a custom NGINX + Node.js server, tho this was scrapped due to design changes and I moved UI, Tools, and marketing material. Soon available on XBox!",
 			
-		}, { 
-			"name":"Bittorio2",
-			"short":"3D Competative Puzzle Game",
-			"date":"2013",
-			"website":"bittor.io",
-			"download-url":"https://games.digipen.edu/games/bittorio</downloadurl",
+		}, 
+		{ 
+			"name":"Cures & Curios",
+			"short":"VR Crafting Game for Vive",
+			"date":[
+				"2017",
+				"2018"
+			],
+			"website":"curesandcurios.com",
+			"teamsize":16,
 			"roles":[
-				"Network Programmer",
 				"Tools Programmer",
-				"Systems Programmer"
+				"Web Developer",
 			],
 			"languages":[
-				"C#",
 				"JavaScript",
+				"cpp",
+				"htmlcss",
 			],
 			"tools":[
-				"Unity",
-				"Node.js",
-				"Git",
-				"Source Tree",
-				"Sublime Text 3",
+				"Presskit",
+				"Unreal",
+				"Visual Studio",
+				"Perforce",
+				"Sublime Text",
 				"AWS",
-				"NGINX"
+				"Slack",
+				"NGINX",
+				"Github Pages"
 			],
 			"actions":[
 				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
 				"Created Menu and Input systems after adjusting to gameplay design changes",
 				"Presented product at PAX, TwitchPDX in Portland, and other outreach events"
 			],
-			"description":"A 3D puzzle fighter made in Unity which went to PAX, was nominated for IGF, and is available for download! I initially designing and implemented online multiplayer using SocketIO and a custom NGINX + Node.js server, tho this was scrapped due to design changes and I moved UI, Tools, and marketing material. Soon available on XBox!",
-		}, { 
-			"name":"Bittorio3",
-			"short":"3D Competative Puzzle Game",
-			"date":"2015",
-			"website":"bittor.io",
-			"download-url":"https://games.digipen.edu/games/bittorio</downloadurl",
+			"description":"An HTC Vive crafting game in unreal, and a project I'm currently contributing to! I've been in a more sysadmin role on this project, learning about data collection techniques using both C++ and web, plus I manage the task tracking tools we use. This game is also a nominee for IGF. As I continue to work on this project, I will be moving more into a tools capacity.",
+		},
+		{ 
+			"name":"rw0.pw",
+			"short":"Web fiddling",
+			"date":[
+				"2017",
+				"2018"
+			],
+			"website":"rw0.pw",
+			"teamsize":1,
 			"roles":[
-				"Network Programmer",
-				"Tools Programmer",
-				"Systems Programmer"
+				"Systems Programmer",
+				"Gameplay Programmer",
+				"Web Developer",
 			],
 			"languages":[
-				"C#",
 				"JavaScript",
+				"htmlcss",
 			],
 			"tools":[
-				"Unity",
-				"Node.js",
+				"Sublime Text",
 				"Git",
-				"Source Tree",
-				"Sublime Text 3",
-				"AWS",
-				"NGINX"
+				"Github Pages",
+				"Phaser.js"
 			],
 			"actions":[
-				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
-				"Created Menu and Input systems after adjusting to gameplay design changes",
-				"Presented product at PAX, TwitchPDX in Portland, and other outreach events"
+				"Created plethora of test projects, anywhere from terrain generation to touch-based games!"
 			],
-			"description":"A 3D puzzle fighter made in Unity which went to PAX, was nominated for IGF, and is available for download! I initially designing and implemented online multiplayer using SocketIO and a custom NGINX + Node.js server, tho this was scrapped due to design changes and I moved UI, Tools, and marketing material. Soon available on XBox!",
-		}
+			"description":"A personal testing ground for all sorts of one-off projects, featuring many small web tech demos and tools at rw0.pw. There are more projects on rw0 than there are on this page, all using different common web APIs and tools; Think of this as a testing ground for web games and tools! The site source is on GitHub!",
+		},
+		{ 
+			"name":"Dragon Drop",
+			"short":"Block-based IDE for game and arduino programming",
+			"date":[
+				"2017",
+				"2018"
+			],
+			"website":"wwwprod5.digipen.edu",
+			"download-url":"https://wwwprod5.digipen.edu/releases/",
+			"teamsize":4,
+			"roles":[
+				"Generalist Programmer",
+			],
+			"languages":[
+				"JavaScript",
+				"htmlcss",
+				"C"
+			],
+			"tools":[
+				"Sublime Text",
+				"Webstorm",
+				"Jira",
+				"Git",
+				"Git flow",
+				"Phaser.js",
+				"Arduino IDE",
+				"Electron.js",
+				"Gulp",
+				"Yarn"
+			],
+			"actions":[
+				"Created plethora of test projects, anywhere from terrain generation to touch-based games!"
+			],
+			"description":"The project I worked on at DigiPen R&D - a piece of educational software to make learning programming more accessable and engaging kids and teens. The application uses popular frameworks several popular tools, including Google's Blockly, NodeJS, and Electron. This software is used during summer camps and classes at DigiPen!",
+		},
 	],
 };
