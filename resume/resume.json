@@ -138,5 +138,29 @@ resumeJSON =
 			],
 			"description":"The project I worked on at DigiPen R&D - a piece of educational software to make learning programming more accessable and engaging kids and teens. The application uses popular frameworks several popular tools, including Google's Blockly, NodeJS, and Electron. This software is used during summer camps and classes at DigiPen!",
 		},
+		{ 
+			"name":"matthewcech.com",
+			"short":"Personal website and where you are now",
+			"date":[
+				"2017",
+				"2018"
+			],
+			"website":"matthewcech.com",
+			"download-url":"https://github.com/MatthewCech/com.matthewcech.www",
+			"teamsize":1,
+			"roles":[
+				"Web Developer",
+			],
+			"languages":[
+				"JavaScript",
+				"htmlcss",
+			],
+			"tools":[
+				"Sublime Text",
+				"Git",
+				"Git flow",
+				"Bootstrap"
+			],
+		},
 	],
 };
