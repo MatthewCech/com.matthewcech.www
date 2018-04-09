@@ -171,11 +171,15 @@
     // When the window is loaded, go ahead and then parse the JSON.
     window.onload = function () { 
       parseResumeJSON(resumeJSON);
-      var containerEl = document.querySelector('.mc-container');
-      var mixer = mixitup(containerEl, {
+      let containerEl = document.querySelector('.mc-container');
+
+      let mixer = mixitup(containerEl, {
         selectors: {
             control: '[data-mixitup-control]'
-            }
+            },
+        load: {
+            sort: 'date:desc'
+          }
         });
     }
 
@@ -270,9 +274,9 @@
               <span class="mc-short">${get('short')}</span>
             </div>
             <div class="mc-links">
-              <a href="http://${get('website')}"><i class="fas fa-link"></i> ${get('website')}</a> 
-              <a href="${get('download-url')}">${get('download-url') ? '<br/><i class="fas fa-download"></i> Download' : ''}</a>
-              <a href="${get('source-url')}">${get('source-url') ? '<br/><i class="fas fa-code"></i> Source' : ''}</a>
+              <a href="http://${get('website')}"> ${get('website') ? '<i class="fas fa-link"></i> ' + get('website') : ''}</a> 
+              <a href="${get('download-url')}">${get('download-url') ? '<i class="fas fa-download"></i> Download' : ''}</a>
+              <a href="${get('source-url')}">${get('source-url') ? '<i class="fas fa-code"></i> Source' : ''}</a>
             </div>
           </div>
           <div class="mc-proj-body">
@@ -302,6 +306,7 @@
             case 'short': accumulated += parseShort(project[key]); break;
             case 'website': accumulated += parseWebsite(project[key]); break;
             case 'download-url': accumulated += parseDownloadURL(project[key]); break;
+            case 'source-url': accumulated += parseSourceURL(project[key]); break;
             case 'image': accumulated += parseImage(project[key]); break;
             case 'teamsize': accumulated += parseTeamsize(project[key]); break;
             case 'date': accumulated += parseDate(project[key]); break;
@@ -343,6 +348,9 @@
       return key_value;
     }
     function parseDownloadURL(key_value) {
+      return key_value;
+    }
+    function parseSourceURL(key_value) {
       return key_value;
     }
     function parseTeamsize (key_value) {
@@ -423,8 +431,8 @@
     <!-- General mixitup controls -->
     <h2 style="text-align: center; margin-bottom: 10px;">Projects Master List</h1>
     <div>
-      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:desc" class="mixitup-control-active"><i class="fas fa-sort"></i> Date Descending</button>
-      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:asc"><i class="fas fa-sort"></i> Date Ascending</button>
+      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:desc" class="mixitup-control-active"><i class="fas fa-sort"></i> Newest First</button>
+      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:asc"><i class="fas fa-sort"></i> Oldest First</button>
       <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-filter="all"><i class="fas fa-list"></i> Show All</button>
     </div>
     
