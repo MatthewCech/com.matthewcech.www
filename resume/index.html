@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> <!-- Bootstrap core CSS -->
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script src="all.js"></script>
   </head>
   <style type="text/css">
     body {
@@ -30,7 +30,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .mc-container {
       padding: 1rem;
       text-align: justify;
@@ -67,6 +66,7 @@
       margin-right: 10px;
       /*background-color: rgb(100, 100, 200);*/
       margin-left: 5px;
+      font-weight: bold;
     }
     .mc-title-bar {
       /*background-color: rgb(120, 180, 220);*/
@@ -117,6 +117,14 @@
     .mc-proj-body {
       margin-left: 5px;
     }
+    .mc-project-icon {
+      width: 80px;
+      position: absolute;
+      border-radius: 7px;
+      bottom: 5px;
+      right: 5px;
+    }
+
 
     /* General classes for adjusting in a specific way. */
     /* Removes the top margin */
@@ -127,6 +135,7 @@
     .mc-h4 {
       margin: 0px;
       font-size: 14px;
+      font-weight: bold;
     }
     .mc-category {
       margin: 0px;
@@ -135,7 +144,9 @@
     .mc-button {
       margin: 2px;
     }
-
+    .mc-inline-block {
+      display: inline-block;
+    }
     @media only screen and (max-width: 968px) {
       body {
         max-width: 656px;
@@ -160,11 +171,15 @@
     // When the window is loaded, go ahead and then parse the JSON.
     window.onload = function () { 
       parseResumeJSON(resumeJSON);
-      var containerEl = document.querySelector('.mc-container');
-      var mixer = mixitup(containerEl, {
+      let containerEl = document.querySelector('.mc-container');
+
+      let mixer = mixitup(containerEl, {
         selectors: {
             control: '[data-mixitup-control]'
-            }
+            },
+        load: {
+            sort: 'date:desc'
+          }
         });
     }
 
@@ -212,7 +227,8 @@
     function populateTools() {
       allTools.forEach(function(val) {
         let val1 = `${val}`;
-        let val2 = `${val}`;
+        let val2 = `${val}`; 
+        val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
 
       document.getElementById('mc-tool-dropdown').innerHTML
         = document.getElementById('mc-tool-dropdown').innerHTML 
@@ -225,6 +241,7 @@
       allRoles.forEach(function(val) {
         let val1 = `${val}`;
         let val2 = `${val}`;
+        val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
 
       document.getElementById('mc-role-dropdown').innerHTML
         = document.getElementById('mc-role-dropdown').innerHTML 
@@ -235,6 +252,10 @@
     // Parses a specific project from the object. 
     // Returns string of the parsed project in HTML.
     // Note that this is file-specific!
+    //
+    // Also, welcome to satanic global replaces for formatting text: 
+    // .replace(/<thing to find>/g , "think to make it")
+    //
     function parseProject(project) {
 
       let content = `
@@ -252,23 +273,26 @@
             <div>
               <span class="mc-short">${get('short')}</span>
             </div>
-            <div class="mc-links mc-subheader">
-              <a href="http://${get('website')}">${get('website')}</a> <a href="${get('download-url')}">${get('download-url') ? '<br/>Download Here' : ''}</a>
+            <div class="mc-links">
+              <a href="http://${get('website')}"> ${get('website') ? '<i class="fas fa-link"></i> ' + get('website') : ''}</a> 
+              <a href="${get('download-url')}">${get('download-url') ? '<i class="fas fa-download"></i> Download' : ''}</a>
+              <a href="${get('source-url')}">${get('source-url') ? '<i class="fas fa-code"></i> Source' : ''}</a>
             </div>
           </div>
           <div class="mc-proj-body">
             <div class="mc-roles mc-notop ">
               <h4 class="mc-h4">Roles:</h4>
               <div class="mc-subheader">
-                ${get('roles')}
+                ${get('roles').replace(/ /g , "<br/>").replace(/_/g , " ")}
               </div>
             </div>
             <div class="mc-tools mc-notop">
               <h4 class="mc-h4">Tools:</h4>
               <div class="mc-subheader">
-                ${get('tools')}
+                ${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
               </div>
             </div>
+                <img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
           </div>
         </div>
       </div>`
@@ -282,6 +306,8 @@
             case 'short': accumulated += parseShort(project[key]); break;
             case 'website': accumulated += parseWebsite(project[key]); break;
             case 'download-url': accumulated += parseDownloadURL(project[key]); break;
+            case 'source-url': accumulated += parseSourceURL(project[key]); break;
+            case 'image': accumulated += parseImage(project[key]); break;
             case 'teamsize': accumulated += parseTeamsize(project[key]); break;
             case 'date': accumulated += parseDate(project[key]); break;
             case 'roles': accumulated += parseRoles(project[key]); break;
@@ -324,7 +350,13 @@
     function parseDownloadURL(key_value) {
       return key_value;
     }
+    function parseSourceURL(key_value) {
+      return key_value;
+    }
     function parseTeamsize (key_value) {
+      return key_value;
+    }
+    function parseImage (key_value) {
       return key_value;
     }
     function parseRoles(key_value) {
@@ -399,8 +431,8 @@
     <!-- General mixitup controls -->
     <h2 style="text-align: center; margin-bottom: 10px;">Projects Master List</h1>
     <div>
-      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:desc" class="mixitup-control-active"><i class="fas fa-sort"></i> Date Descending</button>
-      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:asc"><i class="fas fa-sort"></i> Date Ascending</button>
+      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:desc" class="mixitup-control-active"><i class="fas fa-sort"></i> Newest First</button>
+      <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:asc"><i class="fas fa-sort"></i> Oldest First</button>
       <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-filter="all"><i class="fas fa-list"></i> Show All</button>
     </div>
     
