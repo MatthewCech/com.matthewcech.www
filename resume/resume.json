@@ -230,7 +230,7 @@ resumeJSON =
 				"Tools Programmer",
 			],
 			"languages":[
-				"CSharp",
+				"Csharp",
 			],
 			"tools":[
 				"Visual Studio",
@@ -400,7 +400,7 @@ resumeJSON =
 		},
 		{
 			"name":"C World",
-			"short":"Cross-platform ASCII Map generation tool",
+			"short":"Cross-platform ASCII Map generation tool with color and seed support",
 			"date":[
 				"2014",
 				"2015"
