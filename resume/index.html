@@ -67,6 +67,7 @@
       margin-right: 10px;
       /*background-color: rgb(100, 100, 200);*/
       margin-left: 5px;
+      font-weight: bold;
     }
     .mc-title-bar {
       /*background-color: rgb(120, 180, 220);*/
@@ -117,6 +118,14 @@
     .mc-proj-body {
       margin-left: 5px;
     }
+    .mc-project-icon {
+      width: 80px;
+      position: absolute;
+      border-radius: 7px;
+      bottom: 5px;
+      right: 5px;
+    }
+
 
     /* General classes for adjusting in a specific way. */
     /* Removes the top margin */
@@ -127,6 +136,7 @@
     .mc-h4 {
       margin: 0px;
       font-size: 14px;
+      font-weight: bold;
     }
     .mc-category {
       margin: 0px;
@@ -135,7 +145,9 @@
     .mc-button {
       margin: 2px;
     }
-
+    .mc-inline-block {
+      display: inline-block;
+    }
     @media only screen and (max-width: 968px) {
       body {
         max-width: 656px;
@@ -269,6 +281,7 @@
                 ${get('tools')}
               </div>
             </div>
+                <img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
           </div>
         </div>
       </div>`
@@ -282,6 +295,7 @@
             case 'short': accumulated += parseShort(project[key]); break;
             case 'website': accumulated += parseWebsite(project[key]); break;
             case 'download-url': accumulated += parseDownloadURL(project[key]); break;
+            case 'image': accumulated += parseImage(project[key]); break;
             case 'teamsize': accumulated += parseTeamsize(project[key]); break;
             case 'date': accumulated += parseDate(project[key]); break;
             case 'roles': accumulated += parseRoles(project[key]); break;
@@ -325,6 +339,9 @@
       return key_value;
     }
     function parseTeamsize (key_value) {
+      return key_value;
+    }
+    function parseImage (key_value) {
       return key_value;
     }
     function parseRoles(key_value) {

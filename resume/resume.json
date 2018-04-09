@@ -10,6 +10,7 @@ resumeJSON =
 			],
 			"website":"Bittor.io",
 			"download-url":"https://games.digipen.edu/games/bittorio",
+			"image":"dragondrop.png",
 			"teamsize":9,
 			"roles":[
 				"Systems Programmer",
@@ -43,9 +44,9 @@ resumeJSON =
 			"short":"VR Crafting Game for Vive",
 			"date":[
 				"2017",
-				"2018"
 			],
 			"website":"curesandcurios.com",
+			"image":"dragondrop.png",
 			"teamsize":16,
 			"roles":[
 				"Tools Programmer",
@@ -79,9 +80,9 @@ resumeJSON =
 			"short":"Web fiddling",
 			"date":[
 				"2017",
-				"2018"
 			],
 			"website":"rw0.pw",
+			"image":"dragondrop.png",
 			"teamsize":1,
 			"roles":[
 				"Systems Programmer",
@@ -107,11 +108,11 @@ resumeJSON =
 			"name":"Dragon Drop",
 			"short":"Block-based IDE for game and arduino programming",
 			"date":[
-				"2017",
 				"2018"
 			],
 			"website":"wwwprod5.digipen.edu",
 			"download-url":"https://wwwprod5.digipen.edu/releases/",
+			"image":"dragondrop.png",
 			"teamsize":4,
 			"roles":[
 				"Generalist Programmer",
@@ -147,6 +148,7 @@ resumeJSON =
 			],
 			"website":"matthewcech.com",
 			"download-url":"https://github.com/MatthewCech/com.matthewcech.www",
+			"image":"dragondrop.png",
 			"teamsize":1,
 			"roles":[
 				"Web Developer",
