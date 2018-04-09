@@ -252,6 +252,7 @@ resumeJSON =
 			"languages":[
 				"Cpp",
 				"Zilch",
+				"Lua"
 			],
 			"tools":[
 				"Visual Studio",
@@ -341,5 +342,33 @@ resumeJSON =
 			],
 			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
 		},
+		{
+			"name":"Console Input",
+			"short":"C & C++ nonblocking keyboard input in a compact header",
+			"date":[
+				"2016"
+			],
+			"source-url":"https://github.com/MatthewCech/Console-Input",
+			"image":"keyboard.png",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer"
+			],
+			"languages":[
+				"C",
+				"Cpp",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Premake",
+				"Gpp",
+				"Clang",
+				"MobaXTerm"
+			],
+			"description":"Sometimes you really just need a single header file to plop somewhere and have it just work. That's what this is is for - kbhit and getch functionality cross-platform, plus callback binding",
+		
+			
+		}
 	],
 };
