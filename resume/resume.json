@@ -18,8 +18,8 @@ resumeJSON =
 				"Tools Programmer",
 			],
 			"languages":[
-				"cpp",
-				"csharp",
+				"Cpp",
+				"CSharp",
 				"JavaScript",
 			],
 			"tools":[
@@ -32,6 +32,7 @@ resumeJSON =
 				"AWS",
 				"NGINX",
 				"Socket.io",
+				"MobaXTerm"
 			],
 			"actions":[
 				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
@@ -56,8 +57,8 @@ resumeJSON =
 			],
 			"languages":[
 				"JavaScript",
-				"cpp",
-				"htmlcss",
+				"Cpp",
+				"HTMLCSS",
 			],
 			"tools":[
 				"Presskit",
@@ -68,7 +69,8 @@ resumeJSON =
 				"AWS",
 				"Slack",
 				"NGINX",
-				"Github Pages"
+				"Github Pages",
+				"MobaXTerm"
 			],
 			"actions":[
 				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
@@ -94,7 +96,7 @@ resumeJSON =
 			],
 			"languages":[
 				"JavaScript",
-				"htmlcss",
+				"HTMLCSS",
 			],
 			"tools":[
 				"Sublime Text",
@@ -118,12 +120,12 @@ resumeJSON =
 			"image":"dragondrop.png",
 			"teamsize":4,
 			"roles":[
-				"Generalist Programmer",
+				"Software Engineer",
 			],
 			"languages":[
 				"JavaScript",
-				"htmlcss",
-				"cpp",
+				"HTMLCSS",
+				"Cpp",
 				"C"
 			],
 			"tools":[
@@ -159,7 +161,7 @@ resumeJSON =
 			],
 			"languages":[
 				"JavaScript",
-				"htmlcss",
+				"HTMLCSS",
 			],
 			"tools":[
 				"Sublime Text",
@@ -168,34 +170,6 @@ resumeJSON =
 				"Bootstrap",
 				"Github Pages"
 			],
-		},
-		{ 
-			"name":"ASCIIPlayer",
-			"short":"Lightweight command line visualizer",
-			"date":[
-				"2016",
-				"2018"
-			],
-			"website":"asciiplayer.com",
-			"download-url":"https://asciiplayer.com/",
-			"source-url":"https://github.com/MatthewCech/ASCIIPlayer",
-			"image":"ASCII_Player.png",
-			"teamsize":1,
-			"roles":[
-				"Systems Programmer",
-				"Audio Programmer"
-			],
-			"languages":[
-				"cpp",
-				"Lua",
-			],
-			"tools":[
-				"Visual Studio",
-				"Git",
-				"Git flow",
-				"Premake"
-			],
-			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
 		},
 		{ 
 			"name":"A Sidescrolling Bonanza",
@@ -211,7 +185,7 @@ resumeJSON =
 				"Systems Programmer",
 			],
 			"languages":[
-				"cpp",
+				"Cpp",
 			],
 			"tools":[
 				"Visual Studio",
@@ -250,10 +224,10 @@ resumeJSON =
 			"source-url":"https://github.com/MatthewCech/Time-Check",
 			"teamsize":1,
 			"roles":[
-				"Generalist Programmer",
+				"Tools Programmer",
 			],
 			"languages":[
-				"csharp",
+				"CSharp",
 			],
 			"tools":[
 				"Visual Studio",
@@ -264,7 +238,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Grizzly Beats",
-			"short":"Time estimation and tracking app prototype",
+			"short":"2.5D multiplayer areana brawler in custom C++ engine",
 			"date":[
 				"2016",
 				"2017"
@@ -276,8 +250,9 @@ resumeJSON =
 				"Audio Programmer"
 			],
 			"languages":[
-				"cpp",
-				"zilch",
+				"Cpp",
+				"Zilch",
+				"Lua"
 			],
 			"tools":[
 				"Visual Studio",
@@ -287,5 +262,113 @@ resumeJSON =
 			],
 			"description":"A 2.5D arena brawler game for up to four players locally. I was primarily in charge of designing and implementing the core of the game engine. Later contributions included the audio system and visualizers using FMOD.",
 		},
+		{ 
+			"name":"\"Windows\" on Linux",
+			"short":"Academic research into multithreading techniques using a from-scratch ASCII window manager",
+			"date":[
+				"2017"
+			],
+			"image":"windowsonlinux.png",
+			"download-url":"https://docs.google.com/document/d/1skQyK6WXNOHbz5nCQGSu278A_gVS1XNiphWT0AKwqFY/edit?usp=sharing",
+			"source-url":"https://github.com/MatthewCech/Console-Utils-MT",
+			"teamsize":2,
+			"roles":[
+				"Systems Programmer",
+			],
+			"languages":[
+				"Cpp",
+			],
+			"tools":[
+				"Clang",
+				"Gpp",
+				"Git",
+				"Premake",
+				"Sublime Text",
+				"MobaXTerm"
+			],
+			"description":"12 custom projects exploring different aspects of the development and use of multithreading. This was based on the console-utils project i have, but we soon discovered that by redesigning from the ground up, we could massively improve performance.",
+		},
+		{ 
+			"name":"Console Utils",
+			"short":"Accessable C++ console drawing and debug utilities",
+			"date":[
+				"2016-2018"
+			],
+			"image":"ConsoleUtils.png",
+			"download-url":"https://github.com/MatthewCech/Console-Utils",
+			"source-url":"https://github.com/MatthewCech/Console-Utils",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+			],
+			"languages":[
+				"Cpp",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Premake",
+			],
+			"description":"2 custom projects exploring different aspects of the develop",
+		},
+		{ 
+			"name":"ASCIIPlayer",
+			"short":"Lightweight command line visualizer",
+			"date":[
+				"2016",
+				"2018"
+			],
+			"website":"asciiplayer.com",
+			"download-url":"https://asciiplayer.com/",
+			"source-url":"https://github.com/MatthewCech/ASCIIPlayer",
+			"image":"ASCII_Player.png",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+				"Audio Programmer"
+			],
+			"languages":[
+				"Cpp",
+				"Lua",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Git flow",
+				"Premake",
+				"Gpp",
+				"Clang",
+				"MobaXTerm"
+			],
+			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
+		},
+		{
+			"name":"Console Input",
+			"short":"C & C++ nonblocking keyboard input in a compact header",
+			"date":[
+				"2016"
+			],
+			"source-url":"https://github.com/MatthewCech/Console-Input",
+			"image":"keyboard.png",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer"
+			],
+			"languages":[
+				"C",
+				"Cpp",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Premake",
+				"Gpp",
+				"Clang",
+				"MobaXTerm"
+			],
+			"description":"Sometimes you really just need a single header file to plop somewhere and have it just work. That's what this is is for - kbhit and getch functionality cross-platform, plus callback binding",
+		
+			
+		}
 	],
 };

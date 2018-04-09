@@ -54,7 +54,7 @@
       /*color: rgb(250, 245, 245);*/
       background-color: rgba(20, 20, 30, 0.125);
       max-width: 300px;
-      min-height: 220px;
+      min-height: 235px;
     }
     .mc-project-content {
       margin: 10px;
@@ -213,9 +213,9 @@
         let val1 = `${val}`;
         let val2 = `${val}`;
 
-        if(val1 == 'cpp') val2 = 'C++';
-        if(val1 == 'csharp') val2 = 'C#';
-        if(val1 == 'htmlcss') val2 = 'HTML/CSS';
+        if(val1 == 'Cpp') val2 = 'C++';
+        if(val1 == 'Csharp') val2 = 'C#';
+        if(val1 == 'HTMLCSS') val2 = 'HTML/CSS';
 
         document.getElementById('mc-lang-dropdown').innerHTML 
           = document.getElementById('mc-lang-dropdown').innerHTML 
@@ -229,6 +229,8 @@
         let val1 = `${val}`;
         let val2 = `${val}`; 
         val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
+
+        if(val1 == 'Gpp') val2 = 'G++';
 
       document.getElementById('mc-tool-dropdown').innerHTML
         = document.getElementById('mc-tool-dropdown').innerHTML 
