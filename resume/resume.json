@@ -192,7 +192,7 @@ resumeJSON =
 				"Visual Studio",
 				"Git",
 			],
-			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
+			"description":"A game and engine made in less than 72 hours! This is an infinite runner requiring switching between two characters to solve the puzzles that show up. I had my hands in just about everything, from design to implementation. The source is available on GitHub",
 		},
 		{ 
 			"name":"Dual Reality",
@@ -303,6 +303,7 @@ resumeJSON =
 			"teamsize":1,
 			"roles":[
 				"Systems Programmer",
+				"Graphcis Programmer",
 			],
 			"languages":[
 				"Cpp",
@@ -328,7 +329,8 @@ resumeJSON =
 			"teamsize":1,
 			"roles":[
 				"Systems Programmer",
-				"Audio Programmer"
+				"Audio Programmer",
+				"Graphics Programmer"
 			],
 			"languages":[
 				"Cpp",
@@ -376,7 +378,7 @@ resumeJSON =
 		},
 		{
 			"name":"Color Dodge",
-			"short":"C# game about collecting colors",
+			"short":"C# arena game about collecting colors from clouds",
 			"date":[
 				"2012",
 				"2013"
@@ -416,7 +418,7 @@ resumeJSON =
 				"Gpp",
 				"Cygwin"
 			],
-			"description":"An earlier experiement with procedurally generated worlds!",
+			"description":"An earlier experiement with procedurally generated worlds! Written in C to get myself more familiar with the language and how it worked as I was learning the basics!",
 		},
 		{
 			"name":"Ants GA",
@@ -440,6 +442,28 @@ resumeJSON =
 				"Coffee"
 			],
 			"description":"This was an interesting and partially successful project, and was a fun way to play with non-traditional genetic algorithms. The idea was to create an organic \"Scent trail\" effect almost, or something more organic like the flow of a river. The goal was not actually optimality, but organic and fluid behaviors.",
+		},
+		{
+			"name":"Bubbles",
+			"short":"Arena game with time slowing and enemy management focus done in Java",
+			"date":[
+				"2013",
+				"2014"
+			],
+			"image":"bubbles.gif",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+				"Graphics Programmer",
+			],
+			"languages":[
+				"Java",
+			],
+			"tools":[
+				"Netbeans",
+				"Minueto"
+			],
+			"description":"One of the larger solo engines I created when I just started learning about game engine architecture! Used minueto (http://www.cs.mcgill.ca/~minueto/), a basic Java game framework, and I ended up implementing particles, effects, and engine structure over it!",
 		}
 	],
 };
