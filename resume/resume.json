@@ -3,13 +3,14 @@ resumeJSON =
 	"projects": [ 
 		{ 
 			"name":"Bittorio",
-			"short":"3D Competative Puzzle Game",
+			"short":"3D Competitive Puzzle Game on PC, web (lite), and soon XBox",
 			"date":[
 				"2016",
 				"2017"
 			],
 			"website":"Bittor.io",
 			"download-url":"https://games.digipen.edu/games/bittorio",
+			"image":"bittorio.gif",
 			"teamsize":9,
 			"roles":[
 				"Systems Programmer",
@@ -17,18 +18,21 @@ resumeJSON =
 				"Tools Programmer",
 			],
 			"languages":[
-				"cpp",
-				"csharp",
+				"Cpp",
+				"CSharp",
 				"JavaScript",
 			],
 			"tools":[
-				"Unity",
+				"Unity 3D",
 				"Visual Studio",
-				"Node.js",
 				"Git",
 				"Sublime Text",
+				"Slack",
+				"Node.js",
 				"AWS",
 				"NGINX",
+				"Socket.io",
+				"MobaXTerm"
 			],
 			"actions":[
 				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
@@ -40,12 +44,12 @@ resumeJSON =
 		}, 
 		{ 
 			"name":"Cures & Curios",
-			"short":"VR Crafting Game for Vive",
+			"short":"VR Potion Crafting Game for HTC Vive",
 			"date":[
 				"2017",
-				"2018"
 			],
 			"website":"curesandcurios.com",
+			"image":"cauldron.png",
 			"teamsize":16,
 			"roles":[
 				"Tools Programmer",
@@ -53,8 +57,8 @@ resumeJSON =
 			],
 			"languages":[
 				"JavaScript",
-				"cpp",
-				"htmlcss",
+				"Cpp",
+				"HTMLCSS",
 			],
 			"tools":[
 				"Presskit",
@@ -65,7 +69,8 @@ resumeJSON =
 				"AWS",
 				"Slack",
 				"NGINX",
-				"Github Pages"
+				"Github Pages",
+				"MobaXTerm"
 			],
 			"actions":[
 				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
@@ -76,12 +81,13 @@ resumeJSON =
 		},
 		{ 
 			"name":"rw0.pw",
-			"short":"Web fiddling",
+			"short":"Fiddling about with JavaScript",
 			"date":[
 				"2017",
-				"2018"
 			],
 			"website":"rw0.pw",
+			"source-url":"https://github.com/MatthewCech/pw.rw0.www",
+			"image":"rw0.gif",
 			"teamsize":1,
 			"roles":[
 				"Systems Programmer",
@@ -90,7 +96,7 @@ resumeJSON =
 			],
 			"languages":[
 				"JavaScript",
-				"htmlcss",
+				"HTMLCSS",
 			],
 			"tools":[
 				"Sublime Text",
@@ -107,18 +113,19 @@ resumeJSON =
 			"name":"Dragon Drop",
 			"short":"Block-based IDE for game and arduino programming",
 			"date":[
-				"2017",
 				"2018"
 			],
 			"website":"wwwprod5.digipen.edu",
 			"download-url":"https://wwwprod5.digipen.edu/releases/",
+			"image":"dragondrop.png",
 			"teamsize":4,
 			"roles":[
-				"Generalist Programmer",
+				"Software Engineer",
 			],
 			"languages":[
 				"JavaScript",
-				"htmlcss",
+				"HTMLCSS",
+				"Cpp",
 				"C"
 			],
 			"tools":[
@@ -138,5 +145,230 @@ resumeJSON =
 			],
 			"description":"The project I worked on at DigiPen R&D - a piece of educational software to make learning programming more accessable and engaging kids and teens. The application uses popular frameworks several popular tools, including Google's Blockly, NodeJS, and Electron. This software is used during summer camps and classes at DigiPen!",
 		},
+		{ 
+			"name":"matthewcech.com",
+			"short":"My website, and where you are now!",
+			"date":[
+				"2017",
+				"2018"
+			],
+			"website":"matthewcech.com",
+			"source-url":"https://github.com/MatthewCech/com.matthewcech.www",
+			"image":"matthewcechfolder.svg",
+			"teamsize":1,
+			"roles":[
+				"Web Developer",
+			],
+			"languages":[
+				"JavaScript",
+				"HTMLCSS",
+			],
+			"tools":[
+				"Sublime Text",
+				"Git",
+				"Git flow",
+				"Bootstrap",
+				"Github Pages"
+			],
+		},
+		{ 
+			"name":"A Sidescrolling Bonanza",
+			"short":"2D Side-scroller in a C++ custom engine",
+			"date":[
+				"2016"
+			],
+			"source-url":"https://github.com/Neko81795/ASideScrollBonanza",
+			"image":"a_sidescrolling_bonanza.gif",
+			"teamsize":2,
+			"roles":[
+				"Engine Programmer",
+				"Systems Programmer",
+			],
+			"languages":[
+				"Cpp",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+			],
+			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
+		},
+		{ 
+			"name":"Dual Reality",
+			"short":"Mellow 2D Side-scrolling puzzle game",
+			"date":[
+				"2014"
+			],
+			"image":"dual_reality.gif",
+			"teamsize":3,
+			"roles":[
+				"Gameplay Programmer",
+			],
+			"languages":[
+				"Zilch",
+			],
+			"tools":[
+				"Zero Engine",
+				"SVN",
+				"Slack",
+			],
+			"description":"Mellow 2D puzzle-platformer in which platforms have to be manipulated to finish building the two parts of a level. This project had me working primarily as a gameplay programmer, and introduced me to a variety of event-driven design styles.",
+		},
+		{ 
+			"name":"Time Check",
+			"short":"Time tracking and estimation prototype",
+			"date":[
+				"2016"
+			],
+			"image":"time-check.gif",
+			"source-url":"https://github.com/MatthewCech/Time-Check",
+			"teamsize":1,
+			"roles":[
+				"Tools Programmer",
+			],
+			"languages":[
+				"CSharp",
+			],
+			"tools":[
+				"Visual Studio",
+				".NET",
+				"Git"
+			],
+			"description":"A prototype for a time tracking application that not only helps you track tasks like most every other thing out there, but also provides insight into the accuracy of your estimating skills!",
+		},
+		{ 
+			"name":"Grizzly Beats",
+			"short":"2.5D multiplayer areana brawler in custom C++ engine",
+			"date":[
+				"2016",
+				"2017"
+			],
+			"image":"grizzy_beats.gif",
+			"teamsize":6,
+			"roles":[
+				"Engine Programmer",
+				"Audio Programmer"
+			],
+			"languages":[
+				"Cpp",
+				"Zilch",
+				"Lua"
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Premake",
+				"Slack",
+			],
+			"description":"A 2.5D arena brawler game for up to four players locally. I was primarily in charge of designing and implementing the core of the game engine. Later contributions included the audio system and visualizers using FMOD.",
+		},
+		{ 
+			"name":"\"Windows\" on Linux",
+			"short":"Academic research into multithreading techniques using a from-scratch ASCII window manager",
+			"date":[
+				"2017"
+			],
+			"image":"windowsonlinux.png",
+			"download-url":"https://docs.google.com/document/d/1skQyK6WXNOHbz5nCQGSu278A_gVS1XNiphWT0AKwqFY/edit?usp=sharing",
+			"source-url":"https://github.com/MatthewCech/Console-Utils-MT",
+			"teamsize":2,
+			"roles":[
+				"Systems Programmer",
+			],
+			"languages":[
+				"Cpp",
+			],
+			"tools":[
+				"Clang",
+				"Gpp",
+				"Git",
+				"Premake",
+				"Sublime Text",
+				"MobaXTerm"
+			],
+			"description":"12 custom projects exploring different aspects of the development and use of multithreading. This was based on the console-utils project i have, but we soon discovered that by redesigning from the ground up, we could massively improve performance.",
+		},
+		{ 
+			"name":"Console Utils",
+			"short":"Accessable C++ console drawing and debug utilities",
+			"date":[
+				"2016-2018"
+			],
+			"image":"ConsoleUtils.png",
+			"download-url":"https://github.com/MatthewCech/Console-Utils",
+			"source-url":"https://github.com/MatthewCech/Console-Utils",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+			],
+			"languages":[
+				"Cpp",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Premake",
+			],
+			"description":"2 custom projects exploring different aspects of the develop",
+		},
+		{ 
+			"name":"ASCIIPlayer",
+			"short":"Lightweight command line visualizer",
+			"date":[
+				"2016",
+				"2018"
+			],
+			"website":"asciiplayer.com",
+			"download-url":"https://asciiplayer.com/",
+			"source-url":"https://github.com/MatthewCech/ASCIIPlayer",
+			"image":"ASCII_Player.png",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+				"Audio Programmer"
+			],
+			"languages":[
+				"Cpp",
+				"Lua",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Git flow",
+				"Premake",
+				"Gpp",
+				"Clang",
+				"MobaXTerm"
+			],
+			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
+		},
+		{
+			"name":"Console Input",
+			"short":"C & C++ nonblocking keyboard input in a compact header",
+			"date":[
+				"2016"
+			],
+			"source-url":"https://github.com/MatthewCech/Console-Input",
+			"image":"keyboard.png",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer"
+			],
+			"languages":[
+				"C",
+				"Cpp",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Premake",
+				"Gpp",
+				"Clang",
+				"MobaXTerm"
+			],
+			"description":"Sometimes you really just need a single header file to plop somewhere and have it just work. That's what this is is for - kbhit and getch functionality cross-platform, plus callback binding",
+		
+			
+		}
 	],
 };
