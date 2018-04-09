@@ -3,7 +3,7 @@ resumeJSON =
 	"projects": [ 
 		{ 
 			"name":"Bittorio",
-			"short":"3D Competitive Puzzle Game on PC, web (lite), and soon XBox",
+			"short":"3D Competitive Puzzle Game done in Unity 3D, on PC and soon XBox",
 			"date":[
 				"2016",
 				"2017"
@@ -47,6 +47,7 @@ resumeJSON =
 			"short":"VR Potion Crafting Game for HTC Vive",
 			"date":[
 				"2017",
+				"2018"
 			],
 			"website":"curesandcurios.com",
 			"image":"cauldron.png",
@@ -82,7 +83,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"rw0.pw",
-			"short":"Fiddling about with JavaScript",
+			"short":"A collection of JavaScript game system demos and experiments",
 			"date":[
 				"2017",
 			],
@@ -112,7 +113,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Dragon Drop",
-			"short":"Block-based IDE for game and arduino programming",
+			"short":"Block-based Electron IDE for game and arduino programming",
 			"date":[
 				"2018"
 			],
@@ -148,7 +149,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"matthewcech.com",
-			"short":"My website, and where you are now!",
+			"short":"My playground of a website, and where you are now",
 			"date":[
 				"2017",
 				"2018"
@@ -242,8 +243,8 @@ resumeJSON =
 			"name":"Grizzly Beats",
 			"short":"2.5D multiplayer areana brawler in custom C++ engine",
 			"date":[
-				"2016",
-				"2017"
+				"2015",
+				"2016"
 			],
 			"image":"grizzy_beats.gif",
 			"teamsize":6,
@@ -313,11 +314,11 @@ resumeJSON =
 				"Git",
 				"Premake",
 			],
-			"description":"2 custom projects exploring different aspects of the develop",
+			"description":"A cross-platform C++ library for drawing to specific locations in the terminal, along with debug dumping, logging, and more!",
 		},
 		{ 
 			"name":"ASCIIPlayer",
-			"short":"Lightweight command line visualizer",
+			"short":"Lightweight command line audio visualizer written in C++",
 			"date":[
 				"2016",
 				"2018"
@@ -381,7 +382,6 @@ resumeJSON =
 			"short":"C# arena game about collecting colors from clouds",
 			"date":[
 				"2012",
-				"2013"
 			],
 			"image":"colordodge.gif",
 			"teamsize":1,
@@ -400,7 +400,7 @@ resumeJSON =
 		},
 		{
 			"name":"C World",
-			"short":"ASCII Map generation tool",
+			"short":"Cross-platform ASCII Map generation tool",
 			"date":[
 				"2014",
 				"2015"
