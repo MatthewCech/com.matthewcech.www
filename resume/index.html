@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> <!-- Bootstrap core CSS -->
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script src="all.js"></script>
   </head>
   <style type="text/css">
     body {
@@ -30,7 +30,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .mc-container {
       padding: 1rem;
       text-align: justify;
@@ -224,7 +223,8 @@
     function populateTools() {
       allTools.forEach(function(val) {
         let val1 = `${val}`;
-        let val2 = `${val}`;
+        let val2 = `${val}`; 
+        val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
 
       document.getElementById('mc-tool-dropdown').innerHTML
         = document.getElementById('mc-tool-dropdown').innerHTML 
@@ -237,6 +237,7 @@
       allRoles.forEach(function(val) {
         let val1 = `${val}`;
         let val2 = `${val}`;
+        val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
 
       document.getElementById('mc-role-dropdown').innerHTML
         = document.getElementById('mc-role-dropdown').innerHTML 
@@ -247,6 +248,10 @@
     // Parses a specific project from the object. 
     // Returns string of the parsed project in HTML.
     // Note that this is file-specific!
+    //
+    // Also, welcome to satanic global replaces for formatting text: 
+    // .replace(/<thing to find>/g , "think to make it")
+    //
     function parseProject(project) {
 
       let content = `
@@ -265,20 +270,22 @@
               <span class="mc-short">${get('short')}</span>
             </div>
             <div class="mc-links">
-              <a href="http://${get('website')}">${get('website')}</a> <a href="${get('download-url')}">${get('download-url') ? '<br/><i class="fas fa-download"></i> Download' : ''}</a>
+              <a href="http://${get('website')}"><i class="fas fa-link"></i> ${get('website')}</a> 
+              <a href="${get('download-url')}">${get('download-url') ? '<br/><i class="fas fa-download"></i> Download' : ''}</a>
+              <a href="${get('source-url')}">${get('source-url') ? '<br/><i class="fas fa-code"></i> Source' : ''}</a>
             </div>
           </div>
           <div class="mc-proj-body">
             <div class="mc-roles mc-notop ">
               <h4 class="mc-h4">Roles:</h4>
               <div class="mc-subheader">
-                ${get('roles')}
+                ${get('roles').replace(/ /g , "<br/>").replace(/_/g , " ")}
               </div>
             </div>
             <div class="mc-tools mc-notop">
               <h4 class="mc-h4">Tools:</h4>
               <div class="mc-subheader">
-                ${get('tools')}
+                ${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
               </div>
             </div>
                 <img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">

@@ -10,7 +10,7 @@ resumeJSON =
 			],
 			"website":"Bittor.io",
 			"download-url":"https://games.digipen.edu/games/bittorio",
-			"image":"dragondrop.png",
+			"image":"bittorio.gif",
 			"teamsize":9,
 			"roles":[
 				"Systems Programmer",
@@ -23,7 +23,7 @@ resumeJSON =
 				"JavaScript",
 			],
 			"tools":[
-				"Unity",
+				"Unity 3D",
 				"Visual Studio",
 				"Node.js",
 				"Git",
@@ -46,7 +46,7 @@ resumeJSON =
 				"2017",
 			],
 			"website":"curesandcurios.com",
-			"image":"dragondrop.png",
+			"image":"curesandcurios.jpg",
 			"teamsize":16,
 			"roles":[
 				"Tools Programmer",
@@ -82,7 +82,8 @@ resumeJSON =
 				"2017",
 			],
 			"website":"rw0.pw",
-			"image":"dragondrop.png",
+			"source-url":"https://github.com/MatthewCech/pw.rw0.www",
+			"image":"rw0.gif",
 			"teamsize":1,
 			"roles":[
 				"Systems Programmer",
@@ -148,7 +149,7 @@ resumeJSON =
 			],
 			"website":"matthewcech.com",
 			"download-url":"https://github.com/MatthewCech/com.matthewcech.www",
-			"image":"dragondrop.png",
+			"image":"folder-open.svg",
 			"teamsize":1,
 			"roles":[
 				"Web Developer",
