@@ -19,7 +19,7 @@ resumeJSON =
 			],
 			"languages":[
 				"Cpp",
-				"CSharp",
+				"Csharp",
 				"JavaScript",
 			],
 			"tools":[
@@ -70,7 +70,8 @@ resumeJSON =
 				"Slack",
 				"NGINX",
 				"Github Pages",
-				"MobaXTerm"
+				"MobaXTerm",
+				"Coffee"
 			],
 			"actions":[
 				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
@@ -191,13 +192,14 @@ resumeJSON =
 				"Visual Studio",
 				"Git",
 			],
-			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
+			"description":"A game and engine made in less than 72 hours! This is an infinite runner requiring switching between two characters to solve the puzzles that show up. I had my hands in just about everything, from design to implementation. The source is available on GitHub",
 		},
 		{ 
 			"name":"Dual Reality",
 			"short":"Mellow 2D Side-scrolling puzzle game",
 			"date":[
-				"2014"
+				"2014",
+				"2015"
 			],
 			"image":"dual_reality.gif",
 			"teamsize":3,
@@ -284,7 +286,8 @@ resumeJSON =
 				"Git",
 				"Premake",
 				"Sublime Text",
-				"MobaXTerm"
+				"MobaXTerm",
+				"Coffee"
 			],
 			"description":"12 custom projects exploring different aspects of the development and use of multithreading. This was based on the console-utils project i have, but we soon discovered that by redesigning from the ground up, we could massively improve performance.",
 		},
@@ -300,6 +303,7 @@ resumeJSON =
 			"teamsize":1,
 			"roles":[
 				"Systems Programmer",
+				"Graphcis Programmer",
 			],
 			"languages":[
 				"Cpp",
@@ -325,7 +329,8 @@ resumeJSON =
 			"teamsize":1,
 			"roles":[
 				"Systems Programmer",
-				"Audio Programmer"
+				"Audio Programmer",
+				"Graphics Programmer"
 			],
 			"languages":[
 				"Cpp",
@@ -338,7 +343,9 @@ resumeJSON =
 				"Premake",
 				"Gpp",
 				"Clang",
-				"MobaXTerm"
+				"MobaXTerm",
+				"Cygwin",
+				"Coffee",
 			],
 			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
 		},
@@ -364,11 +371,99 @@ resumeJSON =
 				"Premake",
 				"Gpp",
 				"Clang",
-				"MobaXTerm"
+				"MobaXTerm",
+				"Cygwin"
 			],
 			"description":"Sometimes you really just need a single header file to plop somewhere and have it just work. That's what this is is for - kbhit and getch functionality cross-platform, plus callback binding",
-		
-			
+		},
+		{
+			"name":"Color Dodge",
+			"short":"C# arena game about collecting colors from clouds",
+			"date":[
+				"2012",
+				"2013"
+			],
+			"image":"colordodge.gif",
+			"teamsize":1,
+			"roles":[
+				"Engine Programmer",
+				"Gameplay Programmer"
+			],
+			"languages":[
+				"Csharp",
+			],
+			"tools":[
+				"Visual Studio",
+				".NET",
+			],
+			"description":"One of the first projects I experienced some mild success with, and actually had a playable product! This was quite fun to work on, and was a trial by fire as I started to learn more about game programming.",
+		},
+		{
+			"name":"C World",
+			"short":"ASCII Map generation tool",
+			"date":[
+				"2014",
+				"2015"
+			],
+			"image":"cworld.gif",
+			"teamsize":1,
+			"roles":[
+				"Tools Programmer",
+			],
+			"languages":[
+				"C",
+			],
+			"tools":[
+				"Sublime Text",
+				"Gpp",
+				"Cygwin"
+			],
+			"description":"An earlier experiement with procedurally generated worlds! Written in C to get myself more familiar with the language and how it worked as I was learning the basics!",
+		},
+		{
+			"name":"Ants GA",
+			"short":"Academic experiment with more organic genetic algorithms",
+			"date":[
+				"2017"
+			],
+			"image":"ga.gif",
+			"download-url":"https://docs.google.com/document/d/1AD2NGtHA_cb7JiLFyan80RuBHOjlDIveHyrdZxfa3Dk/edit",
+			"source-url":"https://github.com/MatthewCech/GA-Cpp",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+			],
+			"languages":[
+				"Cpp",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git",
+				"Coffee"
+			],
+			"description":"This was an interesting and partially successful project, and was a fun way to play with non-traditional genetic algorithms. The idea was to create an organic \"Scent trail\" effect almost, or something more organic like the flow of a river. The goal was not actually optimality, but organic and fluid behaviors.",
+		},
+		{
+			"name":"Bubbles",
+			"short":"Arena game with time slowing and enemy management focus done in Java",
+			"date":[
+				"2013",
+				"2014"
+			],
+			"image":"bubbles.gif",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+				"Graphics Programmer",
+			],
+			"languages":[
+				"Java",
+			],
+			"tools":[
+				"Netbeans",
+				"Minueto"
+			],
+			"description":"One of the larger solo engines I created when I just started learning about game engine architecture! Used minueto (http://www.cs.mcgill.ca/~minueto/), a basic Java game framework, and I ended up implementing particles, effects, and engine structure over it!",
 		}
 	],
 };
