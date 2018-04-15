@@ -22,6 +22,7 @@
     <script src="all.js"></script>
   </head>
   <style type="text/css">
+  /* While in beta, syle is located here for quick modification */
     body {
       font-family: 'Open Sans', sans-serif;
       background-image: url("/assets/squairy_light.png");
@@ -124,7 +125,12 @@
       bottom: 5px;
       right: 5px;
     }
-
+    .mc-vertical-buffer {
+      display: inline-block;
+      height: 100%;
+      margin-top: 40px;
+    }
+    
 
     /* General classes for adjusting in a specific way. */
     /* Removes the top margin */
@@ -157,7 +163,7 @@
         min-width: 100%;
       }
     }
-
+    
   </style>
   <script type="text/javascript">
     // Store each project
@@ -430,8 +436,35 @@
 
 
   <body>
+    <!--===[ NAVBAR: ]============================================-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Matthew Cech</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="/">Home</a></li>
+            <li class=""><a href="/skills/">Skills</a></li>
+            <li class=""><a href="/projects/">Showcase</a></li>
+            <li class="active"><a href="/resume/">Projects List (beta)</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--==========================================================-->
+    <span class="mc-vertical-buffer"></span>
+
+
     <!-- General mixitup controls -->
-    <h2 style="text-align: center; margin-bottom: 10px;">Projects Master List</h1>
+    <h2 style="text-align: center; margin-bottom: 10px;">Projects Master List</h2>
+    <h5 style="text-align: center; margin-bottom: 10px;">An experimental data-driven filtering tool</h5>
     <div>
       <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:desc" class="mixitup-control-active"><i class="fas fa-sort"></i> Newest First</button>
       <button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:asc"><i class="fas fa-sort"></i> Oldest First</button>
@@ -450,7 +483,7 @@
 
     <!-- Body to fill with tiles of projects -->
     <div id="mc-fill"></div>
-
+  </div>
     <!--===[ BOOTSTRAP CORE JS: ]=================================-->    
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
