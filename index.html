@@ -63,50 +63,63 @@
   </script>
   
 
-  <body>
+  <body style="padding-top: 0px;">
     <!--===[ NAVBAR: ]============================================-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Matthew Cech</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li class=""><a href="/skills/">Skills</a></li>
-            <li class=""><a href="/projects/">Showcase</a></li>
-            <li class=""><a href="/resume/">Projects List (beta)</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">Matthew Cech</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/skills/">Features</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/projects/">Pricing</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/resume/">Disabled</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
     <!--==========================================================-->
 
     <!--===[ CONTENT: ]===========================================-->
     <div class="text-center center">
     <span class="vertical-buffer"></span>
 
-      <!-- Display common link buttons -->
-      <div>
-        <a class="btn btn-success btn-mod-primary btn-xl shade-image link-padding" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true "></i></a>
-        <a class="btn btn-success btn-mod-primary btn-xl shade-image link-padding" href="https://www.linkedin.com/in/matthew-cech-019b265b"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-        <a class="btn btn-success btn-mod-primary btn-xl shade-image link-padding" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-        <br/>
-        <br/>
-      </div>
+    <div class="row justify-content-md-center">
+    	<div class="col-md-3" style="background-color: red;">
+    		<img class="center-img shade-image img-responsive" src="/assets/hs.jpg" alt="No image of my face today, it seems" />
+    	</div>
+    	<div class="col-md-3">
+
+		<!-- Display common link buttons -->
+		<div>
+			<h1>Matthew Cech</h1>
+      		<h5 id="rotating-text" class="text-muted">Gameplay/Tools Programmer</h5>
+			<hr>
+			<a class="btn btn-outline-dark btn-xl mc-button" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+			<a class="btn btn-outline-dark btn-xl mc-button" href="https://www.linkedin.com/in/matthew-cech-019b265b"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+			<a class="btn btn-outline-dark btn-xl mc-button" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+		</div>
+		      
+
+    	</div>
       
+
+    </div>
       <!-- Image and text below -->
       <div>
-        <img class="center-img shade-image" src="/assets/hs.jpg" alt="No image today apparently" />
-        <h4 id="rotating-text" class="desc text-muted">Gameplay/Tools Programmer</h4>
+        
       </div>
       <br/>
+
     </div>
     <!--==========================================================-->
 
