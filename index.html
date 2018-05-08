@@ -27,39 +27,38 @@
   <!-- Random text script -->
   <script type='text/javascript'>
   
-  // Titles to cycle through
-  var randomTopText = [ 
-    "Tools Programmer",
-    "Game Engine Programmer",
-    "Code Sculptor",
-    "Networking Experimentalist",
-    "Game Engine Wrestler",
-    "Digital Storyteller",
-    "Jack of Increasingly Many Trades"
-    ];
-  
   var randNum = 0;             // Current random number, expose in case access is needed.
   var prev = 0;                // Previous to prevent same from displaying twice.
   var titleSwapDelayMS = 4000; // Delay between cycling the titles below the image, in milliseconds
 
-  // Function to select random text
+  // Titles to cycle through
+  var randomTopText = [ 
+    "Gameplay/Tools Programmer"
+  , "Game Engine Programmer"
+  , "Code Sculptor"
+  , "Probably Holding Coffee"
+  , "Networking Experimentalist"
+  , "Game Engine Wrestler"
+  , "Digital Storyteller"
+  , "Jack of Increasingly Many Trades"
+  , "Game Systems Engineer"
+  ];
+  
+
+  // Select randomly
   function GetRandText() {
     prev = randNum;
-    while(randNum == prev){
+    while(randNum == prev) {
       randNum = Math.floor(Math.random() * randomTopText.length);
     }
-    document.getElementById('rotating-text').innerHTML=randomTopText[randNum];
+
+    document.getElementById('rotating-text').innerHTML = randomTopText[randNum];
   }
   
   // Change text every few seconds
   window.setInterval(function(){
     GetRandText();
   }, titleSwapDelayMS);
-  
-  // Handle function call on load.
-  // Not set with onload because I want the initial message to show first before the slightly
-  // less serious titles.
-  //onload = function() { GetRandText(); }
   </script>
   
 
@@ -99,7 +98,7 @@
         <div class="col-md-2"></div>
           <!-- Display common link buttons -->
           <h1>Matthew Cech</h1>
-          <h5 id="rotating-text" class="text-muted">Gameplay/Tools Programmer</h5>
+          <h5 id="rotating-text" class="text-muted">Game Systems Engineer</h5>
           <hr>
           <a class="btn btn-outline-dark btn-xl mc-button" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
           <a class="btn btn-outline-dark btn-xl mc-button" href="https://www.linkedin.com/in/matthew-cech-019b265b"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
