@@ -24,8 +24,12 @@
   <style type="text/css">
   /* While in beta, syle is located here for quick modification */
     body {
-      font-family: 'Open Sans', sans-serif;
       background-image: url("/assets/squairy_light.png");
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+    .mc-body {
       text-align: center;
       max-width: 968px;
       margin-left: auto;
@@ -55,7 +59,7 @@
       /*color: rgb(250, 245, 245);*/
       background-color: rgba(20, 20, 30, 0.125);
       max-width: 300px;
-      min-height: 235px;
+      min-height: 280px;
     }
     .mc-project-content {
       margin: 10px;
@@ -63,7 +67,7 @@
       /*background-color: rgb(200, 100, 100);*/
     }
     .mc-title {
-      font-size: 1.3em;
+      font-size: 1.1em;
       margin-right: 10px;
       /*background-color: rgb(100, 100, 200);*/
       margin-left: 5px;
@@ -80,6 +84,7 @@
     }
     .mc-date {
       margin-top: 0px;
+      font-size: .9em;
       margin-right: 7px;
       position: relative;
       top: 50%;
@@ -88,11 +93,11 @@
     }
     .mc-short {
       float: none;
-      font-family: 'Open Sans', sans-serif;
+      font-size: .9em;
+      margin-bottom: 10px;
     }
     .mc-tools {
       font-size: .7em;
-      font-family: 'Open Sans', sans-serif;
       /*background-color: rgb(100, 150, 100);*/
       width: 180px;
       display: inline-block;
@@ -100,8 +105,7 @@
       text-align: left;
     }
     .mc-roles {
-      font-size: .9em;
-      font-family: 'Open Sans', sans-serif;
+      font-size: .7em;
       /*background-color: rgb(150, 120, 150);*/
       width: 180px;
       display: inline-block;
@@ -110,7 +114,9 @@
     }
     .mc-links {
       font-size: .9em;
-      font-family: 'Open Sans', sans-serif;
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
     }
     .mc-subheader {
       margin-left: 5px;
@@ -152,6 +158,9 @@
     }
     .mc-inline-block {
       display: inline-block;
+    }
+    .mc-top-nopadding {
+      padding-top: 0px;
     }
     @media only screen and (max-width: 968px) {
       body {
@@ -269,6 +278,8 @@
       let content = `
       <div class="item mix ${get('languages')} ${get('tools')} ${get('roles')} mc-project" data-date="${get('date')}">
         <div class="mc-project-content">
+
+          <!-- ==========[ COMMENT ]: The title and date range of the project in question -->
           <div class="mc-title-bar">
             <div style="float: left;">
               <span class="mc-title">${get('name')}</span>
@@ -277,16 +288,15 @@
               ${get('date').replace(' ', ' - ')}
             </div>
           </div>
+
+          <!-- ==========[ COMMENT ]: This contains an overview of what the project was. -->
           <div class="mc-subheader">
             <div>
-              <span class="mc-short">${get('short')}</span>
-            </div>
-            <div class="mc-links">
-              <a href="http://${get('website')}"> ${get('website') ? '<i class="fas fa-link"></i> ' + get('website') : ''}</a> 
-              <a href="${get('download-url')}">${get('download-url') ? '<i class="fas fa-download"></i> Download' : ''}</a>
-              <a href="${get('source-url')}">${get('source-url') ? '<i class="fas fa-code"></i> Source' : ''}</a>
+              <p class="mc-short">${get('short')}</p>
             </div>
           </div>
+
+          <!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
           <div class="mc-proj-body">
             <div class="mc-roles mc-notop ">
               <h4 class="mc-h4">Roles:</h4>
@@ -300,7 +310,14 @@
                 ${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
               </div>
             </div>
-                <img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
+
+            <!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
+            <div class="mc-links">
+              ${get('website') ? `<a class="btn btn-outline-dark" role="button" href="http://${get('website')}"><i class="fas fa-link"></i></a>` : ''} 
+              ${get('download-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('download-url')}"><i class="fas fa-download"></i></a>` : ''}
+              ${get('source-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('source-url')}"><i class="fas fa-code"></i></a>` : ''}
+            </div>
+            <img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
           </div>
         </div>
       </div>`
@@ -437,32 +454,31 @@
 
   <body>
     <!--===[ NAVBAR: ]============================================-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Matthew Cech</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class=""><a href="/">Home</a></li>
-            <li class=""><a href="/skills/">Skills</a></li>
-            <li class=""><a href="/projects/">Showcase</a></li>
-            <li class="active"><a href="/resume/">Projects List (beta)</a></li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand" href="#">Matthew Cech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects/">Showcase <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/resume/">Projects (beta)</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <!--==========================================================-->
-    <span class="mc-vertical-buffer"></span>
+  <div class="mc-body">
 
 
     <!-- General mixitup controls -->
+    <br/>
     <h2 style="text-align: center; margin-bottom: 10px;">Projects Master List</h2>
     <h5 style="text-align: center; margin-bottom: 10px;">An experimental data-driven filtering tool <a href="#"><i class="far fa-question-circle"></i></a></h5>
     <div>
@@ -472,7 +488,7 @@
     </div>
     
     <!-- Generated mixitup filters -->
-    <div>
+    <div style="margin-bottom: 2px;">
       <button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fas fa-filter"></i> Language</button>
       <button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-role-dropdown"><i class="fas fa-filter"></i> Role</button>
       <button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-tool-dropdown"><i class="fas fa-filter"></i> Tool</button>
@@ -493,6 +509,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
     <!--==========================================================-->
+  </div>
   </body>
 
 
