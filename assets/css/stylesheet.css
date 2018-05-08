@@ -82,6 +82,8 @@ body {
 .center-img {
   border-radius: 150px;
   max-width: 250px;
+  margin-right: 10px;
+  margin-left: 10px;
   /*border:5px solid #FFF;*/
 }
 
@@ -98,4 +100,8 @@ body {
   width: 50px;
   height: 40px;
   margin: 2px;
+}
+
+.img-circle {
+  border-radius: 150px;
 }

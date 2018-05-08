@@ -25,27 +25,25 @@
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
   </head>
 
-  <body>
+  <body style="padding-top: 0px;">
     <!--===[ NAVBAR: ]============================================-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Matthew Cech</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class=""><a href="/">Home</a></li>
-            <li class=""><a href="/skills/">Skills</a></li>
-            <li class="active"><a href="/projects/">Showcase</a></li>
-            <li class=""><a href="/resume/">Projects List (beta)</a></li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand" href="#">Matthew Cech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Showcase <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/resume/">Projects (beta)</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <!--==========================================================-->
