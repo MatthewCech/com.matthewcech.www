@@ -118,7 +118,6 @@ resumeJSON =
 				"2018"
 			],
 			"website":"wwwprod5.digipen.edu",
-			"download-url":"https://wwwprod5.digipen.edu/releases/",
 			"image":"dragondrop.png",
 			"teamsize":4,
 			"roles":[
