@@ -1,6 +1,37 @@
 resumeJSON = 
 {
-	"projects": [ 
+	"projects": [
+		{ 
+			"name":"Digital Golems",
+			"short":"2D turn-based puzzle game designed for Android mobile",
+			"date":[
+				"2018",
+				"2019"
+			],
+			"website":"http://loam.app/game",
+			"image":"digital-golems.gif",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+				"Gameplay Programmer",
+			],
+			"languages":[
+				"Csharp",
+			],
+			"tools":[
+				"Unity 3D",
+				"Visual Studio",
+				"Sublime Text",
+				"Git",
+				"Android SDK",
+			],
+			"actions":[
+				"Designed a mobile-first game experience in Unity 2018+ working with Google Play deployment tools",
+				"Worked with 3D Artists to acquire game assets and establish asset requirements",
+				"Developed simple but effective content creation system for fast level creation and iteration"
+			],
+			"description":"Digital Golems draws on interesting health management mechanics of older 2D turn-based puzzle games and brings them to a tough-first environment",
+		},
 		{ 
 			"name":"Bittorio",
 			"short":"3D Competitive Puzzle Game done in Unity 3D, on PC and soon XBox",
@@ -169,7 +200,8 @@ resumeJSON =
 				"Git",
 				"Git flow",
 				"Bootstrap",
-				"Github Pages"
+				"Github Pages",
+				"Cloudflare"
 			],
 		},
 		{ 
@@ -459,6 +491,7 @@ resumeJSON =
 				"Java",
 			],
 			"tools":[
+				"Eclipse",
 				"Netbeans",
 				"Minueto"
 			],
@@ -466,7 +499,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"\"The Portfolio\"",
-			"short":"A guide website and resources to create simple online portfolio websites for low or no cost.",
+			"short":"A guide and free resources for creating simple online portfolio websites for no or low cost",
 			"date":[
 				"2018"
 			],
@@ -485,7 +518,7 @@ resumeJSON =
 				"Git",
 				"Bootstrap",
 				"Github Pages",
-				"Cloudflare"
+				"Cloudflare",
 			],
 			"actions":[
 				"Created approachable guide for creation of online portfolios",
