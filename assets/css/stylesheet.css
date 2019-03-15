@@ -13,7 +13,7 @@ body {
 
 /* The offset I use to define being vertically "centered." */
 .center {
-  height: 13vh;
+  height: 10vh;
   /*vertical-align: middle;*/
 }
 @media (max-width: 768px)
@@ -84,6 +84,7 @@ body {
   max-width: 250px;
   margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: -15px
   /*border:5px solid #FFF;*/
 }
 
