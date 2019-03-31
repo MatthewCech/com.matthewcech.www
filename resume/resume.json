@@ -8,7 +8,7 @@ resumeJSON =
 				"2018",
 				"2019"
 			],
-			"website":"http://loam.app/game",
+			"website":"http://digitalgolems.loam.app/",
 			"image":"digital-golems.gif",
 			"teamsize":1,
 			"roles":[
@@ -31,6 +31,39 @@ resumeJSON =
 				"Developed simple but effective content creation system for fast level creation and iteration"
 			],
 			"description":"Digital Golems draws on interesting health management mechanics of older 2D turn-based puzzle games and brings them to a tough-first environment",
+		},
+		{ 
+			"name":"Kitty Bot",
+			"short":"Multithreaded Discord bot with utility, entertainment, and management features",
+			"date":[
+				"2018",
+				"2019",
+			],
+			"image":"digital-golems.gif",
+			"source-url":"https://github.com/AlexStewartCode/KittyBot",
+			"teamsize":2,
+			"roles":[
+				"Systems Programmer",
+				"System Administrator",
+			],
+			"languages":[
+				"Java",
+				"JavaScript",
+			],
+			"tools":[
+				"Eclipse",
+				"NodeJS",
+				"Sublime Text",
+				"Git",
+				"Discord API",
+				"SQLite",
+			],
+			"actions":[
+				"Designed and implemented a scaleable multithreaded service backed by java 8's threading features",
+				"Worked to coordinate development, feature request, and hosting for a chat bot with several hundred daily active users",
+				"Explored multi-machine server monitoring and database management techniques"
+			],
+			"description":"Kitty Bot is a cat-themed discord chat bot designed to provide users with entertaining image processing feautres, code compilation features, games, poll functionaltiy, and other standard management feautres comperable to slack utility functionality. The bot was designed with scaleable multithreaded command execution in mind, and so it can scale to fully utilize server resources when under heavy load.",
 		},
 		{ 
 			"name":"Bittorio",
@@ -117,6 +150,7 @@ resumeJSON =
 			"short":"A collection of JavaScript game system demos and experiments",
 			"date":[
 				"2017",
+				"2018",
 			],
 			"website":"rw0.pw",
 			"source-url":"https://github.com/MatthewCech/pw.rw0.www",
@@ -181,8 +215,7 @@ resumeJSON =
 			"name":"matthewcech.com",
 			"short":"My playground of a website, and where you are now",
 			"date":[
-				"2017",
-				"2018"
+				"2017-2019",
 			],
 			"website":"matthewcech.com",
 			"source-url":"https://github.com/MatthewCech/com.matthewcech.www",
