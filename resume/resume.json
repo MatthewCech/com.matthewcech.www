@@ -39,7 +39,7 @@ resumeJSON =
 				"2018",
 				"2019",
 			],
-			"image":"digital-golems.gif",
+			"image":"kittybot.jpg",
 			"source-url":"https://github.com/AlexStewartCode/KittyBot",
 			"teamsize":2,
 			"roles":[
