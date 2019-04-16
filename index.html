@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Homepage">
+    <meta name="description" content="I'm a professional and recreational game developer and application programmer that likes creating all sorts of stuff!">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/favicon-folder-open.ico">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
     
     <!-- Title -->
-    <title>Matthew Cech</title>
+    <title>Matthew Cech Portfolio</title>
 
     <!-- External and associated -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">    <!-- Bootstrap core CSS -->
@@ -74,11 +74,11 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <!--li class="nav-item">
             <a class="nav-link" href="/projects/">Showcase</a>
-          </li>
+          </li-->
           <li class="nav-item">
-            <a class="nav-link" href="/resume/">Projects (beta)</a>
+            <a class="nav-link" href="/resume/">Project Viewer</a>
           </li>
         </ul>
       </div>
@@ -89,22 +89,115 @@
     <div class="text-center center container">
       <span class="vertical-buffer"></span>
 
-      <div class="row ">
-        <div class="col-md-2""></div>
-        <div class="col-md-4" >
-          <img class="center-img shade-image img-responsive" style="margin-bottom: -15px;" src="/assets/hs.jpg" alt="No image of my face today, it seems" />
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <img class="center-img shade-image img-fluid" style="max-width: 250px;" src="/assets/hs.jpg" alt="No image of my face today, it seems" />
         </div>
-        <div class="col-md-4" style="margin-top: 35px;">
-        <div class="col-md-2"></div>
+        <div class="col-md-5" style="margin-top: 35px;">
+        <div class="col-md-1"></div>
           <!-- Display common link buttons -->
           <h1>Matthew Cech</h1>
           <p id="rotating-text" class="text-muted">Game Systems Engineer</p>
           <hr>
-          <a class="btn btn-outline-dark btn-xl mc-button" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
-          <a class="btn btn-outline-dark btn-xl mc-button" href="https://www.linkedin.com/in/matthew-cech-019b265b"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-          <a class="btn btn-outline-dark btn-xl mc-button" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+          <a class="btn btn-outline-dark btn-xl" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+          <a class="btn btn-outline-dark btn-xl" href="https://www.linkedin.com/in/matthewcech/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+          <a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+          <a class="btn btn-outline-dark btn-xl" role="button" href="/assets/Matthew_Cech_Resume.pdf" download="Matthew Cech - Resume"><i class="fa fa-download" aria-hidden="true"></i> Resume</a>
         </div>
       </div>
+
+    <!--==========================================================-->
+    <br/>
+    <br/>
+    <br/>
+    <div class="row "> <!-- Starting a new row -->
+      
+        <!-- DRAGONDROP SECTION -->
+        <div class="col-sm-4 vertical-margin">
+         <img class="img-circle" src="/assets/images/dragondrop.png" alt="Cures and curios still" width="150" height="150">
+          <h3>DragonDrop</h3>
+          <p class="text-muted">This Block-based educational IDE was created to make learning programming more accessable. It was developed as part of a paid internship with the DigiPen Research and Development department and was based on popular frameworks and tools including Blockly, NodeJS, and Electron. This software is used during summer camps and classes at DigiPen!</a></p>
+          <h5><i class="fa fa-bar-chart" aria-hidden="true"></i><strong> Project Info:</strong></h5>
+          <table border="1" class="text-muted table-fiddling">
+            <tr>
+              <td class="left-info">Languages:</td>
+              <td>JavaScript, C, HTML/CSS</td>
+            <tr>
+            <tr>
+              <td class="left-info">Platform:</td>
+              <td>PC (Any OS) </td>
+            </tr>
+            <tr>
+              <td class="left-info">Team Size:</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td class="left-info">Roles:</td>
+              <td>Software Engineer<br></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- BITTORIO SECTION -->
+        <div class="col-sm-4 vertical-margin">
+         <img class="img-circle" src="/assets/images/bittorio.gif" alt="Bittorio animated GIF" width="150" height="150">
+          <h3>Bittorio</h3>
+          <p class="text-muted">A 3D puzzle fighter made in Unity as an academic project at DigiPen. This game went to PAX, was nominated for <a href="http://www.igf.com/bittorio">IGF</a>, and is <a href="https://games.digipen.edu/games/bittorio"> available for download</a>! I Worked on Tools, UI, website/marketing, and did network prototyping using SocketIO and a custom NGINX and Node.js server. See more on <a href="https://www.bittorio.com/credits/">the game's website!</a></p>
+          <h5><i class="fa fa-bar-chart" aria-hidden="true"></i><strong> Project Info:</strong></h5>
+          <table border="1" class="text-muted table-fiddling">
+            <tr>
+              <td class="left-info">Languages:</td>
+              <td>C#, JavaScript</td>
+            <tr>
+            <tr>
+              <td class="left-info">Platform:</td>
+              <td>PC (Any OS)</td>
+            </tr>
+            <tr>
+              <td class="left-info">Team Size:</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td class="left-info">Roles:</td>
+              <td>Tools Programmer<br>UI Programmer<br>Network Programmer</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- ASCIIPLAYER SECTION -->
+        <div class="col-sm-4 vertical-margin">
+         <img class="img-circle" src="/assets/images/ASCIIPlayer.gif" alt="Generic placeholder image" width="150" height="150">
+          <h3>ASCIIPlayer</strong></h3>
+          <p class="text-muted">Lightweight cross-platform music player that runs on the command line. The Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames, and the audio playback and analysis is done with FMOD. Check it out on <a href="http://www.asciiplayer.com/">asciiplayer.com</a>, or thumb through the source that's <a href="https://github.com/MatthewCech/ASCIIPlayer">available on GitHub</a>!</p></p>
+          <h5><i class="fa fa-bar-chart" aria-hidden="true"></i><strong> Project Info:</strong></h5>
+          <table border="1" class="text-muted table-fiddling">
+            <tr>
+              <td class="left-info">Languages:</td>
+              <td>C, C++</td>
+            <tr>
+            <tr>
+              <td class="left-info">Platform:</td>
+              <td>PC (Any OS)</td>
+            </tr>
+            <tr>
+              <td class="left-info">Team Size:</td>
+              <td>Solo</td>
+            </tr>
+            <tr>
+              <td class="left-info">Roles:</td>
+              <td>Generalist Programmer</td>
+            </tr>
+          </table>
+        </div>     
+      </div>
+      <br/>
+      <br/>
+      <a class="btn btn-outline-dark btn-xl" role="button" href="/resume/">More projects...</a>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
     <!--==========================================================-->
 

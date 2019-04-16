@@ -1,6 +1,72 @@
 resumeJSON = 
 {
-	"projects": [ 
+	"projects": [
+		{ 
+			"name":"Digital Golems",
+			"short":"2D turn-based puzzle game designed for Android mobile",
+			"date":[
+				"2018",
+				"2019"
+			],
+			"website":"digitalgolems.loam.app",
+			"image":"digital-golems.gif",
+			"teamsize":1,
+			"roles":[
+				"Systems Programmer",
+				"Gameplay Programmer",
+			],
+			"languages":[
+				"Csharp",
+			],
+			"tools":[
+				"Unity 3D",
+				"Visual Studio",
+				"Sublime Text",
+				"Git",
+				"Android SDK",
+			],
+			"actions":[
+				"Designed a mobile-first game experience in Unity 2018+ working with Google Play deployment tools",
+				"Worked with 3D Artists to acquire game assets and establish asset requirements",
+				"Developed simple but effective content creation system for fast level creation and iteration"
+			],
+			"description":"Digital Golems draws on interesting health management mechanics of older 2D turn-based puzzle games and brings them to a tough-first environment",
+		},
+		{ 
+			"name":"Kitty Bot",
+			"short":"Multithreaded Discord bot with utility, entertainment, and management features.",
+			"date":[
+				"2018",
+				"2019",
+			],
+			"image":"kittybot.jpg",
+			"website":"https://kittybot.net",
+			"source-url":"https://github.com/AlexStewartCode/KittyBot",
+			"teamsize":3,
+			"roles":[
+				"Generalist Programmer",
+			],
+			"languages":[
+				"Java",
+				"JavaScript",
+				"HTMLCSS",
+			],
+			"tools":[
+				"Eclipse",
+				"NodeJS",
+				"Sublime Text",
+				"Git",
+				"Discord API",
+				"SQLite",
+			],
+			"actions":[
+				"Designed and implemented a scaleable multithreaded service backed by java 8's threading features",
+				"Worked to coordinate development, feature request, and hosting for a chat bot with several hundred daily active users",
+				"Explored multi-machine server monitoring and database management techniques",
+				"Created showcase website with monitoring, blog, and help features"
+			],
+			"description":"Kitty Bot is a cat-themed discord chat bot designed to provide users with entertaining image processing feautres, code compilation features, games, poll functionaltiy, and other standard management feautres comperable to slack utility functionality. The bot was designed with scaleable multithreaded command execution in mind, and so it can scale to fully utilize server resources when under heavy load.",
+		},
 		{ 
 			"name":"Bittorio",
 			"short":"3D Competitive Puzzle Game done in Unity 3D, on PC and soon XBox",
@@ -8,7 +74,7 @@ resumeJSON =
 				"2016",
 				"2017"
 			],
-			"website":"Bittor.io",
+			"website":"bittorio.com",
 			"download-url":"https://games.digipen.edu/games/bittorio",
 			"image":"bittorio.gif",
 			"teamsize":9,
@@ -86,6 +152,7 @@ resumeJSON =
 			"short":"A collection of JavaScript game system demos and experiments",
 			"date":[
 				"2017",
+				"2018",
 			],
 			"website":"rw0.pw",
 			"source-url":"https://github.com/MatthewCech/pw.rw0.www",
@@ -118,7 +185,6 @@ resumeJSON =
 				"2018"
 			],
 			"website":"wwwprod5.digipen.edu",
-			"download-url":"https://wwwprod5.digipen.edu/releases/",
 			"image":"dragondrop.png",
 			"teamsize":4,
 			"roles":[
@@ -151,8 +217,7 @@ resumeJSON =
 			"name":"matthewcech.com",
 			"short":"My playground of a website, and where you are now",
 			"date":[
-				"2017",
-				"2018"
+				"2017-2019",
 			],
 			"website":"matthewcech.com",
 			"source-url":"https://github.com/MatthewCech/com.matthewcech.www",
@@ -170,7 +235,8 @@ resumeJSON =
 				"Git",
 				"Git flow",
 				"Bootstrap",
-				"Github Pages"
+				"Github Pages",
+				"Cloudflare"
 			],
 		},
 		{ 
@@ -218,19 +284,22 @@ resumeJSON =
 			"description":"Mellow 2D puzzle-platformer in which platforms have to be manipulated to finish building the two parts of a level. This project had me working primarily as a gameplay programmer, and introduced me to a variety of event-driven design styles.",
 		},
 		{ 
-			"name":"Time Check",
-			"short":"Time tracking and estimation prototype",
+			"name":"Firetime",
+			"short":"Time tracking and estimation software: Beta desktop application and web proof-of-concept",
 			"date":[
 				"2016"
 			],
-			"image":"time-check.gif",
-			"source-url":"https://github.com/MatthewCech/Time-Check",
+			"image":"firetime.png",
+			"website":"matthewcech.github.io/Firetime/",
+			"source-url":"https://github.com/MatthewCech/Firetime",
 			"teamsize":1,
 			"roles":[
 				"Tools Programmer",
 			],
 			"languages":[
 				"Csharp",
+				"JavaScript",
+				"HTMLCSS"
 			],
 			"tools":[
 				"Visual Studio",
@@ -304,7 +373,7 @@ resumeJSON =
 			"teamsize":1,
 			"roles":[
 				"Systems Programmer",
-				"Graphcis Programmer",
+				"Graphics Programmer",
 			],
 			"languages":[
 				"Cpp",
@@ -460,10 +529,41 @@ resumeJSON =
 				"Java",
 			],
 			"tools":[
+				"Eclipse",
 				"Netbeans",
 				"Minueto"
 			],
 			"description":"One of the larger solo engines I created when I just started learning about game engine architecture! Used minueto (http://www.cs.mcgill.ca/~minueto/), a basic Java game framework, and I ended up implementing particles, effects, and engine structure over it!",
-		}
+		},
+		{ 
+			"name":"\"The Portfolio\"",
+			"short":"A guide and free resources for creating simple online portfolio websites for no or low cost",
+			"date":[
+				"2018"
+			],
+			"website":"theportfolio.pw/",
+			"source-url":"https://github.com/MatthewCech/The-Portfolio",
+			"image":"theportfolio.png",
+			"teamsize":1,
+			"roles":[
+				"Web Developer"
+			],
+			"languages":[
+				"HTMLCSS",
+			],
+			"tools":[
+				"Sublime Text",
+				"Git",
+				"Bootstrap",
+				"Github Pages",
+				"Cloudflare",
+			],
+			"actions":[
+				"Created approachable guide for creation of online portfolios",
+				"Documented modern techniques for creating "
+			],
+			"description":"An online website guide and collection of free portfolio site designs for low to no cost portfolio creation.",
+		},
+
 	],
 };
