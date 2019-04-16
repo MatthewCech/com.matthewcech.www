@@ -285,7 +285,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Firetime",
-			"short":"Time tracking and estimation software: Beta desktop application and web proof-of-concept",
+			"short":"Time tracking and estimation software with C# desktop application and online proof-of-concept",
 			"date":[
 				"2016"
 			],
