@@ -8,7 +8,7 @@ resumeJSON =
 				"2018",
 				"2019"
 			],
-			"website":"http://digitalgolems.loam.app/",
+			"website":"digitalgolems.loam.app",
 			"image":"digital-golems.gif",
 			"teamsize":1,
 			"roles":[
@@ -34,21 +34,22 @@ resumeJSON =
 		},
 		{ 
 			"name":"Kitty Bot",
-			"short":"Multithreaded Discord bot with utility, entertainment, and management features",
+			"short":"Multithreaded Discord bot with utility, entertainment, and management features.",
 			"date":[
 				"2018",
 				"2019",
 			],
 			"image":"kittybot.jpg",
+			"website":"https://kittybot.net",
 			"source-url":"https://github.com/AlexStewartCode/KittyBot",
-			"teamsize":2,
+			"teamsize":3,
 			"roles":[
-				"Systems Programmer",
-				"System Administrator",
+				"Generalist Programmer",
 			],
 			"languages":[
 				"Java",
 				"JavaScript",
+				"HTMLCSS",
 			],
 			"tools":[
 				"Eclipse",
@@ -61,7 +62,8 @@ resumeJSON =
 			"actions":[
 				"Designed and implemented a scaleable multithreaded service backed by java 8's threading features",
 				"Worked to coordinate development, feature request, and hosting for a chat bot with several hundred daily active users",
-				"Explored multi-machine server monitoring and database management techniques"
+				"Explored multi-machine server monitoring and database management techniques",
+				"Created showcase website with monitoring, blog, and help features"
 			],
 			"description":"Kitty Bot is a cat-themed discord chat bot designed to provide users with entertaining image processing feautres, code compilation features, games, poll functionaltiy, and other standard management feautres comperable to slack utility functionality. The bot was designed with scaleable multithreaded command execution in mind, and so it can scale to fully utilize server resources when under heavy load.",
 		},
@@ -72,7 +74,7 @@ resumeJSON =
 				"2016",
 				"2017"
 			],
-			"website":"Bittor.io",
+			"website":"bittorio.com",
 			"download-url":"https://games.digipen.edu/games/bittorio",
 			"image":"bittorio.gif",
 			"teamsize":9,
@@ -282,19 +284,22 @@ resumeJSON =
 			"description":"Mellow 2D puzzle-platformer in which platforms have to be manipulated to finish building the two parts of a level. This project had me working primarily as a gameplay programmer, and introduced me to a variety of event-driven design styles.",
 		},
 		{ 
-			"name":"Time Check",
-			"short":"Time tracking and estimation prototype",
+			"name":"Firetime",
+			"short":"Time tracking and estimation software: Beta desktop application and web proof-of-concept",
 			"date":[
 				"2016"
 			],
-			"image":"time-check.gif",
-			"source-url":"https://github.com/MatthewCech/Time-Check",
+			"image":"firetime.png",
+			"website":"matthewcech.github.io/Firetime/",
+			"source-url":"https://github.com/MatthewCech/Firetime",
 			"teamsize":1,
 			"roles":[
 				"Tools Programmer",
 			],
 			"languages":[
 				"Csharp",
+				"JavaScript",
+				"HTMLCSS"
 			],
 			"tools":[
 				"Visual Studio",
