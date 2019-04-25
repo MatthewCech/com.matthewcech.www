@@ -16,7 +16,7 @@ body {
   height: 10vh;
   /*vertical-align: middle;*/
 }
-@media (max-width: 768px)
+@media (max-width: 767px)
 {
   .center {
     height: 0vh;
@@ -80,7 +80,7 @@ body {
 }
 
 .center-img {
-  border-radius: 150px;
+  /*border-radius: 150px;*/
   max-width: 250px;
   margin-right: 10px;
   margin-left: 10px;
