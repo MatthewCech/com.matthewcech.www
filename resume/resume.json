@@ -2,6 +2,32 @@ resumeJSON =
 {
 	"projects": [
 		{ 
+			"name":"URI Binder",
+			"short":"A tool that makes it easy to create URI schemes for existing executables",
+			"date":[
+				"2019"
+			],
+			"download-url":"https://github.com/MatthewCech/URI-Binder/releases",
+			"source-url":"https://github.com/MatthewCech/URI-Binder",
+			"image":"uribinder.png",
+			"teamsize":1,
+			"roles":[
+				"Tools Programmer",
+			],
+			"languages":[
+				"Csharp"
+			],
+			"tools":[
+				"Visual Studio",
+				".NET",
+				"Git"
+			],
+			"actions":[
+				"Explored Windows registry limitations and learned about interaction techniques",
+			],
+			"description":"URI Binder is an easy-to-use .NET tool for windows to help create a custom URI for an existing application.",
+		},
+		{ 
 			"name":"Digital Golems",
 			"short":"2D turn-based puzzle game designed for Android mobile",
 			"date":[
@@ -34,7 +60,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Kitty Bot",
-			"short":"Multithreaded Discord bot with utility, entertainment, and management features.",
+			"short":"Multithreaded Discord bot with utility, entertainment, and management features",
 			"date":[
 				"2018",
 				"2019",
@@ -159,7 +185,6 @@ resumeJSON =
 			"image":"rw0.gif",
 			"teamsize":1,
 			"roles":[
-				"Systems Programmer",
 				"Gameplay Programmer",
 				"Web Developer",
 			],
@@ -188,7 +213,7 @@ resumeJSON =
 			"image":"dragondrop.png",
 			"teamsize":4,
 			"roles":[
-				"Software Engineer",
+				"Generalist Programmer",
 			],
 			"languages":[
 				"JavaScript",
@@ -315,7 +340,7 @@ resumeJSON =
 				"2015",
 				"2016"
 			],
-			"image":"grizzy_beats.gif",
+			"image":"grizzybeats.gif",
 			"teamsize":6,
 			"roles":[
 				"Engine Programmer",
@@ -365,9 +390,10 @@ resumeJSON =
 			"name":"Console Utils",
 			"short":"Accessable C++ console drawing and debug utilities",
 			"date":[
-				"2016-2018"
+				"2016",
+				"2018"
 			],
-			"image":"ConsoleUtils.png",
+			"image":"consoleutils.png",
 			"download-url":"https://github.com/MatthewCech/Console-Utils",
 			"source-url":"https://github.com/MatthewCech/Console-Utils",
 			"teamsize":1,
@@ -400,7 +426,6 @@ resumeJSON =
 			"roles":[
 				"Systems Programmer",
 				"Audio Programmer",
-				"Graphics Programmer"
 			],
 			"languages":[
 				"Cpp",
