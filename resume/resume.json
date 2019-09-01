@@ -142,6 +142,7 @@ resumeJSON =
 				"2018"
 			],
 			"website":"curesandcurios.com",
+			"download-url":"https://store.steampowered.com/app/1141740/",
 			"image":"cauldron.png",
 			"teamsize":16,
 			"roles":[
