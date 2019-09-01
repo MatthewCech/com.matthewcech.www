@@ -1,165 +1,179 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <!-- Establish meta information -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="I'm a professional and recreational game developer and application programmer that likes creating all sorts of stuff!">
+	<head>
+	<!-- Establish meta information -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="I'm a professional and recreational game developer and application programmer that likes creating all sorts of stuff!">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/favicon-folder-open.ico">
-    
-    <!-- Stylesheet loading -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/defaults.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    
-    <!-- Title -->
-    <title>Matthew Cech Portfolio</title>
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="/assets/favicon-folder-open.ico">
+	
+	<!-- Stylesheet loading -->
+	<link rel="stylesheet" type="text/css" href="/assets/css/defaults.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
+	
+	<!-- Title -->
+	<title>Matthew Cech Portfolio</title>
 
-    <!-- External and associated -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">    <!-- Bootstrap core CSS -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-  </head>
-  
-  <!-- Random text script -->
-  <script type='text/javascript'>
-  
-  var randNum = 0;             // Current random number, expose in case access is needed.
-  var prev = 0;                // Previous to prevent same from displaying twice.
-  var titleSwapDelayMS = 4000; // Delay between cycling the titles below the image, in milliseconds
+	<!-- External and associated -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">    <!-- Bootstrap core CSS -->
+	<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+	</head>
+	
+	<!-- Random text script -->
+	<script type='text/javascript'>
+	let randNum = 0;             
+	let prev = 0;                
+	let titleSwapDelayMS = 4000; 
 
-  // Titles to cycle through
-  var randomTopText = [ 
-    "Generalist Game Programmer"
-  , "Code Sculptor"
-  , "Probably Holding Coffee"
-  , "Networking Experimentalist"
-  , "Game Engine Wrestler"
-  , "Digital Storyteller"
-  , "Jack of Increasingly Many Trades"
-  , "Game Systems Engineer"
-  ];
-  
+	// Titles to cycle through
+	let randomTopText = [ 
+	"Generalist Game Programmer"
+	, "Code Sculptor"
+	, "Probably Holding Coffee"
+	, "Networking Experimentalist"
+	, "Game Engine Wrestler"
+	, "Digital Storyteller"
+	, "Jack of Increasingly Many Trades"
+	, "Game Systems Engineer"
+	];
+	
 
-  // Select randomly
-  function GetRandText() {
-    prev = randNum;
-    while(randNum == prev) {
-      randNum = Math.floor(Math.random() * randomTopText.length);
-    }
+	// Select randomly
+	function GetRandText() {
+		prev = randNum;
+		while(randNum == prev) {
+			randNum = Math.floor(Math.random() * randomTopText.length);
+		}
 
-    document.getElementById('rotating-text').innerHTML = randomTopText[randNum];
-  }
-  
-  // Change text every few seconds
-  window.setInterval(function(){
-    GetRandText();
-  }, titleSwapDelayMS);
-  </script>
-  
+		document.getElementById('rotating-text').innerHTML = randomTopText[randNum];
+	}
+	
+	// Change text every few seconds
+	window.setInterval(function(){
+		GetRandText();
+	}, titleSwapDelayMS);
+	</script>
+	
+	<style>
+		.mc-shade {
+			filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.3));
+		}
+	</style>
 
-  <body style="padding-top: 0px;">
-    <!--===[ NAVBAR: ]============================================-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <a class="navbar-brand" href="#">Matthew Cech</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <!--li class="nav-item">
-            <a class="nav-link" href="/projects/">Showcase</a>
-          </li-->
-          <li class="nav-item">
-            <a class="nav-link" href="/resume/">Project Viewer</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!--==========================================================-->
+	<body style="padding-top: 0px;">
+	<!--===[ NAVBAR: ]============================================-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+		<a class="navbar-brand" href="#">Matthew Cech</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<!--li class="nav-item">
+			<a class="nav-link" href="/projects/">Showcase</a>
+			</li-->
+			<li class="nav-item">
+			<a class="nav-link" href="/resume/">Project Viewer</a>
+			</li>
+		</ul>
+		</div>
+	</nav>
+	<!--==========================================================-->
 
-    <!--===[ CONTENT: ]===========================================-->
-    <div class="text-center center container">
-      <span class="vertical-buffer"></span>
+	<!--===[ CONTENT: ]===========================================-->
+	<div class="text-center center container">
+		<span class="vertical-buffer"></span>
 
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-5">
-          <img class="center-img shade-image img-fluid" style="max-width: 250px;  filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.3));" src="/assets/headshot-slant.png" alt="A smiling, upbeat picture of Matthew" />
-        </div>
-        <div class="col-md-5" style="margin-top: 35px;">
-        
+		<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-5">
+			<img class="center-img shade-image img-fluid" style="max-width: 250px;  filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.3));" src="/assets/headshot-slant.png" alt="A smiling, upbeat picture of Matthew" />
+		</div>
+		<div class="col-md-5" style="margin-top: 35px;">
+		
 
-          <!-- Name & Serious title that becomes a silly title after 4 seconds -->
-          <h1>Matthew Cech</h1>
-          <p id="rotating-text" class="text-muted">Generalist Game Programmer</p>
-          <hr>
+			<!-- Name & Serious title that becomes a silly title after 4 seconds -->
+			<h1>Matthew Cech</h1>
+			<p id="rotating-text" class="text-muted">Generalist Game Programmer</p>
+			<hr>
 
-          <!-- Links -->
-          <a class="btn btn-outline-dark btn-xl" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
-          <a class="btn btn-outline-dark btn-xl" href="https://www.linkedin.com/in/matthewcech/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-          <a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-          <a class="btn btn-outline-dark btn-xl" href="https://twitter.com/MatthewCech"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-        </div>
-        <div class="col-md-1"></div>
-      </div>
+			<!-- Links -->
+			<a class="btn btn-outline-dark btn-xl" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+			<a class="btn btn-outline-dark btn-xl" href="https://www.linkedin.com/in/matthewcech/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+			<a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+			<a class="btn btn-outline-dark btn-xl" href="https://twitter.com/MatthewCech"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+		</div>
+		<div class="col-md-1"></div>
+		</div>
 
-      <!--==========================================================-->
-      <br/>
-      <br/>
-      <br/>
-      <div class="row"> <!-- Starting a new row -->
+		<!--==========================================================-->
+		<br/>
+		<br/>
+		<br/>
+		<div class="row"> <!-- Starting a new row -->
 
-        <!-- SECTION -->
-        <div class="col-md vertical-margin">
-         <img class="img-circle" src="/assets/images/dragondrop.png" alt="Cures and curios still" width="150" height="150">
-          <h3>DragonDrop</h3>
-          <p class="text-muted text-left">This Block-based educational IDE was created to make learning programming more accessible that I worked on for the DigiPen Research and Development department! The software was based on popular frameworks and tools including Blockly, NodeJS, and Electron. This software is used during summer camps and classes at DigiPen!</a></p>
-        </div>
+		<!-- SECTION -->
+		<div class="col-lg vertical-margin">
+			<img class="mc-shade" src="/assets/images/ksp2.png" alt="The logo for kerbal space program 2" width="150">
+			<br/>
+			<br/>
+			<h3>KSP 2</strong></h3>
+			<p><stong>2018 - Present</stong></p>
+			<p class="text-muted text-left">Kerbal Space Program 2 the title I've worked on at Star Theory! It's a sandbox game that secretly teaches you about space travel and orbital mechanics that we develop and is published by Private Division. I've worn many hats over the course of this project, from working on startup systems to serialization, the in-game content editor, and more!</p>
+		</div>
+		<br/>
 
-        <!-- SECTION -->
-        <div class="col-md vertical-margin">
-         <img class="img-circle" src="/assets/images/bittorio.gif" alt="Bittorio animated GIF" width="150" height="150">
-          <h3>Bittorio</h3>
-          <p class="text-muted text-left">A 3D puzzle fighter made in Unity as an academic project at DigiPen. This game went to PAX, was nominated for <a href="http://www.igf.com/bittorio">IGF</a>, and is <a href="https://games.digipen.edu/games/bittorio"> available for download</a>! I Worked on Tools, UI, website/marketing, and did network prototyping using SocketIO and a custom NGINX and Node.js server. See more on <a href="https://www.bittorio.com/credits/">the game's website!</a></p>
-        </div>
+		<!-- SECTION -->
+		<div class="col-lg vertical-margin">
+			<img class="mc-shade" src="/assets/images/dragondrop.png" alt="Cures and curios still" width="150" height="150">
+			<br/>
+			<br/>
+			<h3>DragonDrop</h3>
+			<p><stong>2018</stong></p>
+			<p class="text-muted text-left">This Block-based educational IDE was created to make learning programming more accessible that I worked on for the DigiPen Research and Development department! The software was based on popular frameworks and tools including Blockly, NodeJS, and Electron. This software is used during summer camps and classes at DigiPen!</a></p>
+
+		</div>
+		<br/>
+
+		<!-- SECTION -->
+		<div class="col-lg vertical-margin">
+			<img class="mc-shade" style="border-radius: 15px;" src="/assets/images/bittorio.gif" alt="Bittorio animated GIF" width="150" height="150">
+			<br/>
+			<br/>
+			<h3>Bittorio</h3>
+			<p><stong>2016 - 2018</stong></p>
+			<p class="text-muted text-left">A 3D puzzle fighter made in Unity as an academic project at DigiPen. This game went to PAX, was nominated for <a href="http://www.igf.com/bittorio">IGF</a>, and is <a href="https://games.digipen.edu/games/bittorio"> available for download</a>! I Worked on Tools, UI, website/marketing, and did network prototyping using SocketIO and a custom NGINX and Node.js server. See more on <a href="https://www.bittorio.com/credits/">the game's website!</a></p>
+		</div>
+		<br/>
+
+		</div>
+		<br/>
+		<a class="btn btn-outline-dark btn-xl" role="button" href="/resume/">More projects...</a>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+	</div>
+	<!--==========================================================-->
 
 
-        <!-- SECTION -->
-        <div class="col-md vertical-margin">
-         <img class="img-circle" src="/assets/images/ASCIIPlayer.gif" alt="Generic placeholder image" width="150" height="150">
-          <h3>ASCIIPlayer</strong></h3>
-          <p class="text-muted text-left">Lightweight cross-platform music player that runs on the command line. The Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames, and the audio playback and analysis is done with FMOD. Check it out on <a href="http://www.asciiplayer.com/">asciiplayer.com</a>, or thumb through the source that's <a href="https://github.com/MatthewCech/ASCIIPlayer">available on GitHub</a>!</p></p>
-        </div>   
+	<!--===[ BOOTSTRAP CORE JS: ]=================================-->    
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
+	<script src="/assets/js/bootstrap.min.js"></script>
 
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+	<!--==========================================================-->
 
-      </div>
-      <br/>
-      <br/>
-      <a class="btn btn-outline-dark btn-xl" role="button" href="/resume/">More projects...</a>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-    </div>
-    <!--==========================================================-->
-
-
-    <!--===[ BOOTSTRAP CORE JS: ]=================================-->    
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <!--==========================================================-->
-
-  </body>
+	</body>
 </html>
