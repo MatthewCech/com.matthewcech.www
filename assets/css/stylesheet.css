@@ -11,24 +11,11 @@ body {
   border-width: 0;
 }
 
-/* The offset I use to define being vertically "centered." */
-.center {
-  height: 10vh;
-  /*vertical-align: middle;*/
-}
-@media (max-width: 767px)
-{
-  .center {
-    height: 0vh;
-  }
-}
-
 .link-padding
 {
   margin-right: 5px;
   margin-left: 5px;
 }
-
 
 /* For correcting the vertical height between elements, useful for mobile. */
 .vertical-margin {
@@ -43,7 +30,6 @@ body {
   /*font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;*/
   font-size: 2em
 }
-
 
 .btn-mod-primary {
   text-align: center;
@@ -92,11 +78,17 @@ body {
   /*box-shadow: 3px 3px 4px #282835;*/
 }
 
-.vertical-buffer {
-  display: inline-block;
-  height: 100%;
-}
-
 .img-circle {
   border-radius: 150px;
+}
+
+.mc-top-margin {
+  margin-top: 70px;
+}
+
+@media (max-width: 767px)
+{
+  .mc-top-margin {
+    height: 20px;
+  }
 }

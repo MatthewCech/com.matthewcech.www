@@ -18,8 +18,7 @@
 	<title>Matthew Cech Portfolio</title>
 
 	<!-- External and associated -->
-	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">    <!-- Bootstrap core CSS -->
-	<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 	</head>
@@ -71,113 +70,75 @@
 	</style>
 
 	<body style="padding-top: 0px;">
-	<!--===[ NAVBAR: ]============================================-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-		<a class="navbar-brand" href="#">Matthew Cech</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-		<ul class="navbar-nav">
-			<li class="nav-item active">
-			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			</li>
-			<!--li class="nav-item">
-			<a class="nav-link" href="/projects/">Showcase</a>
-			</li-->
-			<li class="nav-item">
-			<a class="nav-link" href="/resume/">Project Viewer</a>
-			</li>
-		</ul>
+		<div class="mc-top-margin text-center center container">
+			<div>
+				<img class="center-img shade-image img-fluid" style="max-width: 250px;  filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.3));" src="/assets/headshot-slant.png" alt="A smiling, upbeat picture of Matthew"/>
+
+				<div style="margin-top: 35px;">
+					<!-- Name & Serious title that becomes a silly title after 4 seconds -->
+					<h1>Matthew Cech</h1>
+					<p id="rotating-text" class="text-muted">Generalist Game Programmer</p>
+
+					<!-- Links -->
+					<a class="btn btn-outline-dark btn-xl" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+					<a class="btn btn-outline-dark btn-xl" href="https://www.linkedin.com/in/matthewcech/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+					<a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+					<a class="btn btn-outline-dark btn-xl" href="https://twitter.com/MatthewCech"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+					<hr style="max-width: 100px;">
+				</div>
+				<a class="btn btn-outline-dark btn-xl" role="button" href="/list/"><i class="fa fa-th"></i></i>&nbsp;List of Many Projects</a>
+			</div>
+			<br/>
+			<div class="row"> <!-- Starting a new row -->
+
+				<!-- SECTION -->
+				<div class="col-lg vertical-margin">
+					<img class="mc-shade" src="/assets/images/ksp2.png" alt="The logo for kerbal space program 2" width="150">
+					<br/>
+					<br/>
+					<h3>KSP 2</strong></h3>
+					<p><stong>2018 - Present</stong></p>
+					<p class="text-muted text-left">Kerbal Space Program 2 the title I've worked on at Star Theory! It's a sandbox game that secretly teaches you about space travel and orbital mechanics that we develop and is published by Private Division. I've worn many hats over the course of this project, from working on startup systems to serialization, the in-game content editor, and more! You can check out the site and forum on the <a href="https://www.kerbalspaceprogram.com">KSP Website</a>!</p>
+				</div>
+				<br/>
+
+				<!-- SECTION -->
+				<div class="col-lg vertical-margin">
+					<img class="mc-shade" src="/assets/images/dragondrop.png" alt="Cures and curios still" width="150" height="150">
+					<br/>
+					<br/>
+					<h3>DragonDrop</h3>
+					<p><stong>2018</stong></p>
+					<p class="text-muted text-left">This Block-based educational IDE was created to make learning programming more accessible that I worked on for the DigiPen Research and Development department! The software was based on popular frameworks and tools including Blockly, NodeJS, and Electron. This software is used during summer camps and classes at DigiPen!</a></p>
+				</div>
+				<br/>
+
+				<!-- SECTION -->
+				<div class="col-lg vertical-margin">
+					<img class="mc-shade" style="border-radius: 15px;" src="/assets/images/bittorio.gif" alt="Bittorio animated GIF" width="150" height="150">
+					<br/>
+					<br/>
+					<h3>Bittorio</h3>
+					<p><stong>2016 - 2018</stong></p>
+					<p class="text-muted text-left">A 3D puzzle fighter made in Unity as an academic project at DigiPen, featuring both single and local multiplayer! This game went to PAX, was nominated for <a href="http://www.igf.com/bittorio">IGF</a>, and is <a href="https://games.digipen.edu/games/bittorio"> available for download</a>! I Worked on Tools, UI, website/marketing, and did feature prototyping using SocketIO and a custom NGINX and Node.js server. See more on <a href="https://www.bittorio.com/credits/">the game's website!</a></p>
+				</div>
+			<br/>
+
+			</div>
+			<br/>
+			<br/>
+			<br/>
 		</div>
-	</nav>
-	<!--==========================================================-->
 
-	<!--===[ CONTENT: ]===========================================-->
-	<div class="text-center center container">
-		<span class="vertical-buffer"></span>
+		<!--===[ BOOTSTRAP CORE JS: ]=================================-->    
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
+		<script src="/assets/js/bootstrap.min.js"></script>
 
-		<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-5">
-			<img class="center-img shade-image img-fluid" style="max-width: 250px;  filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.3));" src="/assets/headshot-slant.png" alt="A smiling, upbeat picture of Matthew" />
-		</div>
-		<div class="col-md-5" style="margin-top: 35px;">
-		
-
-			<!-- Name & Serious title that becomes a silly title after 4 seconds -->
-			<h1>Matthew Cech</h1>
-			<p id="rotating-text" class="text-muted">Generalist Game Programmer</p>
-			<hr>
-
-			<!-- Links -->
-			<a class="btn btn-outline-dark btn-xl" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
-			<a class="btn btn-outline-dark btn-xl" href="https://www.linkedin.com/in/matthewcech/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-			<a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-			<a class="btn btn-outline-dark btn-xl" href="https://twitter.com/MatthewCech"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-		</div>
-		<div class="col-md-1"></div>
-		</div>
-
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 		<!--==========================================================-->
-		<br/>
-		<br/>
-		<br/>
-		<div class="row"> <!-- Starting a new row -->
-
-		<!-- SECTION -->
-		<div class="col-lg vertical-margin">
-			<img class="mc-shade" src="/assets/images/ksp2.png" alt="The logo for kerbal space program 2" width="150">
-			<br/>
-			<br/>
-			<h3>KSP 2</strong></h3>
-			<p><stong>2018 - Present</stong></p>
-			<p class="text-muted text-left">Kerbal Space Program 2 the title I've worked on at Star Theory! It's a sandbox game that secretly teaches you about space travel and orbital mechanics that we develop and is published by Private Division. I've worn many hats over the course of this project, from working on startup systems to serialization, the in-game content editor, and more! You can check out the site and forum on the <a href="https://www.kerbalspaceprogram.com">KSP Website</a>!</p>
-		</div>
-		<br/>
-
-		<!-- SECTION -->
-		<div class="col-lg vertical-margin">
-			<img class="mc-shade" src="/assets/images/dragondrop.png" alt="Cures and curios still" width="150" height="150">
-			<br/>
-			<br/>
-			<h3>DragonDrop</h3>
-			<p><stong>2018</stong></p>
-			<p class="text-muted text-left">This Block-based educational IDE was created to make learning programming more accessible that I worked on for the DigiPen Research and Development department! The software was based on popular frameworks and tools including Blockly, NodeJS, and Electron. This software is used during summer camps and classes at DigiPen!</a></p>
-		</div>
-		<br/>
-
-		<!-- SECTION -->
-		<div class="col-lg vertical-margin">
-			<img class="mc-shade" style="border-radius: 15px;" src="/assets/images/bittorio.gif" alt="Bittorio animated GIF" width="150" height="150">
-			<br/>
-			<br/>
-			<h3>Bittorio</h3>
-			<p><stong>2016 - 2018</stong></p>
-			<p class="text-muted text-left">A 3D puzzle fighter made in Unity as an academic project at DigiPen, featuring both single and local multiplayer! This game went to PAX, was nominated for <a href="http://www.igf.com/bittorio">IGF</a>, and is <a href="https://games.digipen.edu/games/bittorio"> available for download</a>! I Worked on Tools, UI, website/marketing, and did feature prototyping using SocketIO and a custom NGINX and Node.js server. See more on <a href="https://www.bittorio.com/credits/">the game's website!</a></p>
-		</div>
-		<br/>
-
-		</div>
-		<br/>
-		<a class="btn btn-outline-dark btn-xl" role="button" href="/resume/">More projects...</a>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-	</div>
-	<!--==========================================================-->
-
-
-	<!--===[ BOOTSTRAP CORE JS: ]=================================-->    
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
-	<script src="/assets/js/bootstrap.min.js"></script>
-
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
-	<!--==========================================================-->
 
 	</body>
 </html>
