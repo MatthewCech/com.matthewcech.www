@@ -29,9 +29,9 @@ resumeJSON =
 				"Slack",
 			],
 			"actions":[
-				"Explored Windows registry limitations and learned about interaction techniques",
+				"",
 			],
-			"description":"URI Binder is an easy-to-use .NET tool for windows to help create a custom URI for an existing application.",
+			"description":"The sequel to Kerbal Space Program, a game about sending small green creatures called \"Kerbals\" into space! It's a space sandbox game that teaches you about orbital mechanics and near-future rocket tech - Private Division is our publisher. I've worn many hats over the course of this project, from working on startup systems to serialization, the in-game content editor, and more!"
 		},
 		{ 
 			"name":"URI Binder",
@@ -242,8 +242,9 @@ resumeJSON =
 			"date":[
 				"2018"
 			],
-			"website-url":"wwwprod5.digipen.edu",
+			"website-url":"https://dragondropteam.github.io",
 			"image":"dragondrop.png",
+			"company":"<a href=\"https://www.digipen.edu\">DigiPen R&D",
 			"teamsize":4,
 			"roles":[
 				"Junior Software Engineer",
