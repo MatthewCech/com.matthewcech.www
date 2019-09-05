@@ -3,7 +3,7 @@ resumeJSON =
 	"projects": [
 		{ 
 			"name":"KSP 2",
-			"short":"The space simulation and rocket building game game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbidal mechanics! ",
+			"short":"A space simulation and rocket building game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbidal mechanics! ",
 			"date":[
 				"2018",
 				"2019"
@@ -25,7 +25,8 @@ resumeJSON =
 				"Visual Studio",
 				"Jira",
 				"Perforce",
-				"Zoom"
+				"Zoom",
+				"Slack",
 			],
 			"actions":[
 				"Explored Windows registry limitations and learned about interaction techniques",
@@ -43,7 +44,7 @@ resumeJSON =
 			"image":"uribinder.png",
 			"teamsize":1,
 			"roles":[
-				"Tools Programmer",
+				"Tools Engineer",
 			],
 			"languages":[
 				"Csharp"
@@ -69,8 +70,8 @@ resumeJSON =
 			"image":"digital-golems.gif",
 			"teamsize":1,
 			"roles":[
-				"Systems Programmer",
-				"Gameplay Programmer",
+				"Systems Engineer",
+				"Gameplay Engineer",
 			],
 			"languages":[
 				"Csharp",
@@ -101,7 +102,7 @@ resumeJSON =
 			"source-url":"https://github.com/AlexStewartCode/KittyBot",
 			"teamsize":3,
 			"roles":[
-				"Generalist Programmer",
+				"Generalist",
 			],
 			"languages":[
 				"Java",
@@ -136,9 +137,9 @@ resumeJSON =
 			"image":"bittorio.gif",
 			"teamsize":9,
 			"roles":[
-				"Systems Programmer",
-				"Network Programmer",
-				"Tools Programmer",
+				"Systems Engineer",
+				"Network Engineer",
+				"Tools Engineer",
 			],
 			"languages":[
 				"Cpp",
@@ -178,7 +179,7 @@ resumeJSON =
 			"image":"cauldron.png",
 			"teamsize":16,
 			"roles":[
-				"Tools Programmer",
+				"Tools Engineer",
 				"Web Developer",
 			],
 			"languages":[
@@ -197,7 +198,6 @@ resumeJSON =
 				"NGINX",
 				"Github Pages",
 				"MobaXTerm",
-				"Coffee"
 			],
 			"actions":[
 				"Designed and implemented custom multiplayer layout using Node.js, Unity, and NGINX",
@@ -218,7 +218,7 @@ resumeJSON =
 			"image":"rw0.gif",
 			"teamsize":1,
 			"roles":[
-				"Gameplay Programmer",
+				"Gameplay Engineer",
 				"Web Developer",
 			],
 			"languages":[
@@ -246,7 +246,7 @@ resumeJSON =
 			"image":"dragondrop.png",
 			"teamsize":4,
 			"roles":[
-				"Generalist Programmer",
+				"Junior Software Engineer",
 			],
 			"languages":[
 				"JavaScript",
@@ -300,7 +300,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"A Sidescrolling Bonanza",
-			"short":"2D Side-scroller in a C++ custom engine",
+			"short":"Custom C++ 2D Side-scroller engine with demo game",
 			"date":[
 				"2016"
 			],
@@ -308,8 +308,7 @@ resumeJSON =
 			"image":"a_sidescrolling_bonanza.gif",
 			"teamsize":2,
 			"roles":[
-				"Engine Programmer",
-				"Systems Programmer",
+				"Systems Engineer"
 			],
 			"languages":[
 				"Cpp",
@@ -330,7 +329,7 @@ resumeJSON =
 			"image":"dual_reality.gif",
 			"teamsize":3,
 			"roles":[
-				"Gameplay Programmer",
+				"Gameplay Engineer",
 			],
 			"languages":[
 				"Zilch",
@@ -340,7 +339,7 @@ resumeJSON =
 				"SVN",
 				"Slack",
 			],
-			"description":"Mellow 2D puzzle-platformer in which platforms have to be manipulated to finish building the two parts of a level. This project had me working primarily as a gameplay programmer, and introduced me to a variety of event-driven design styles.",
+			"description":"Mellow 2D puzzle-platformer in which platforms have to be manipulated to finish building the two parts of a level. This project had me working primarily as a gameplay Engineer, and introduced me to a variety of event-driven design styles.",
 		},
 		{ 
 			"name":"Firetime",
@@ -353,7 +352,7 @@ resumeJSON =
 			"source-url":"https://github.com/MatthewCech/Firetime",
 			"teamsize":1,
 			"roles":[
-				"Tools Programmer",
+				"Tools Engineer",
 			],
 			"languages":[
 				"Csharp",
@@ -377,8 +376,7 @@ resumeJSON =
 			"image":"grizzybeats.gif",
 			"teamsize":6,
 			"roles":[
-				"Engine Programmer",
-				"Audio Programmer"
+				"Systems Engineer"
 			],
 			"languages":[
 				"Cpp",
@@ -404,7 +402,7 @@ resumeJSON =
 			"source-url":"https://github.com/MatthewCech/Console-Utils-MT",
 			"teamsize":2,
 			"roles":[
-				"Systems Programmer",
+				"Systems Engineer",
 			],
 			"languages":[
 				"Cpp",
@@ -415,8 +413,7 @@ resumeJSON =
 				"Git",
 				"Premake",
 				"Sublime Text",
-				"MobaXTerm",
-				"Coffee"
+				"MobaXTerm"
 			],
 			"description":"12 custom projects exploring different aspects of the development and use of multithreading. This was based on the console-utils project i have, but we soon discovered that by redesigning from the ground up, we could massively improve performance.",
 		},
@@ -432,8 +429,7 @@ resumeJSON =
 			"source-url":"https://github.com/MatthewCech/Console-Utils",
 			"teamsize":1,
 			"roles":[
-				"Systems Programmer",
-				"Graphics Programmer",
+				"Systems Engineer"
 			],
 			"languages":[
 				"Cpp",
@@ -458,8 +454,8 @@ resumeJSON =
 			"image":"ASCII_Player.png",
 			"teamsize":1,
 			"roles":[
-				"Systems Programmer",
-				"Audio Programmer",
+				"Systems Engineer",
+				"Audio Engineer",
 			],
 			"languages":[
 				"Cpp",
@@ -474,7 +470,6 @@ resumeJSON =
 				"Clang",
 				"MobaXTerm",
 				"Cygwin",
-				"Coffee",
 			],
 			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
 		},
@@ -488,7 +483,7 @@ resumeJSON =
 			"image":"keyboard.png",
 			"teamsize":1,
 			"roles":[
-				"Systems Programmer"
+				"Systems Engineer"
 			],
 			"languages":[
 				"C",
@@ -514,8 +509,7 @@ resumeJSON =
 			"image":"colordodge.gif",
 			"teamsize":1,
 			"roles":[
-				"Engine Programmer",
-				"Gameplay Programmer"
+				"Systems Engineer"
 			],
 			"languages":[
 				"Csharp",
@@ -536,7 +530,7 @@ resumeJSON =
 			"image":"cworld.gif",
 			"teamsize":1,
 			"roles":[
-				"Tools Programmer",
+				"Tools Engineer",
 			],
 			"languages":[
 				"C",
@@ -559,7 +553,7 @@ resumeJSON =
 			"source-url":"https://github.com/MatthewCech/GA-Cpp",
 			"teamsize":1,
 			"roles":[
-				"Systems Programmer",
+				"Systems Engineer",
 			],
 			"languages":[
 				"Cpp",
@@ -567,7 +561,6 @@ resumeJSON =
 			"tools":[
 				"Visual Studio",
 				"Git",
-				"Coffee"
 			],
 			"description":"This was an interesting and partially successful project, and was a fun way to play with non-traditional genetic algorithms. The idea was to create an organic \"Scent trail\" effect almost, or something more organic like the flow of a river. The goal was not actually optimality, but organic and fluid behaviors.",
 		},
@@ -581,8 +574,7 @@ resumeJSON =
 			"image":"bubbles.gif",
 			"teamsize":1,
 			"roles":[
-				"Systems Programmer",
-				"Graphics Programmer",
+				"Generalist",
 			],
 			"languages":[
 				"Java",

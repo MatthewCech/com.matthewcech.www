@@ -62,7 +62,6 @@
       margin: 5px;
       /*color: rgb(250, 245, 245);*/
       background-color: rgba(20, 20, 30, 0.125);
-      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
       max-width: 300px;
       min-height: 280px;
     }
@@ -112,7 +111,7 @@
     .mc-roles {
       font-size: .7em;
       /*background-color: rgb(150, 120, 150);*/
-      width: 180px;
+      width: 200px;
       display: inline-block;
       margin-top: 5px;
       text-align: left;
@@ -135,6 +134,7 @@
       border-radius: 7px;
       bottom: 5px;
       right: 5px;
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
     }
     .mc-vertical-buffer {
       display: inline-block;
@@ -303,8 +303,16 @@
 
           <!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
           <div class="mc-proj-body">
+            ${get('company') ? 
+            `<div class="mc-roles mc-notop ">
+              <h4 class="mc-h4">Company:</h4>
+              <div class="mc-subheader">
+                ${get('company')}
+              </div>
+            </div>` : ''
+            }
             <div class="mc-roles mc-notop ">
-              <h4 class="mc-h4">Roles:</h4>
+              <h4 class="mc-h4">Role${(get('roles').split(" ").length > 1) ? 's' : ''}:</h4>
               <div class="mc-subheader">
                 ${get('roles').replace(/ /g , "<br/>").replace(/_/g , " ")}
               </div>
@@ -343,6 +351,7 @@
             case 'teamsize': accumulated += parseTeamsize(project[key]); break;
             case 'date': accumulated += parseDate(project[key]); break;
             case 'roles': accumulated += parseRoles(project[key]); break;
+            case 'company': accumulated += parseCompany(project[key]); break;
             case 'languages': accumulated += parseLanguages(project[key]); break;
             case 'tools': accumulated += parseTools(project[key]); break;
             case 'actions': accumulated += parseActions(project[key]); break;
@@ -394,11 +403,14 @@
     function parseImage (key_value) {
       return key_value;
     }
+    function parseCompany (key_value) {
+      return key_value;
+    }
     function parseRoles(key_value) {
       let accumulated = '';
 
       for(let i = 0; i < key_value.length; i += 1) {
-        let replaced = key_value[i].replace(' ', '_');
+        let replaced = key_value[i].replace(/ /g, '_');
         allRoles.add(replaced);
         if(i == 0)
           accumulated += replaced;
