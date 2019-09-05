@@ -63,7 +63,7 @@
       /*color: rgb(250, 245, 245);*/
       background-color: rgba(20, 20, 30, 0.125);
       max-width: 300px;
-      min-height: 280px;
+      min-height: 285px;
     }
     .mc-project-content {
       margin: 10px;
@@ -98,7 +98,7 @@
     .mc-short {
       float: none;
       font-size: .9em;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
     .mc-tools {
       font-size: .7em;
@@ -317,12 +317,14 @@
                 ${get('roles').replace(/ /g , "<br/>").replace(/_/g , " ")}
               </div>
             </div>
-            <div class="mc-tools mc-notop">
+            ${get('tools') ? 
+            `<div class="mc-tools mc-notop">
               <h4 class="mc-h4">Tools:</h4>
               <div class="mc-subheader">
                 ${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
               </div>
-            </div>
+            </div>` : ''
+            }
 
             <!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
             <div class="mc-links">

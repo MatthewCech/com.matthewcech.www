@@ -2,8 +2,31 @@ resumeJSON =
 {
 	"projects": [
 		{ 
+			"name":"Loam LLC",
+			"short":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers",
+			"date":[
+				"2018",
+				"2019"
+			],
+			"website-url":"https://www.loam.net",
+			"image":"loam.png",
+			"teamsize":1,
+			"company":"<a href=\"https://loam.net\">Loam LLC</a>",
+			"roles":[
+				"Software Engineer",
+				"Web Developer",
+			],
+			"languages":[
+				"Csharp",
+			],
+			"actions":[
+				"",
+			],
+			"description":"The sequel to Kerbal Space Program, a game about sending small green creatures called \"Kerbals\" into space! It's a space sandbox game that teaches you about orbital mechanics and near-future rocket tech - Private Division is our publisher. I've worn many hats over the course of this project, from working on startup systems to serialization, the in-game content editor, and more!"
+		},
+		{ 
 			"name":"KSP 2",
-			"short":"A space simulation and rocket building game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbidal mechanics! ",
+			"short":"A space simulation and rocket building game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbidal mechanics",
 			"date":[
 				"2018",
 				"2019"
@@ -244,7 +267,7 @@ resumeJSON =
 			],
 			"website-url":"https://dragondropteam.github.io",
 			"image":"dragondrop.png",
-			"company":"<a href=\"https://www.digipen.edu\">DigiPen R&D",
+			"company":"<a href=\"https://www.digipen.edu\">DigiPen R&D</a>",
 			"teamsize":4,
 			"roles":[
 				"Junior Software Engineer",
