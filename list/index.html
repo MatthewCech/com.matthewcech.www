@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../assets/css/" >
     <link rel="stylesheet" href="../assets/css/ie10-viewport-bug-workaround.css">
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
-    <script src="all.js"></script>
+    <script src="all.js"></script> <!-- Fontawesome updated icons -->
   </head>
   <style type="text/css">
   /* While in beta, syle is located here for quick modification */
@@ -62,6 +62,7 @@
       margin: 5px;
       /*color: rgb(250, 245, 245);*/
       background-color: rgba(20, 20, 30, 0.125);
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
       max-width: 300px;
       min-height: 280px;
     }
@@ -317,9 +318,10 @@
 
             <!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
             <div class="mc-links">
-              ${get('website') ? `<a class="btn btn-outline-dark" role="button" href="http://${get('website')}"><i class="fas fa-link"></i></a>` : ''} 
+              ${get('website-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('website-url')}"><i class="fas fa-link"></i></a>` : ''} 
               ${get('download-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('download-url')}"><i class="fas fa-download"></i></a>` : ''}
               ${get('source-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('source-url')}"><i class="fas fa-code"></i></a>` : ''}
+              ${get('video-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('video-url')}"><i class="fas fa-video"></i></a>` : ''}
             </div>
             <img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
           </div>
@@ -333,9 +335,10 @@
           switch(key) {
             case 'name': accumulated += parseName(project[key]); break;
             case 'short': accumulated += parseShort(project[key]); break;
-            case 'website': accumulated += parseWebsite(project[key]); break;
+            case 'website-url': accumulated += parseWebsiteURL(project[key]); break;
             case 'download-url': accumulated += parseDownloadURL(project[key]); break;
             case 'source-url': accumulated += parseSourceURL(project[key]); break;
+            case 'video-url': accumulated += parseVideoURL(project[key]); break;
             case 'image': accumulated += parseImage(project[key]); break;
             case 'teamsize': accumulated += parseTeamsize(project[key]); break;
             case 'date': accumulated += parseDate(project[key]); break;
@@ -373,13 +376,16 @@
     function parseShort(key_value) {
       return key_value;
     }
-    function parseWebsite(key_value) {
+    function parseWebsiteURL(key_value) {
       return key_value;
     }
     function parseDownloadURL(key_value) {
       return key_value;
     }
     function parseSourceURL(key_value) {
+      return key_value;
+    }
+    function parseVideoURL(key_value) {
       return key_value;
     }
     function parseTeamsize (key_value) {

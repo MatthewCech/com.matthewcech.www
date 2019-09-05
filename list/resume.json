@@ -2,6 +2,37 @@ resumeJSON =
 {
 	"projects": [
 		{ 
+			"name":"KSP 2",
+			"short":"The space simulation and rocket building game game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbidal mechanics! ",
+			"date":[
+				"2018",
+				"2019"
+			],
+			"website-url":"https://www.kerbalspaceprogram.com",
+			"download-url":"https://store.steampowered.com/app/954850/Kerbal_Space_Program_2/",
+			"video-url":"https://www.youtube.com/watch?v=P_nj6wW6Gsc",
+			"image":"ksp2.png",
+			"teamsize":1,
+			"company":"<a href=\"https://startheory.com\">Star Theory</a>",
+			"roles":[
+				"Software Engineer",
+			],
+			"languages":[
+				"Csharp",
+			],
+			"tools":[
+				"Unity",
+				"Visual Studio",
+				"Jira",
+				"Perforce",
+				"Zoom"
+			],
+			"actions":[
+				"Explored Windows registry limitations and learned about interaction techniques",
+			],
+			"description":"URI Binder is an easy-to-use .NET tool for windows to help create a custom URI for an existing application.",
+		},
+		{ 
 			"name":"URI Binder",
 			"short":"A tool that makes it easy to create URI schemes for existing executables",
 			"date":[
@@ -34,7 +65,7 @@ resumeJSON =
 				"2018",
 				"2019"
 			],
-			"website":"digitalgolems.loam.app",
+			"website-url":"digitalgolems.loam.app",
 			"image":"digital-golems.gif",
 			"teamsize":1,
 			"roles":[
@@ -66,7 +97,7 @@ resumeJSON =
 				"2019",
 			],
 			"image":"kittybot.jpg",
-			"website":"https://kittybot.net",
+			"website-url":"https://kittybot.net",
 			"source-url":"https://github.com/AlexStewartCode/KittyBot",
 			"teamsize":3,
 			"roles":[
@@ -100,7 +131,7 @@ resumeJSON =
 				"2016",
 				"2017"
 			],
-			"website":"bittorio.com",
+			"website-url":"bittorio.com",
 			"download-url":"https://games.digipen.edu/games/bittorio",
 			"image":"bittorio.gif",
 			"teamsize":9,
@@ -141,10 +172,10 @@ resumeJSON =
 				"2017",
 				"2018"
 			],
-			"website":"curesandcurios.com",
+			"website-url":"curesandcurios.com",
 			"download-url":"https://store.steampowered.com/app/1141740/",
+			"video-url":"https://www.youtube.com/watch?v=-8Q37ylfy-E",
 			"image":"cauldron.png",
-			"video":"https://www.youtube.com/watch?v=-8Q37ylfy-E",
 			"teamsize":16,
 			"roles":[
 				"Tools Programmer",
@@ -182,7 +213,7 @@ resumeJSON =
 				"2017",
 				"2018",
 			],
-			"website":"rw0.pw",
+			"website-url":"rw0.pw",
 			"source-url":"https://github.com/MatthewCech/pw.rw0.www",
 			"image":"rw0.gif",
 			"teamsize":1,
@@ -211,7 +242,7 @@ resumeJSON =
 			"date":[
 				"2018"
 			],
-			"website":"wwwprod5.digipen.edu",
+			"website-url":"wwwprod5.digipen.edu",
 			"image":"dragondrop.png",
 			"teamsize":4,
 			"roles":[
@@ -244,9 +275,10 @@ resumeJSON =
 			"name":"matthewcech.com",
 			"short":"My playground of a website, and where you are now",
 			"date":[
-				"2017-2019",
+				"2017",
+				"2019"
 			],
-			"website":"matthewcech.com",
+			"website-url":"matthewcech.com",
 			"source-url":"https://github.com/MatthewCech/com.matthewcech.www",
 			"image":"matthewcechfolder.svg",
 			"teamsize":1,
@@ -317,7 +349,7 @@ resumeJSON =
 				"2016"
 			],
 			"image":"firetime.png",
-			"website":"matthewcech.github.io/Firetime/",
+			"website-url":"matthewcech.github.io/Firetime/",
 			"source-url":"https://github.com/MatthewCech/Firetime",
 			"teamsize":1,
 			"roles":[
@@ -420,7 +452,7 @@ resumeJSON =
 				"2016",
 				"2018"
 			],
-			"website":"asciiplayer.com",
+			"website-url":"asciiplayer.com",
 			"download-url":"https://asciiplayer.com/",
 			"source-url":"https://github.com/MatthewCech/ASCIIPlayer",
 			"image":"ASCII_Player.png",
@@ -568,7 +600,7 @@ resumeJSON =
 			"date":[
 				"2018"
 			],
-			"website":"theportfolio.pw/",
+			"website-url":"theportfolio.pw/",
 			"source-url":"https://github.com/MatthewCech/The-Portfolio",
 			"image":"theportfolio.png",
 			"teamsize":1,
