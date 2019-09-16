@@ -89,7 +89,7 @@ resumeJSON =
 				"2018",
 				"2019"
 			],
-			"website-url":"digitalgolems.loam.app",
+			"website-url":"https://digitalgolems.loam.app",
 			"image":"digital-golems.gif",
 			"teamsize":1,
 			"roles":[
@@ -155,7 +155,7 @@ resumeJSON =
 				"2016",
 				"2017"
 			],
-			"website-url":"bittorio.com",
+			"website-url":"https://bittorio.com",
 			"download-url":"https://games.digipen.edu/games/bittorio",
 			"image":"bittorio.gif",
 			"teamsize":9,
@@ -196,7 +196,7 @@ resumeJSON =
 				"2017",
 				"2018"
 			],
-			"website-url":"curesandcurios.com",
+			"website-url":"https://curesandcurios.com",
 			"download-url":"https://store.steampowered.com/app/1141740/",
 			"video-url":"https://www.youtube.com/watch?v=-8Q37ylfy-E",
 			"image":"cauldron.png",
@@ -236,7 +236,7 @@ resumeJSON =
 				"2017",
 				"2018",
 			],
-			"website-url":"rw0.pw",
+			"website-url":"https://rw0.pw",
 			"source-url":"https://github.com/MatthewCech/pw.rw0.www",
 			"image":"rw0.gif",
 			"teamsize":1,
@@ -302,7 +302,7 @@ resumeJSON =
 				"2017",
 				"2019"
 			],
-			"website-url":"matthewcech.com",
+			"website-url":"https://matthewcech.com",
 			"source-url":"https://github.com/MatthewCech/com.matthewcech.www",
 			"image":"matthewcechfolder.svg",
 			"teamsize":1,
@@ -372,7 +372,7 @@ resumeJSON =
 				"2016"
 			],
 			"image":"firetime.png",
-			"website-url":"matthewcech.github.io/Firetime/",
+			"website-url":"https://matthewcech.github.io/Firetime/",
 			"source-url":"https://github.com/MatthewCech/Firetime",
 			"teamsize":1,
 			"roles":[
@@ -472,7 +472,7 @@ resumeJSON =
 				"2016",
 				"2018"
 			],
-			"website-url":"asciiplayer.com",
+			"website-url":"https://asciiplayer.com",
 			"download-url":"https://asciiplayer.com/",
 			"source-url":"https://github.com/MatthewCech/ASCIIPlayer",
 			"image":"ASCII_Player.png",
@@ -616,7 +616,7 @@ resumeJSON =
 			"date":[
 				"2018"
 			],
-			"website-url":"theportfolio.pw/",
+			"website-url":"https://theportfolio.pw/",
 			"source-url":"https://github.com/MatthewCech/The-Portfolio",
 			"image":"theportfolio.png",
 			"teamsize":1,
