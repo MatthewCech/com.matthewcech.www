@@ -2,10 +2,40 @@ resumeJSON =
 {
 	"projects": [
 		{ 
-			"name":"Loam LLC",
-			"short":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers",
+			"name":"Salmonberry",
+			"short":"An experimental multiplayer roguelite game made with a custom Java server solution designed for multiple client styles.",
 			"date":[
-				"2018",
+				"2019"
+			],
+			"website-url":"http://salmonberry.info",
+			"image":"salmonberry.png",
+			"teamsize":1,
+			"roles":[
+				"Generalist",
+			],
+			"languages":[
+				"Java",
+				"JavaScript",
+				"HTMLCSS",
+				"CSharp"
+			],
+			"tools":[
+				"Git",
+				"Java",
+				"Digital Ocean",
+				"Eclipse",
+				"Visual Studio",
+				"Unity"
+			],
+			"actions":[
+				"",
+			],
+			"description":"This is partially inspired by brogue, a fun ASCII game - and roguelites aren't my usual, nor is Java, so I figured 'What better than to try and make a multiplayer roguelite with java driving the web app?'"
+		},
+		{ 
+			"name":"Loam LLC",
+			"short":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers.",
+			"date":[
 				"2019"
 			],
 			"website-url":"https://www.loam.net",
@@ -22,11 +52,11 @@ resumeJSON =
 			"actions":[
 				"",
 			],
-			"description":"The sequel to Kerbal Space Program, a game about sending small green creatures called \"Kerbals\" into space! It's a space sandbox game that teaches you about orbital mechanics and near-future rocket tech - Private Division is our publisher. I've worn many hats over the course of this project, from working on startup systems to serialization, the in-game content editor, and more!"
+			"description":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers. It allows people to more easily offer their services and showcase their work, and I do everything from creating physical goods, to providing consulting services and assisting with donations for digital artists!"
 		},
 		{ 
 			"name":"KSP 2",
-			"short":"A space simulation and rocket building game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbidal mechanics",
+			"short":"A space simulation and rocket building game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbital mechanics!",
 			"date":[
 				"2018",
 				"2019"
@@ -35,7 +65,7 @@ resumeJSON =
 			"download-url":"https://store.steampowered.com/app/954850/Kerbal_Space_Program_2/",
 			"video-url":"https://www.youtube.com/watch?v=P_nj6wW6Gsc",
 			"image":"ksp2.png",
-			"teamsize":1,
+			"teamsize":50,
 			"company":"<a href=\"https://startheory.com\">Star Theory</a>",
 			"roles":[
 				"Software Engineer",
@@ -58,7 +88,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"URI Binder",
-			"short":"A tool that makes it easy to create URI schemes for existing executables",
+			"short":"A tiny tool that makes it easy to set up custom URI schemes for existing executables.",
 			"date":[
 				"2019"
 			],
@@ -80,11 +110,11 @@ resumeJSON =
 			"actions":[
 				"Explored Windows registry limitations and learned about interaction techniques",
 			],
-			"description":"URI Binder is an easy-to-use .NET tool for windows to help create a custom URI for an existing application.",
+			"description":"URI Binder is an easy-to-use .NET tool for windows to help create and set up a custom URI for an existing application.",
 		},
 		{ 
 			"name":"Digital Golems",
-			"short":"2D turn-based puzzle game designed for Android mobile",
+			"short":"2D turn-based puzzle game designed for Android mobile and still in development.",
 			"date":[
 				"2018",
 				"2019"
@@ -115,7 +145,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Kitty Bot",
-			"short":"Multithreaded Discord bot with utility, entertainment, and management features",
+			"short":"Multithreaded Discord bot with utility, entertainment, and management features.",
 			"date":[
 				"2018",
 				"2019",
@@ -150,7 +180,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Bittorio",
-			"short":"3D Competitive Puzzle Game done in Unity 3D, on PC and soon XBox",
+			"short":"3D Competitive Puzzle Game done in Unity 3D, on PC and soon XBox.",
 			"date":[
 				"2016",
 				"2017"
@@ -191,7 +221,7 @@ resumeJSON =
 		}, 
 		{ 
 			"name":"Cures & Curios",
-			"short":"VR Potion Crafting Game for HTC Vive",
+			"short":"VR Potion Crafting Game for HTC Vive, downloadable on Steam.",
 			"date":[
 				"2017",
 				"2018"
@@ -231,7 +261,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"rw0.pw",
-			"short":"A collection of JavaScript game system demos and experiments",
+			"short":"A small collection of JavaScript game system demos and experiments!",
 			"date":[
 				"2017",
 				"2018",
@@ -261,7 +291,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Dragon Drop",
-			"short":"Block-based Electron IDE for game and arduino programming",
+			"short":"Block-based Electron IDE for game and arduino programming.",
 			"date":[
 				"2018"
 			],
@@ -297,7 +327,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"matthewcech.com",
-			"short":"My playground of a website, and where you are now",
+			"short":"My playground of a website, and where you are now!",
 			"date":[
 				"2017",
 				"2019"
@@ -324,7 +354,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"A Sidescrolling Bonanza",
-			"short":"Custom C++ 2D Side-scroller engine with demo game",
+			"short":"Custom C++ 2D Side-scroller engine with demo game.",
 			"date":[
 				"2016"
 			],
@@ -345,7 +375,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Dual Reality",
-			"short":"Mellow 2D Side-scrolling puzzle game",
+			"short":"Mellow 2D Side-scrolling puzzle game.",
 			"date":[
 				"2014",
 				"2015"
@@ -367,7 +397,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Firetime",
-			"short":"Time tracking and estimation software with C# desktop application and online proof-of-concept",
+			"short":"Time tracking and estimation software with C# desktop application and online proof-of-concept.",
 			"date":[
 				"2016"
 			],
@@ -392,7 +422,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Grizzly Beats",
-			"short":"2.5D multiplayer areana brawler in custom C++ engine",
+			"short":"2.5D multiplayer areana brawler written in a custom C++ engine.",
 			"date":[
 				"2015",
 				"2016"
@@ -417,7 +447,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"\"Windows\" on Linux",
-			"short":"Academic research into multithreading techniques using a from-scratch ASCII window manager",
+			"short":"Academic research into multithreading techniques using a from-scratch ASCII window manager.",
 			"date":[
 				"2017"
 			],
@@ -443,7 +473,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"Console Utils",
-			"short":"Accessable C++ console drawing and debug utilities",
+			"short":"Accessable C++ console drawing and debug utilities.",
 			"date":[
 				"2016",
 				"2018"
@@ -467,7 +497,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"ASCIIPlayer",
-			"short":"Lightweight command line audio visualizer written in C++",
+			"short":"Lightweight command line audio visualizer written in C++.",
 			"date":[
 				"2016",
 				"2018"
@@ -499,7 +529,7 @@ resumeJSON =
 		},
 		{
 			"name":"Console Input",
-			"short":"C & C++ nonblocking keyboard input in a compact header",
+			"short":"C & C++ nonblocking keyboard input handling implemented in a compact header.",
 			"date":[
 				"2016"
 			],
@@ -526,7 +556,7 @@ resumeJSON =
 		},
 		{
 			"name":"Color Dodge",
-			"short":"C# arena game about collecting colors from clouds",
+			"short":"C# arena game about collecting colors from clouds.",
 			"date":[
 				"2012",
 			],
@@ -546,7 +576,7 @@ resumeJSON =
 		},
 		{
 			"name":"C World",
-			"short":"Cross-platform ASCII Map generation tool with color and seed support",
+			"short":"Cross-platform ASCII Map generation tool with color and seed support.",
 			"date":[
 				"2014",
 				"2015"
@@ -568,7 +598,7 @@ resumeJSON =
 		},
 		{
 			"name":"Ants GA",
-			"short":"Academic experiment with more organic genetic algorithms",
+			"short":"Academic experiment exploring creating organic behaviors with genetic algorithms.",
 			"date":[
 				"2017"
 			],
@@ -590,7 +620,7 @@ resumeJSON =
 		},
 		{
 			"name":"Bubbles",
-			"short":"Arena game with time slowing and enemy management focus done in Java",
+			"short":"Arena game with time slowing and enemy management focus done in Java.",
 			"date":[
 				"2013",
 				"2014"
@@ -612,7 +642,7 @@ resumeJSON =
 		},
 		{ 
 			"name":"\"The Portfolio\"",
-			"short":"A guide and free resources for creating simple online portfolio websites for no or low cost",
+			"short":"Free templates and a guide for creating simple websites for low or no cost! (guide merged into loam.net)",
 			"date":[
 				"2018"
 			],
@@ -637,7 +667,7 @@ resumeJSON =
 				"Created approachable guide for creation of online portfolios",
 				"Documented modern techniques for creating "
 			],
-			"description":"An online website guide and collection of free portfolio site designs for low to no cost portfolio creation.",
+			"description":"An online website section guide and collection of free portfolio site designs for low to no cost portfolio creation.",
 		},
 
 	],
