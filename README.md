@@ -1,5 +1,5 @@
 # matthewcech.com
-Portfolio site / project lookup / document hub for stuff I've done! The site itself is prepretually a work in progress, but the master branch representes (at least at this point) versions I'm happy to put out there! Other branches may be a bit more of a mess depending on when you check them.
+Portfolio site / project lookup / document hub for stuff I've done! The site itself is prepretually a work in progress, but that's alright - isn't everything?
 
 Resources and whatnot:
 - I used fontawesome for icons and such! A link to fontawesome's icon license is here: https://fontawesome.com/license
