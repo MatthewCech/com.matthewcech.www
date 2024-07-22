@@ -1,94 +1,186 @@
 body {
-  padding-top: 5rem;
-}
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-/* Fix the bottom border of the navbar being off by 1px*/
-.navbar-fixed-top {
-  border-width: 0;
-}
-
-.link-padding
-{
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-/* For correcting the vertical height between elements, useful for mobile. */
-.vertical-margin {
-  margin-top: 40px;
-}
-.vertical-margin.next-section {
-  margin-top: 25px; /* this is 40 - the standard 15 that is the margin/padding) */
-}
-
-.desc {
-  margin-top: 15px;
-  /*font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;*/
-  font-size: 2em
-}
-
-.btn-mod-primary {
-  text-align: center;
-  
-  padding: 6px 0;
-  font-size: 12px;
-
-}
-
-.btn-mod-primary.btn-xl {
-  width: 70px;
-  height: 70px;
-
-  padding: 10px 16px;
-  font-size: 24px;
-  line-height: 2;
-    border-radius: 10px;
-}
-
-.table-fiddling {
-  margin-left: auto;
-  margin-right: auto;
-}
-.table-fiddling tr{
-  text-align: left;
-}
-.table-fiddling .left-info{
-  padding-right: 10px;
-}
-body {
-  /*line-height: 200px;*/
-  background-image: url("/assets/squairy_light.png");
-  background-repeat: repeat;
+	background-image: url("/assets/squairy_light.png");
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
 }
 
 .center-img {
-  /*border-radius: 150px;*/
-  max-width: 250px;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: -15px
-  /*border:5px solid #FFF;*/
-}
-
-.shade-image {
-  /*box-shadow: 3px 3px 4px #282835;*/
-}
-
-.img-circle {
-  border-radius: 150px;
+	/*border-radius: 150px;*/
+	max-width: 250px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: -15px
+	/*border:5px solid #FFF;*/
 }
 
 .mc-top-margin {
-  margin-top: 70px;
+	margin-top: 70px;
 }
 
-@media (max-width: 767px)
-{
-  .mc-top-margin {
-    height: 20px;
-  }
+.mc-body {
+	text-align: center;
+	max-width: 968px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mc-container {
+	padding: 1rem;
+	text-align: justify;
+	font-size: 100%;
+	display: flex;   
+	flex-wrap: wrap;
+}
+
+.mc-container:after {
+	display: inline-block;
+	width: 100%;
+}
+
+.mix:before {
+	display: inline-block;
+}
+
+.mix {
+	 position: relative;
+}
+
+.mc-project {
+	border: 1px solid black;
+	border-radius: 7px;
+	margin: 5px;
+	/*color: rgb(250, 245, 245);*/
+	background-color: rgba(20, 20, 30, 0.125);
+	max-width: 300px;
+	min-height: 285px;
+}
+
+.mc-project-content {
+	margin: 10px;
+	text-align: left;
+	/*background-color: rgb(200, 100, 100);*/
+}
+
+.mc-title {
+	font-size: 1.1em;
+	margin-right: 10px;
+	/*background-color: rgb(100, 100, 200);*/
+	margin-left: 5px;
+	font-weight: bold;
+}
+
+.mc-title-bar {
+	/*background-color: rgb(120, 180, 220);*/
+	text-align: right;
+	height: 100%; 
+	overflow: auto;
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 4px;
+}
+
+.mc-date {
+	margin-top: 0px;
+	font-size: .9em;
+	margin-right: 7px;
+	position: relative;
+	top: 50%;
+	transform: translateY(15%);
+	/*background-color: rgb(100, 150, 200);*/
+}
+
+.mc-short {
+	float: none;
+	font-size: .9em;
+	margin-bottom: 5px;
+}
+
+.mc-tools {
+	font-size: .7em;
+	/*background-color: rgb(100, 150, 100);*/
+	width: 180px;
+	display: inline-block;
+	margin-top: 5px;
+	text-align: left;
+}
+
+.mc-roles {
+	font-size: .7em;
+	/*background-color: rgb(150, 120, 150);*/
+	width: 200px;
+	display: inline-block;
+	margin-top: 5px;
+	text-align: left;
+}
+
+.mc-links {
+	font-size: .9em;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+}
+
+.mc-subheader {
+	margin-left: 5px;
+}
+
+.mc-proj-body {
+	margin-left: 5px;
+}
+
+.mc-project-icon {
+	width: 80px;
+	position: absolute;
+	border-radius: 7px;
+	bottom: 5px;
+	right: 5px;
+	filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+}
+
+.mc-vertical-buffer {
+	display: inline-block;
+	height: 100%;
+	margin-top: 40px;
+}
+
+/* General classes for adjusting in a specific way. */
+/* Removes the top margin */
+.mc-notop {
+	vertical-align:top
+}
+
+/* Custom H4 sizing */
+.mc-h4 {
+	margin: 0px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.mc-category {
+	margin: 0px;
+	margin-top: 4px;
+}
+
+.mc-button {
+	margin: 2px;
+}
+
+.mc-inline-block {
+	display: inline-block;
+}
+
+.mc-top-nopadding {
+	padding-top: 0px;
+}
+
+@media only screen and (max-width: 968px) {
+	.mc-body {
+		max-width: 656px;
+	}
+}
+@media only screen and (max-width: 656px) {
+	.mc-project {
+		min-width: 100%;
+	}
 }

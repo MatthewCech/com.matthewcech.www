@@ -1,202 +1,40 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<!-- Establish meta information -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="I'm a professional and recreational game developer and application programmer that likes creating all sorts of stuff!">
+		<!-- Establish meta information -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="I'm a professional and recreational game developer and application programmer that likes creating all sorts of stuff!">
 
-	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="/assets/favicon-folder-open.ico">
-	
-	<!-- Stylesheet loading -->
-	<link rel="stylesheet" type="text/css" href="/assets/css/defaults.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-	<script type="text/javascript" src="resume.json"></script>
-    <script type="text/javascript" src="mixitup.min.js"></script>
-
-	<!-- Title -->
-	<title>Matthew Cech Portfolio</title>
-
-    <!-- External and associated -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../assets/css/ie10-viewport-bug-workaround.css">
-    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
-    <script src="all.js"></script> <!-- Fontawesome updated icons -->
-	</head>
-
-	<style type="text/css">
-	.mc-shade {
-		filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.3));
-	}
-
-	.mc-greyscale {
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
-	}
-
-	body {
-			background-image: url("/assets/squairy_light.png");
-			width: 100%;
-			margin: 0px;
-			padding: 0px;
-		}
-		.mc-body {
-			text-align: center;
-			max-width: 968px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		.mc-container {
-			padding: 1rem;
-			text-align: justify;
-			font-size: 100%;
-			display: flex;   
-			flex-wrap: wrap;
-		}
-		.mc-container:after {
-			display: inline-block;
-			width: 100%;
-		}
-		.mix:before {
-			display: inline-block;
-		}
-		.mix {
-			 position: relative;
-		}
-		.mc-project {
-			border: 1px solid black;
-			border-radius: 7px;
-			margin: 5px;
-			/*color: rgb(250, 245, 245);*/
-			background-color: rgba(20, 20, 30, 0.125);
-			max-width: 300px;
-			min-height: 285px;
-		}
-		.mc-project-content {
-			margin: 10px;
-			text-align: left;
-			/*background-color: rgb(200, 100, 100);*/
-		}
-		.mc-title {
-			font-size: 1.1em;
-			margin-right: 10px;
-			/*background-color: rgb(100, 100, 200);*/
-			margin-left: 5px;
-			font-weight: bold;
-		}
-		.mc-title-bar {
-			/*background-color: rgb(120, 180, 220);*/
-			text-align: right;
-			height: 100%; 
-			overflow: auto;
-			font-family: 'Open Sans', sans-serif;
-			background-color: rgba(255, 255, 255, 0.4);
-			border-radius: 4px;
-		}
-		.mc-date {
-			margin-top: 0px;
-			font-size: .9em;
-			margin-right: 7px;
-			position: relative;
-			top: 50%;
-			transform: translateY(15%);
-			/*background-color: rgb(100, 150, 200);*/
-		}
-		.mc-short {
-			float: none;
-			font-size: .9em;
-			margin-bottom: 5px;
-		}
-		.mc-tools {
-			font-size: .7em;
-			/*background-color: rgb(100, 150, 100);*/
-			width: 180px;
-			display: inline-block;
-			margin-top: 5px;
-			text-align: left;
-		}
-		.mc-roles {
-			font-size: .7em;
-			/*background-color: rgb(150, 120, 150);*/
-			width: 200px;
-			display: inline-block;
-			margin-top: 5px;
-			text-align: left;
-		}
-		.mc-links {
-			font-size: .9em;
-			position: absolute;
-			bottom: 5px;
-			left: 5px;
-		}
-		.mc-subheader {
-			margin-left: 5px;
-		}
-		.mc-proj-body {
-			margin-left: 5px;
-		}
-		.mc-project-icon {
-			width: 80px;
-			position: absolute;
-			border-radius: 7px;
-			bottom: 5px;
-			right: 5px;
-			filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
-		}
-		.mc-vertical-buffer {
-			display: inline-block;
-			height: 100%;
-			margin-top: 40px;
-		}
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/assets/favicon-folder-open.ico">
 		
+		<!-- Stylesheet loading -->
+		<link rel="stylesheet" type="text/css" href="/assets/css/defaults.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
+		<script type="text/javascript" src="resume.json"></script>
+		<script type="text/javascript" src="mixitup.min.js"></script>
 
-		/* General classes for adjusting in a specific way. */
-		/* Removes the top margin */
-		.mc-notop {
-			vertical-align:top
-		}
-		/* Custom H4 sizing */
-		.mc-h4 {
-			margin: 0px;
-			font-size: 14px;
-			font-weight: bold;
-		}
-		.mc-category {
-			margin: 0px;
-			margin-top: 4px;
-		}
-		.mc-button {
-			margin: 2px;
-		}
-		.mc-inline-block {
-			display: inline-block;
-		}
-		.mc-top-nopadding {
-			padding-top: 0px;
-		}
-		@media only screen and (max-width: 968px) {
-			.mc-body {
-				max-width: 656px;
-			}
-		}
-		@media only screen and (max-width: 656px) {
-			.mc-project {
-				min-width: 100%;
-			}
-		}
-	</style>
+		<!-- Title -->
+		<title>Matthew Cech Portfolio</title>
 
+		<!-- External and associated -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+		<!-- TODO: For long term stability, consider specific version downloading for bootstrap-->
 
+		<link href="/assets/fa-6.6.0/css/fontawesome.css" rel="stylesheet" />
+		<link href="/assets/fa-6.6.0/css/brands.css" rel="stylesheet" />
+		<link href="/assets/fa-6.6.0/css/solid.css" rel="stylesheet" />
+	</head>
 
 	<body style="padding-top: 0px;">
 		<div class="mc-top-margin text-center center container">
 			<div>
-				<img class="center-img shade-image img-fluid" style="max-width: 250px;  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); border-radius: 200px;" src="/assets/snow-faceplant.jpg" alt="A smiling, upbeat picture of Matthew"/>
+				<img class="center-img img-fluid" style="max-width: 250px;  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); border-radius: 200px;" src="/assets/snow-faceplant.jpg" alt="A smiling, upbeat picture of Matthew"/>
 
 				<div style="margin-top: 35px;">
 					<!-- Name & Serious title that becomes a silly title after 4 seconds -->
@@ -204,73 +42,30 @@
 					<p class="text-muted">Software Engineering Manager and <span id="rotating-text"> Developer</span><p>
 
 					<!-- Links -->
-					<a class="btn btn-outline-dark btn-xl" role="button" href="mailto:contactAmatthewcechDTcom" onclick = "this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
-					<a class="btn btn-outline-dark btn-xl" href="https://www.linkedin.com/in/matthewcech/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-					<a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-					<a class="btn btn-outline-dark btn-xl" href="https://twitter.com/MatthewCech"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+					<a class="btn btn-outline-dark btn-xl" role="button" href="mailto:contactAmatthewcechDTcom" onclick="this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+					<a class="btn btn-outline-dark btn-xl" href="https://www.linkedin.com/in/matthewcech/"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></a>
+					<a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></a>
+					<a class="btn btn-outline-dark btn-xl" href="/assets/Cech, Matthew - Resume.pdf" target="_blank"><i class="fa fa-download fa-lg" aria-hidden="true"></i> Resume</a>
 					<hr style="max-width: 100px;">
 				</div>
 			</div>
-			<div class="row"> <!-- Starting a new row -->
-
-				<!-- SECTION -->
-				<div class="col-lg vertical-margin">
-					<img class="mc-shade" src="/assets/images/ksp2.png" alt="The logo for kerbal space program 2" width="150">
-					<br/>
-					<br/>
-					<h3>KSP 2</strong></h3>
-					<p><stong>2018 - Present</stong></p>
-					<p class="text-muted text-left"><a href="https://www.kerbalspaceprogram.com">Kerbal Space Program 2</a> is the title I work on at <a href="https://www.interceptgames.com/">Intercept Games</a> (and formerly at Star Theory) that's published by <a href="https://www.privatedivision.com">Private Division</a>! It's a space sandbox game that teaches you about orbital mechanics and near-future rocket tech. I've worn many hats over the course of this project, working on tools, in-game vehicle editor, serialization, and much more. Starting 2022, I became an Engineering Manager, although I do IC work here and there.</p>
-				</div>
-				<br/>
-
-				<!-- SECTION -->
-				<div class="col-lg vertical-margin">
-					<img class="mc-shade" src="/assets/images/dragondrop.png" alt="Cures and curios still" width="150" height="150">
-					<br/>
-					<br/>
-					<h3>DragonDrop</h3>
-					<p><stong>2018</stong></p>
-					<p class="text-muted text-left">A <a href="https://dragondropteam.github.io">free block-based educational IDE</a> that was created to make learning programming more accessible! I worked on this as an intern at the DigiPen Research and Development department - the software is based on popular frameworks and tools including Blockly, NodeJS, and Electron, and is used during summer camps and classes at DigiPen.</a></p>
-				</div>
-				<br/>
-
-				<!-- SECTION -->
-				<div class="col-lg vertical-margin">
-					<img class="mc-shade" style="border-radius: 15px;" src="/assets/images/bittorio.gif" alt="Bittorio animated GIF" width="150" height="150">
-					<br/>
-					<br/>
-					<h3>Bittorio</h3>
-					<p><stong>2016 - 2017</stong></p>
-					<p class="text-muted text-left">A 3D puzzle fighter made in Unity as an academic project at DigiPen, featuring both single and local multiplayer! This game went to PAX, was nominated for <a href="http://www.igf.com/bittorio">IGF</a>, and is <a href="https://games.digipen.edu/games/bittorio"> available for download</a>! I Worked on tools, UI, website/marketing, and did feature prototyping using SocketIO and a custom NGINX and Node.js server. See more on <a href="https://www.bittorio.com/">the game's website</a>.</p>
-				</div>
-			<br/>
-
-			</div>
-			<br/>
-			<br/>
-				<a class="btn btn-outline-dark btn-xl" role="button" href="/list/"><i class="fa fa-th"></i></i>&nbsp;More Projects</a>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
 		</div>
 		
 		<div class="mc-top-margin mc-body">
 			<!-- General mixitup controls -->
-			<h2 style="text-align: center; margin-bottom: 10px;">Projects Master List</h2>
-			<p style="text-align: center; margin-bottom: 10px;">An experimental data-driven filtering tool <a href="#"><i class="far fa-question-circle"></i></a></p>
+			<!--h2 style="text-align: center; margin-bottom: 10px;">Projects Master List</h2-->
+			<!--p style="text-align: center; margin-bottom: 10px;">An experimental data-driven filtering tool <a href="#"><i class="far fa-question-circle"></i></a></p-->
 			<div>
-				<button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:desc" class="mixitup-control-active"><i class="fas fa-sort"></i> Newest First</button>
-				<button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:asc"><i class="fas fa-sort"></i> Oldest First</button>
-				<button type="button" class="btn btn-warning mc-category" data-mixitup-control data-filter="all"><i class="fas fa-list"></i> Show All</button>
+				<button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:desc" class="mixitup-control-active"><i class="fa fa-sort"></i> Newest First</button>
+				<button type="button" class="btn btn-warning mc-category" data-mixitup-control data-sort="date:asc"><i class="fa fa-sort"></i> Oldest First</button>
+				<button type="button" class="btn btn-warning mc-category" data-mixitup-control data-filter="all"><i class="fa fa-list"></i> Show All</button>
 			</div>
 			
 			<!-- Generated mixitup filters -->
 			<div style="margin-bottom: 2px;">
-				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fas fa-filter"></i> Language</button>
-				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-role-dropdown"><i class="fas fa-filter"></i> Role</button>
-				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-tool-dropdown"><i class="fas fa-filter"></i> Tool</button>
+				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fa fa-filter"></i> Language</button>
+				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-role-dropdown"><i class="fa fa-filter"></i> Role</button>
+				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-tool-dropdown"><i class="fa fa-filter"></i> Tool</button>
 			</div>
 			<div id="mc-lang-dropdown" class="collapse"></div>
 			<div id="mc-role-dropdown" class="collapse"></div>
@@ -282,386 +77,335 @@
 
 		<!--===[ BOOTSTRAP CORE JS: ]=================================-->    
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
-		<script src="/assets/js/bootstrap.min.js"></script>
-
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<!--==========================================================-->
 
-	</body>
+		<script type="text/javascript">
+
+			// Top title rotating
+			let randNum = 0;             
+			let prev = 0;                
+			let titleSwapDelayMS = 4000; 
+
+			// Titles to cycle through
+			let randomTopText = [ 
+			  "Game Engineer"
+			, "Plant Hoarder"
+			, "Tinkerer"
+			, "Skier"
+			, "Gardener"
+			];
+			
+
+			// Select randomly
+			function GetRandText() {
+				prev = randNum;
+				while(randNum == prev) {
+					randNum = Math.floor(Math.random() * randomTopText.length);
+				}
+
+				document.getElementById('rotating-text').innerHTML = randomTopText[randNum];
+			}
+			
+			// Change text every few seconds
+			window.setInterval(function(){
+				GetRandText();
+			}, titleSwapDelayMS);
 
 
+			// Store each project
+			var arrayProjects = [];
+			var allLanguages = new Set();
+			var allRoles = new Set();
+			var allTools = new Set();
 
+			// When the window is loaded, go ahead and then parse the JSON.
+			window.onload = function () { 
+				parseResumeJSON(resumeJSON);
+				let containerEl = document.querySelector('.mc-container');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<script type="text/javascript">
-
-		// Top title rotating
-		let randNum = 0;             
-		let prev = 0;                
-		let titleSwapDelayMS = 4000; 
-
-		// Titles to cycle through
-		let randomTopText = [ 
-		  "Game Engineer"
-		, "Plant Hoarder"
-		, "Tinkerer"
-		, "Skier"
-		, "Gardener"
-		];
-		
-
-		// Select randomly
-		function GetRandText() {
-			prev = randNum;
-			while(randNum == prev) {
-				randNum = Math.floor(Math.random() * randomTopText.length);
+				let mixer = mixitup(containerEl, {
+					selectors: {
+							control: '[data-mixitup-control]'
+							},
+					load: {
+							sort: 'date:desc'
+						}
+					});
 			}
 
-			document.getElementById('rotating-text').innerHTML = randomTopText[randNum];
-		}
-		
-		// Change text every few seconds
-		window.setInterval(function(){
-			GetRandText();
-		}, titleSwapDelayMS);
+			// Parses different possible sections for the resume.
+			function parseResumeJSON(json) {
+				let accumulated = '';
+				accumulated += '<div class="mc-container">';
 
+				// For every project, parse content.
+				for(let i = 0; i < json.projects.length; i += 1){
+					let newItem = parseProject(json.projects[i]);
+					arrayProjects[json.projects[i]["name"]] = json.projects[i];
+					accumulated += newItem;
+				}
 
+				accumulated += '</div>';
 
+				console.log(allLanguages);
+				console.log(allRoles);
+				console.log(allTools);
 
+				document.getElementById('mc-fill').innerHTML = accumulated;
+				populateLanguages();
+				populateTools();
+				populateRoles();
+			}
 
+			// Takes all the parsed langauges and generates buttons / filters for them
+			function populateLanguages() {
+				allLanguages.forEach(function(val) {
+					let val1 = `${val}`;
+					let val2 = `${val}`;
 
+					if(val1 == 'Cpp') val2 = 'C++';
+					if(val1 == 'Csharp') val2 = 'C#';
+					if(val1 == 'HTMLCSS') val2 = 'HTML/CSS';
 
-
-
-
-
-
-
-		// Store each project
-		var arrayProjects = [];
-		var allLanguages = new Set();
-		var allRoles = new Set();
-		var allTools = new Set();
-
-
-
-		// When the window is loaded, go ahead and then parse the JSON.
-		window.onload = function () { 
-			parseResumeJSON(resumeJSON);
-			let containerEl = document.querySelector('.mc-container');
-
-			let mixer = mixitup(containerEl, {
-				selectors: {
-						control: '[data-mixitup-control]'
-						},
-				load: {
-						sort: 'date:desc'
-					}
+					document.getElementById('mc-lang-dropdown').innerHTML 
+						= document.getElementById('mc-lang-dropdown').innerHTML 
+						+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
 				});
-		}
-
-		// Parses different possible sections for the resume.
-		function parseResumeJSON(json) {
-			let accumulated = '';
-			accumulated += '<div class="mc-container">';
-
-			// For every project, parse content.
-			for(let i = 0; i < json.projects.length; i += 1){
-				let newItem = parseProject(json.projects[i]);
-				arrayProjects[json.projects[i]["name"]] = json.projects[i];
-				accumulated += newItem;
 			}
 
-			accumulated += '</div>';
+			// Takes all the parsed tools and generates buttons / filters for them
+			function populateTools() {
+				allTools.forEach(function(val) {
+					let val1 = `${val}`;
+					let val2 = `${val}`; 
+					val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
 
-			console.log(allLanguages);
-			console.log(allRoles);
-			console.log(allTools);
+					if(val1 == 'Gpp') val2 = 'G++';
 
-			document.getElementById('mc-fill').innerHTML = accumulated;
-			populateLanguages();
-			populateTools();
-			populateRoles();
-		}
+				document.getElementById('mc-tool-dropdown').innerHTML
+					= document.getElementById('mc-tool-dropdown').innerHTML 
+					+ `<button type="button" class="mc-button btn btn-default" class="mc-button" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+				});
+			}
 
-		// Takes all the parsed langauges and generates buttons / filters for them
-		function populateLanguages() {
-			allLanguages.forEach(function(val) {
-				let val1 = `${val}`;
-				let val2 = `${val}`;
+			// Takes all the parsed roles and generates buttons / filters for them
+			function populateRoles() {
+				allRoles.forEach(function(val) {
+					let val1 = `${val}`;
+					let val2 = `${val}`;
+					val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
 
-				if(val1 == 'Cpp') val2 = 'C++';
-				if(val1 == 'Csharp') val2 = 'C#';
-				if(val1 == 'HTMLCSS') val2 = 'HTML/CSS';
-
-				document.getElementById('mc-lang-dropdown').innerHTML 
-					= document.getElementById('mc-lang-dropdown').innerHTML 
+				document.getElementById('mc-role-dropdown').innerHTML
+					= document.getElementById('mc-role-dropdown').innerHTML 
 					+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
-			});
-		}
+				});
+			}
 
-		// Takes all the parsed tools and generates buttons / filters for them
-		function populateTools() {
-			allTools.forEach(function(val) {
-				let val1 = `${val}`;
-				let val2 = `${val}`; 
-				val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
+			// Parses a specific project from the object. 
+			// Returns string of the parsed project in HTML.
+			// Note that this is file-specific!
+			//
+			// Also, welcome to satanic global replaces for formatting text: 
+			// .replace(/<thing to find>/g , "think to make it")
+			//
+			function parseProject(project) {
 
-				if(val1 == 'Gpp') val2 = 'G++';
+				let content = `
+				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')} mc-project" data-date="${get('date')}">
+					<div class="mc-project-content">
 
-			document.getElementById('mc-tool-dropdown').innerHTML
-				= document.getElementById('mc-tool-dropdown').innerHTML 
-				+ `<button type="button" class="mc-button btn btn-default" class="mc-button" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
-			});
-		}
-
-		// Takes all the parsed roles and generates buttons / filters for them
-		function populateRoles() {
-			allRoles.forEach(function(val) {
-				let val1 = `${val}`;
-				let val2 = `${val}`;
-				val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
-
-			document.getElementById('mc-role-dropdown').innerHTML
-				= document.getElementById('mc-role-dropdown').innerHTML 
-				+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
-			});
-		}
-
-		// Parses a specific project from the object. 
-		// Returns string of the parsed project in HTML.
-		// Note that this is file-specific!
-		//
-		// Also, welcome to satanic global replaces for formatting text: 
-		// .replace(/<thing to find>/g , "think to make it")
-		//
-		function parseProject(project) {
-
-			let content = `
-			<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')} mc-project" data-date="${get('date')}">
-				<div class="mc-project-content">
-
-					<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
-					<div class="mc-title-bar">
-						<div style="float: left;">
-							<span class="mc-title">${get('name')}</span>
-						</div>
-						<div class="mc-date">
-							${get('date').replace(' ', ' - ')}
-						</div>
-					</div>
-
-					<!-- ==========[ COMMENT ]: This contains an overview of what the project was. -->
-					<div class="mc-subheader">
-						<div>
-							<p class="mc-short">${get('short')}</p>
-						</div>
-					</div>
-
-					<!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
-					<div class="mc-proj-body">
-						${get('company') ? 
-						`<div class="mc-roles mc-notop ">
-							<h4 class="mc-h4">Company:</h4>
-							<div class="mc-subheader">
-								${get('company')}
+						<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
+						<div class="mc-title-bar">
+							<div style="float: left;">
+								<span class="mc-title">${get('name')}</span>
 							</div>
-						</div>` : ''
-						}
-						<div class="mc-roles mc-notop ">
-							<h4 class="mc-h4">Role${(get('roles').split(" ").length > 1) ? 's' : ''}:</h4>
-							<div class="mc-subheader">
-								${get('roles').replace(/ /g , "<br/>").replace(/_/g , " ")}
+							<div class="mc-date">
+								${get('date').replace(' ', ' - ')}
 							</div>
 						</div>
-						${get('tools') ? 
-						`<div class="mc-tools mc-notop">
-							<h4 class="mc-h4">Tools:</h4>
-							<div class="mc-subheader">
-								${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
+
+						<!-- ==========[ COMMENT ]: This contains an overview of what the project was. -->
+						<div class="mc-subheader">
+							<div>
+								<p class="mc-short">${get('short')}</p>
 							</div>
-						</div>` : ''
-						}
+						</div>
 
 						<!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
-						<div class="mc-links">
-							${get('website-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('website-url')}"><i class="fas fa-link"></i></a>` : ''} 
-							${get('download-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('download-url')}"><i class="fas fa-download"></i></a>` : ''}
-							${get('source-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('source-url')}"><i class="fas fa-code"></i></a>` : ''}
-							${get('video-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('video-url')}"><i class="fas fa-video"></i></a>` : ''}
+						<div class="mc-proj-body">
+							${get('company') ? 
+							`<div class="mc-roles mc-notop ">
+								<h4 class="mc-h4">Company:</h4>
+								<div class="mc-subheader">
+									${get('company')}
+								</div>
+							</div>` : ''
+							}
+							<div class="mc-roles mc-notop ">
+								<h4 class="mc-h4">Role${(get('roles').split(" ").length > 1) ? 's' : ''}:</h4>
+								<div class="mc-subheader">
+									${get('roles').replace(/ /g , "<br/>").replace(/_/g , " ")}
+								</div>
+							</div>
+							${get('tools') ? 
+							`<div class="mc-tools mc-notop">
+								<h4 class="mc-h4">Tools:</h4>
+								<div class="mc-subheader">
+									${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
+								</div>
+							</div>` : ''
+							}
+
+							<!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
+							<div class="mc-links">
+								${get('website-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('website-url')}"><i class="fa fa-link" aria-hidden="true"></i></a>` : ''} 
+								${get('download-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('download-url')}"><i class="fa fa-download" aria-hidden="true"></i></a>` : ''}
+								${get('source-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('source-url')}"><i class="fa fa-code" aria-hidden="true"></i></a>` : ''}
+								${get('video-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('video-url')}"><i class="fa fa-video" aria-hidden="true"></i></a>` : ''}
+							</div>
+							<img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
 						</div>
-						<img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
 					</div>
-				</div>
-			</div>`
+				</div>`
 
-			function get(key) {
-				let accumulated = "";
+				function get(key) {
+					let accumulated = "";
 
-				if(project.hasOwnProperty(key)) {
-					switch(key) {
-						case 'name': accumulated += parseName(project[key]); break;
-						case 'short': accumulated += parseShort(project[key]); break;
-						case 'website-url': accumulated += parseWebsiteURL(project[key]); break;
-						case 'download-url': accumulated += parseDownloadURL(project[key]); break;
-						case 'source-url': accumulated += parseSourceURL(project[key]); break;
-						case 'video-url': accumulated += parseVideoURL(project[key]); break;
-						case 'image': accumulated += parseImage(project[key]); break;
-						case 'teamsize': accumulated += parseTeamsize(project[key]); break;
-						case 'date': accumulated += parseDate(project[key]); break;
-						case 'roles': accumulated += parseRoles(project[key]); break;
-						case 'company': accumulated += parseCompany(project[key]); break;
-						case 'languages': accumulated += parseLanguages(project[key]); break;
-						case 'tools': accumulated += parseTools(project[key]); break;
-						case 'actions': accumulated += parseActions(project[key]); break;
-						case 'description': accumulated += parseDescription(project[key]); break;
-						default:
-							console.log('Key "' + key + '" could not be parsed.');
+					if(project.hasOwnProperty(key)) {
+						switch(key) {
+							case 'name': accumulated += parseName(project[key]); break;
+							case 'short': accumulated += parseShort(project[key]); break;
+							case 'website-url': accumulated += parseWebsiteURL(project[key]); break;
+							case 'download-url': accumulated += parseDownloadURL(project[key]); break;
+							case 'source-url': accumulated += parseSourceURL(project[key]); break;
+							case 'video-url': accumulated += parseVideoURL(project[key]); break;
+							case 'image': accumulated += parseImage(project[key]); break;
+							case 'teamsize': accumulated += parseTeamsize(project[key]); break;
+							case 'date': accumulated += parseDate(project[key]); break;
+							case 'roles': accumulated += parseRoles(project[key]); break;
+							case 'company': accumulated += parseCompany(project[key]); break;
+							case 'languages': accumulated += parseLanguages(project[key]); break;
+							case 'tools': accumulated += parseTools(project[key]); break;
+							case 'actions': accumulated += parseActions(project[key]); break;
+							case 'description': accumulated += parseDescription(project[key]); break;
+							default:
+								console.log('Key "' + key + '" could not be parsed.');
+						}
 					}
+
+					return accumulated;
+				}
+
+				return content;
+			}
+
+			function parseName(key_value) {
+				return key_value;
+			}
+			function parseDate(key_value) {
+				let accumulated = '';
+
+				for(let i = 0; i <  key_value.length; i += 1) {
+					if(i == 0)
+						accumulated += key_value[i];
+					else
+						accumulated += ' ' + key_value[i];
 				}
 
 				return accumulated;
 			}
-
-			return content;
-		}
-
-		function parseName(key_value) {
-			return key_value;
-		}
-		function parseDate(key_value) {
-			let accumulated = '';
-
-			for(let i = 0; i <  key_value.length; i += 1) {
-				if(i == 0)
-					accumulated += key_value[i];
-				else
-					accumulated += ' ' + key_value[i];
+			function parseShort(key_value) {
+				return key_value;
 			}
-
-			return accumulated;
-		}
-		function parseShort(key_value) {
-			return key_value;
-		}
-		function parseWebsiteURL(key_value) {
-			return key_value;
-		}
-		function parseDownloadURL(key_value) {
-			return key_value;
-		}
-		function parseSourceURL(key_value) {
-			return key_value;
-		}
-		function parseVideoURL(key_value) {
-			return key_value;
-		}
-		function parseTeamsize (key_value) {
-			return key_value;
-		}
-		function parseImage (key_value) {
-			return key_value;
-		}
-		function parseCompany (key_value) {
-			return key_value;
-		}
-		function parseRoles(key_value) {
-			let accumulated = '';
-
-			for(let i = 0; i < key_value.length; i += 1) {
-				let replaced = key_value[i].replace(/ /g, '_');
-				allRoles.add(replaced);
-				if(i == 0)
-					accumulated += replaced;
-				else
-					accumulated += ' ' + replaced;
+			function parseWebsiteURL(key_value) {
+				return key_value;
 			}
-
-			return accumulated;
-		}
-		function parseLanguages(key_value) {
-			let accumulated = '';
-			
-			for(let i = 0; i <  key_value.length; i += 1) {
-				allLanguages.add(key_value[i]);
-				if(i == 0)
-					accumulated += key_value[i];
-				else
-					accumulated += ' ' + key_value[i];
+			function parseDownloadURL(key_value) {
+				return key_value;
 			}
+			function parseSourceURL(key_value) {
+				return key_value;
+			}
+			function parseVideoURL(key_value) {
+				return key_value;
+			}
+			function parseTeamsize (key_value) {
+				return key_value;
+			}
+			function parseImage (key_value) {
+				return key_value;
+			}
+			function parseCompany (key_value) {
+				return key_value;
+			}
+			function parseRoles(key_value) {
+				let accumulated = '';
 
-			return accumulated;
-		}
-		function parseTools(key_value) {
-			let accumulated = '';
-			
-			for(let i = 0; i < key_value.length; i += 1) {
-				let replaced = key_value[i].replace(' ', '_');
-				replaced = replaced.replace('.', '-');
+				for(let i = 0; i < key_value.length; i += 1) {
+					let replaced = key_value[i].replace(/ /g, '_');
+					allRoles.add(replaced);
+					if(i == 0)
+						accumulated += replaced;
+					else
+						accumulated += ' ' + replaced;
+				}
+
+				return accumulated;
+			}
+			function parseLanguages(key_value) {
+				let accumulated = '';
 				
-				allTools.add(replaced);
-				if(i == 0)
-					accumulated += replaced;
-				else
-					accumulated += ' ' + replaced;
+				for(let i = 0; i <  key_value.length; i += 1) {
+					allLanguages.add(key_value[i]);
+					if(i == 0)
+						accumulated += key_value[i];
+					else
+						accumulated += ' ' + key_value[i];
+				}
+
+				return accumulated;
 			}
+			function parseTools(key_value) {
+				let accumulated = '';
+				
+				for(let i = 0; i < key_value.length; i += 1) {
+					let replaced = key_value[i].replace(' ', '_');
+					replaced = replaced.replace('.', '-');
+					
+					allTools.add(replaced);
+					if(i == 0)
+						accumulated += replaced;
+					else
+						accumulated += ' ' + replaced;
+				}
 
-			return accumulated;
-		}
-		function parseActions(key_value) {
-			let accumulated = '';
-			
-			for(let i = 0; i < key_value.length; i += 1)
-				accumulated += '<li>' + key_value[i] + '</li>';
+				return accumulated;
+			}
+			function parseActions(key_value) {
+				let accumulated = '';
+				
+				for(let i = 0; i < key_value.length; i += 1)
+					accumulated += '<li>' + key_value[i] + '</li>';
 
-			return accumulated;
-		}
-		function parseDescription(key_value) {
-			return key_value;
-		}
-		// function toggleColor(button_id) {
-		//     let filter_button = document.getElementById(button_id);
-		//     if(filter_button.classList.contains("btn-info")) {
-		//       filter_button.classList.remove("btn-info");
-		//       filter_button.classList.add("btn-primary");
-		//     }
-		//     else if(filter_button.classList.contains("btn-primary")) {
-		//       filter_button.classList.remove("btn-primary");
-		//       filter_button.classList.add("btn-info");
-		//     }
-		// }
-	</script>
+				return accumulated;
+			}
+			function parseDescription(key_value) {
+				return key_value;
+			}
+			// function toggleColor(button_id) {
+			//     let filter_button = document.getElementById(button_id);
+			//     if(filter_button.classList.contains("btn-info")) {
+			//       filter_button.classList.remove("btn-info");
+			//       filter_button.classList.add("btn-primary");
+			//     }
+			//     else if(filter_button.classList.contains("btn-primary")) {
+			//       filter_button.classList.remove("btn-primary");
+			//       filter_button.classList.add("btn-info");
+			//     }
+			// }
+		</script>	
+	</body>
 </html>
