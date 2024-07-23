@@ -3,22 +3,22 @@ projectsJSON =
 	"projects": [
 		{ 
 			"name":"Salmonberry",
+			"weight":0,
 			"short":"An experimental multiplayer roguelite game made with a custom Java server solution designed for multiple client styles.",
 			"date":[
 				"2019"
 			],
-			"website-url":"http://salmonberry.info",
+			"website-url":"http://salmonberry.loam.net",
 			"image":"salmonberry.png",
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Generalist",
+				"Solo",
 			],
 			"languages":[
 				"Java",
 				"JavaScript",
-				"HTMLCSS",
-				"CSharp"
+				"HTMLCSS"
 			],
 			"tools":[
 				"Git",
@@ -35,6 +35,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"Loam LLC",
+			"weight":0,
 			"short":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers.",
 			"date":[
 				"2019",
@@ -42,12 +43,12 @@ projectsJSON =
 			],
 			"website-url":"https://www.loam.net",
 			"image":"loam.png",
-			"team-size":1,
+			"team-size":3,
 			"company":"<a href=\"https://loam.net\">Loam LLC</a>",
 			"project-size":3,
 			"roles":[
 				"Software Engineer",
-				"Web Developer",
+				"Game Engineer"
 			],
 			"languages":[
 				"Csharp",
@@ -59,20 +60,21 @@ projectsJSON =
 		},
 		{ 
 			"name":"KSP 2",
-			"short":"A space simulation and rocket building game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbital mechanics!",
+			"weight":1,
+			"short":"A 3D Unity space simulation and rocket building game I worked on for over half a decade. I was involved from pre-alpha through game launch and several post-launch updates over 6 years, stepping into a Software Engineering Management in late 2021 with between 5 and 8 reports.",
 			"date":[
 				"2018",
 				"2024"
 			],
-			"website-url":"https://www.kerbalspaceprogram.com",
-			"download-url":"https://store.steampowered.com/app/954850/Kerbal_Space_Program_2/",
+			"website-url":"https://store.privatedivision.com/game/kerbal-space-program-2",
 			"video-url":"https://www.youtube.com/watch?v=P_nj6wW6Gsc",
 			"image":"ksp2.png",
-			"team-size":50,
+			"team-size":52,
 			"company":"<a href=\"https://startheory.com\">Star Theory</a>",
 			"project-size":4,
 			"roles":[
-				"Software Engineer",
+				"Software Engineering Manager",
+				"Game Engineer",
 			],
 			"languages":[
 				"Csharp",
@@ -92,6 +94,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"URI Binder",
+			"weight":0,
 			"short":"A tiny tool that makes it easy to set up custom URI schemes for existing executables.",
 			"date":[
 				"2019"
@@ -102,7 +105,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Tools Engineer",
+				"Solo",
 			],
 			"languages":[
 				"Csharp"
@@ -119,18 +122,18 @@ projectsJSON =
 		},
 		{ 
 			"name":"Digital Golems",
+			"weight":0,
 			"short":"2D turn-based puzzle game designed for Android mobile and still in development.",
 			"date":[
 				"2018",
-				"2019"
+				"2019",
 			],
 			"website-url":"https://digitalgolems.loam.app",
 			"image":"digital-golems.gif",
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Systems Engineer",
-				"Gameplay Engineer",
+				"Solo",
 			],
 			"languages":[
 				"Csharp",
@@ -151,18 +154,19 @@ projectsJSON =
 		},
 		{ 
 			"name":"Kitty Bot",
-			"short":"Multithreaded Discord bot with utility, entertainment, and management features.",
+			"weight":0,
+			"short":"Multithreaded Discord bot with utility, entertainment, and management features deployed to around 100 servers at peak.",
 			"date":[
 				"2018",
 				"2019",
 			],
 			"image":"kittybot.jpg",
-			"website-url":"https://kittybot.net",
+			"website-url":"https://github.com/AlexStewartCode/KittyBot",
 			"source-url":"https://github.com/AlexStewartCode/KittyBot",
 			"team-size":3,
 			"project-size":2,
 			"roles":[
-				"Generalist",
+				"Software Engineer",
 			],
 			"languages":[
 				"Java",
@@ -187,6 +191,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"Bittorio",
+			"weight":0,
 			"short":"3D Competitive Puzzle Game done in Unity 3D, on PC and soon XBox.",
 			"date":[
 				"2016",
@@ -198,9 +203,7 @@ projectsJSON =
 			"team-size":9,
 			"project-size":3,
 			"roles":[
-				"Systems Engineer",
-				"Network Engineer",
-				"Tools Engineer",
+				"Game Engineer",
 			],
 			"languages":[
 				"Cpp",
@@ -229,6 +232,7 @@ projectsJSON =
 		}, 
 		{ 
 			"name":"Cures & Curios",
+			"weight":0,
 			"short":"VR Potion Crafting Game for HTC Vive, downloadable on Steam.",
 			"date":[
 				"2017",
@@ -242,7 +246,6 @@ projectsJSON =
 			"project-size":2,
 			"roles":[
 				"Tools Engineer",
-				"Web Developer",
 			],
 			"languages":[
 				"JavaScript",
@@ -270,6 +273,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"rw0.pw",
+			"weight":0,
 			"short":"A small collection of JavaScript game system demos and experiments!",
 			"date":[
 				"2017",
@@ -281,8 +285,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Gameplay Engineer",
-				"Web Developer",
+				"Solo",
 			],
 			"languages":[
 				"JavaScript",
@@ -301,6 +304,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"Dragon Drop",
+			"weight":0,
 			"short":"Block-based Electron IDE for game and arduino programming.",
 			"date":[
 				"2018"
@@ -311,7 +315,7 @@ projectsJSON =
 			"team-size":4,
 			"project-size":2,
 			"roles":[
-				"Junior Software Engineer",
+				"Software Engineer",
 			],
 			"languages":[
 				"JavaScript",
@@ -338,6 +342,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"matthewcech.com",
+			"weight":0,
 			"short":"My playground of a website, and where you are now!",
 			"date":[
 				"2017",
@@ -349,7 +354,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Web Developer",
+				"Solo",
 			],
 			"languages":[
 				"JavaScript",
@@ -365,7 +370,8 @@ projectsJSON =
 			],
 		},
 		{ 
-			"name":"A Sidescrolling Bonanza",
+			"name":"Swap Sizescroll",
+			"weight":0,
 			"short":"Custom C++ 2D Side-scroller engine with demo game.",
 			"date":[
 				"2016"
@@ -375,7 +381,7 @@ projectsJSON =
 			"team-size":2,
 			"project-size":1,
 			"roles":[
-				"Systems Engineer"
+				"Game Engineer"
 			],
 			"languages":[
 				"Cpp",
@@ -388,6 +394,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"Dual Reality",
+			"weight":0,
 			"short":"Mellow 2D Side-scrolling puzzle game.",
 			"date":[
 				"2014",
@@ -397,7 +404,7 @@ projectsJSON =
 			"team-size":3,
 			"project-size":1,
 			"roles":[
-				"Gameplay Engineer",
+				"Game Engineer",
 			],
 			"languages":[
 				"Zilch",
@@ -411,6 +418,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"Firetime",
+			"weight":0,
 			"short":"Time tracking and estimation software with C# desktop application and online proof-of-concept.",
 			"date":[
 				"2016"
@@ -421,7 +429,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Tools Engineer",
+				"Solo",
 			],
 			"languages":[
 				"Csharp",
@@ -437,6 +445,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"Grizzly Beats",
+			"weight":0,
 			"short":"2.5D multiplayer areana brawler written in a custom C++ engine.",
 			"date":[
 				"2015",
@@ -446,7 +455,7 @@ projectsJSON =
 			"team-size":6,
 			"project-size":1,
 			"roles":[
-				"Systems Engineer"
+				"Game Engineer"
 			],
 			"languages":[
 				"Cpp",
@@ -462,18 +471,19 @@ projectsJSON =
 			"description":"A 2.5D arena brawler game for up to four players locally. I was primarily in charge of designing and implementing the core of the game engine. Later contributions included the audio system and visualizers using FMOD.",
 		},
 		{ 
-			"name":"\"Windows\" on Linux",
+			"name":"*Nix Windows",
+			"weight":0,
 			"short":"Academic research into multithreading techniques using a from-scratch ASCII window manager.",
 			"date":[
 				"2017"
 			],
 			"image":"windowsonlinux.png",
-			"download-url":"https://docs.google.com/document/d/1skQyK6WXNOHbz5nCQGSu278A_gVS1XNiphWT0AKwqFY/edit?usp=sharing",
+			"website-url":"https://docs.google.com/document/d/1skQyK6WXNOHbz5nCQGSu278A_gVS1XNiphWT0AKwqFY/edit?usp=sharing",
 			"source-url":"https://github.com/MatthewCech/Console-Utils-MT",
 			"team-size":2,
 			"project-size":1,
 			"roles":[
-				"Systems Engineer",
+				"Software Engineer",
 			],
 			"languages":[
 				"Cpp",
@@ -490,6 +500,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"Console Utils",
+			"weight":0,
 			"short":"Accessable C++ console drawing and debug utilities.",
 			"date":[
 				"2016",
@@ -501,7 +512,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Systems Engineer"
+				"Solo"
 			],
 			"languages":[
 				"Cpp",
@@ -515,6 +526,7 @@ projectsJSON =
 		},
 		{ 
 			"name":"ASCIIPlayer",
+			"weight":0,
 			"short":"Lightweight command line audio visualizer written in C++.",
 			"date":[
 				"2016",
@@ -527,8 +539,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":2,
 			"roles":[
-				"Systems Engineer",
-				"Audio Engineer",
+				"Solo",
 			],
 			"languages":[
 				"Cpp",
@@ -547,35 +558,8 @@ projectsJSON =
 			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
 		},
 		{
-			"name":"Console Input",
-			"short":"C & C++ nonblocking keyboard input handling implemented in a compact header.",
-			"date":[
-				"2016"
-			],
-			"source-url":"https://github.com/MatthewCech/Console-Input",
-			"image":"keyboard.png",
-			"team-size":1,
-			"project-size":1,
-			"roles":[
-				"Systems Engineer"
-			],
-			"languages":[
-				"C",
-				"Cpp",
-			],
-			"tools":[
-				"Visual Studio",
-				"Git",
-				"Premake",
-				"Gpp",
-				"Clang",
-				"MobaXTerm",
-				"Cygwin"
-			],
-			"description":"Sometimes you really just need a single header file to plop somewhere and have it just work. That's what this is is for - kbhit and getch functionality cross-platform, plus callback binding",
-		},
-		{
 			"name":"Color Dodge",
+			"weight":0,
 			"short":"C# arena game about collecting colors from clouds.",
 			"date":[
 				"2012",
@@ -584,7 +568,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Systems Engineer"
+				"Solo"
 			],
 			"languages":[
 				"Csharp",
@@ -597,6 +581,7 @@ projectsJSON =
 		},
 		{
 			"name":"C World",
+			"weight":0,
 			"short":"Cross-platform ASCII Map generation tool with color and seed support.",
 			"date":[
 				"2014",
@@ -606,7 +591,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Tools Engineer",
+				"Solo",
 			],
 			"languages":[
 				"C",
@@ -619,30 +604,8 @@ projectsJSON =
 			"description":"An earlier experiement with procedurally generated worlds! Written in C to get myself more familiar with the language and how it worked as I was learning the basics!",
 		},
 		{
-			"name":"Ants GA",
-			"short":"Academic experiment exploring creating organic behaviors with genetic algorithms.",
-			"date":[
-				"2017"
-			],
-			"image":"ga.gif",
-			"download-url":"https://docs.google.com/document/d/1AD2NGtHA_cb7JiLFyan80RuBHOjlDIveHyrdZxfa3Dk/edit",
-			"source-url":"https://github.com/MatthewCech/GA-Cpp",
-			"team-size":1,
-			"project-size":1,
-			"roles":[
-				"Systems Engineer",
-			],
-			"languages":[
-				"Cpp",
-			],
-			"tools":[
-				"Visual Studio",
-				"Git",
-			],
-			"description":"This was an interesting and partially successful project, and was a fun way to play with non-traditional genetic algorithms. The idea was to create an organic \"Scent trail\" effect almost, or something more organic like the flow of a river. The goal was not actually optimality, but organic and fluid behaviors.",
-		},
-		{
 			"name":"Bubbles",
+			"weight":0,
 			"short":"Arena game with time slowing and enemy management focus done in Java.",
 			"date":[
 				"2013",
@@ -652,7 +615,7 @@ projectsJSON =
 			"team-size":1,
 			"project-size":1,
 			"roles":[
-				"Generalist",
+				"Solo",
 			],
 			"languages":[
 				"Java",
@@ -664,36 +627,5 @@ projectsJSON =
 			],
 			"description":"One of the larger solo engines I created when I just started learning about game engine architecture! Used minueto (http://www.cs.mcgill.ca/~minueto/), a basic Java game framework, and I ended up implementing particles, effects, and engine structure over it!",
 		},
-		{ 
-			"name":"\"The Portfolio\"",
-			"short":"Free templates and a guide for creating simple websites for low or no cost! (guide merged into loam.net)",
-			"date":[
-				"2018"
-			],
-			"website-url":"https://theportfolio.pw/",
-			"source-url":"https://github.com/MatthewCech/The-Portfolio",
-			"image":"theportfolio.png",
-			"team-size":1,
-			"project-size":1,
-			"roles":[
-				"Web Developer"
-			],
-			"languages":[
-				"HTMLCSS",
-			],
-			"tools":[
-				"Sublime Text",
-				"Git",
-				"Bootstrap",
-				"Github Pages",
-				"Cloudflare",
-			],
-			"actions":[
-				"Created approachable guide for creation of online portfolios",
-				"Documented modern techniques for creating "
-			],
-			"description":"An online website section guide and collection of free portfolio site designs for low to no cost portfolio creation.",
-		},
-
 	],
 };
