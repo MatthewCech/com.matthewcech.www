@@ -70,9 +70,9 @@
 			<div id="mc-tool-dropdown" class="collapse"></div>
 			<div id="mc-size-dropdown" class="collapse"></div>
 
+			<div id="mc-fill" class="mc-top-margin"></div>
 		</div>
 		<!-- Body to fill with tiles of projects -->
-		<div id="mc-fill"></div>
 
 		<!--===[ SCRIPT ZONE ]=================================-->    
 		<!-- Placed at the end of the document so the pages load faster -->
@@ -236,7 +236,7 @@
 						<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
 						<div class="mc-title-bar">
 							<div style="float: left;">
-								<a href="${get('website-url')}"><span class="mc-title">${get('name')}</span></a>
+								<a href="${get('website-url')}" style="text-decoration: none;"><span class="mc-title">${get('name')}</span></a>
 							</div>
 							${project['project-size'] > projectSizeSmall ?
 								"<div class=\"mc-date\">" + get('date').replace(' ', ' - ') + "</div>"

@@ -196,7 +196,7 @@ projectsJSON =
 			"download-url":"https://games.digipen.edu/games/bittorio",
 			"image":"bittorio.gif",
 			"team-size":9,
-			"project-size":2,
+			"project-size":3,
 			"roles":[
 				"Systems Engineer",
 				"Network Engineer",
@@ -499,7 +499,7 @@ projectsJSON =
 			"download-url":"https://github.com/MatthewCech/Console-Utils",
 			"source-url":"https://github.com/MatthewCech/Console-Utils",
 			"team-size":1,
-			"project-size":2,
+			"project-size":1,
 			"roles":[
 				"Systems Engineer"
 			],
