@@ -35,7 +35,7 @@ projectsJSON =
 		{ 
 			"name":"Loam LLC",
 			"weight":0,
-			"short":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers.",
+			"short":"Loam is a company I founded for solo game and app publishing, art sales, indie resources, and in general helping people with other creative barriers they might be dealing with.",
 			"date":[
 				"2019",
 				"Present"
@@ -60,7 +60,7 @@ projectsJSON =
 		{ 
 			"name":"KSP 2",
 			"weight":1,
-			"short":"A 3D Unity space simulation and rocket building game I worked on for over half a decade. I was involved from pre-alpha through game launch and several post-launch updates over 6 years, stepping into a Software Engineering Management in late 2021 with between 5 and 8 reports.",
+			"short":"A 3D Unity space simulation and rocket building sandbox game! Six years with a great team, from pre-alpha through launch and patches. Late 2021 onward, I was accountable for 5 to 8 engineers at any given time.",
 			"date":[
 				"2018",
 				"2024"
@@ -69,7 +69,7 @@ projectsJSON =
 			"video-url":"https://www.youtube.com/watch?v=P_nj6wW6Gsc",
 			"image":"ksp2.png",
 			"team-size":52,
-			"company":"<a href=\"https://startheory.com\">Star Theory</a>",
+			"company":"<a href=\"https://www.privatedivision.com/\">Private Division</a> (<a href=\"https://www.take2games.com/\">Take-Two</a>)",
 			"project-size":4,
 			"roles":[
 				"Software Engineering Manager",
@@ -77,6 +77,7 @@ projectsJSON =
 			],
 			"languages":[
 				"Csharp",
+				"Lua"
 			],
 			"tools":[
 				"Unity",
@@ -139,7 +140,6 @@ projectsJSON =
 				"Unity 3D",
 				"Visual Studio",
 				"Git",
-				"Android SDK",
 			],
 			"actions":[
 				"Designed a mobile-first game experience in Unity 2018+ working with Google Play deployment tools",
@@ -449,7 +449,7 @@ projectsJSON =
 		{ 
 			"name":"*Nix Windows",
 			"weight":0,
-			"short":"Academic research into multithreading techniques using a from-scratch ASCII window manager.",
+			"short":"Academic exploration into the requirements for multithreading techniques using a from-scratch ASCII window manager.",
 			"date":[
 				"2017"
 			],
@@ -528,7 +528,7 @@ projectsJSON =
 		},
 		{
 			"name":"Color Dodge",
-			"weight":0,
+			"weight":-1,
 			"short":"C# arena game about collecting colors from clouds.",
 			"date":[
 				"2012",

@@ -261,9 +261,7 @@
 							<div style="float: left;">
 								${project['website-url'] == null || project['website-url'] == "" ? `<span class="mc-title">${get('name')}</span>` : `<a href="${get('website-url')}" style="text-decoration: none;"><span class="mc-title">${get('name')}</span></a>`}
 							</div>
-							${project['project-size'] > projectSizeSmall ?
-								"<div class=\"mc-date\">" + get('date').replace(' ', ' - ') + "</div>"
-								: " " }
+							${"<div class=\"mc-date\">" + get('date').replace(' ', ' - ') + "</div>"}
 						</div>
 
 						<!-- ==========[ COMMENT ]: This contains an overview of what the project was. -->

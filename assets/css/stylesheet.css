@@ -18,10 +18,11 @@ body {
 
 .mc-body {
 	text-align: center;
-	max-width: 968px; /* 968px is the size of the media tag used elsewhere, but this is the size of the overall element + padding for 3x the large elements. */
+	max-width: 950px; /* 968px is the size of the media tag used elsewhere, but this is the size of the overall element + padding for 3x the large elements. */
 	margin-left: auto;
 	margin-right: auto;
-	background-color: rgba(255,0,0,0.1); /* Debug */
+	padding: 10px;
+	/* background-color: cornflowerblue; /* Debug */
 }
 
 .mc-container {
@@ -46,28 +47,29 @@ body {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	margin: 5px;
 	border-radius: 7px;
-	background-color: rgba(240, 230, 230, 0.4);
+
 	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+
+	width: 300px;
+	height: 250px;
 }
 
 .mc-project-lg {
-	/*color: rgb(250, 245, 245);*/
-	width: 300px;
-	height: 300px;
+	background-color: rgba(230, 240, 250, 0.35);
 }
 
 .mc-project-md {
-	width: 225px;
-	height: 225px;
+	background-color: rgba(200, 210, 220, 0.30);
 }
 
 .mc-project-sm {
-	width: 150px;
-	height: 150px;
+	background-color: rgba(170, 180, 190, 0.25);
 }
 
 .mc-project-content {
-	margin: 5px;
+	padding: 5px;
 	text-align: left;
 }
 
