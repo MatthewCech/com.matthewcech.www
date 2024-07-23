@@ -13,7 +13,7 @@
 		<!-- Stylesheet loading -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/defaults.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-		<script type="text/javascript" src="/assets/resume.json"></script>
+		<script type="text/javascript" src="/assets/projects.json"></script>
 		<script type="text/javascript" src="/assets/mixitup.min.js"></script>
 
 		<!-- Title -->
@@ -69,9 +69,9 @@
 			<div id="mc-role-dropdown" class="collapse"></div>
 			<div id="mc-tool-dropdown" class="collapse"></div>
 
-			<!-- Body to fill with tiles of projects -->
-			<div id="mc-fill"></div>
 		</div>
+		<!-- Body to fill with tiles of projects -->
+		<div id="mc-fill"></div>
 
 		<!--===[ SCRIPT ZONE ]=================================-->    
 		<!-- Placed at the end of the document so the pages load faster -->
@@ -129,7 +129,7 @@
 
 			// When the window is loaded, go ahead and then parse the JSON.
 			window.onload = function () { 
-				parseResumeJSON(resumeJSON);
+				parseProjectsJSON(projectsJSON);
 				let containerEl = document.querySelector('.mc-container');
 
 				let mixer = mixitup(containerEl, {
@@ -143,7 +143,7 @@
 			}
 
 			// Parses different possible sections for the resume.
-			function parseResumeJSON(json) {
+			function parseProjectsJSON(json) {
 				let accumulated = '';
 				accumulated += '<div class="mc-container">';
 
@@ -176,9 +176,9 @@
 					if(val1 == 'Csharp') val2 = 'C#';
 					if(val1 == 'HTMLCSS') val2 = 'HTML/CSS';
 
-					document.getElementById('mc-lang-dropdown').innerHTML 
-						= document.getElementById('mc-lang-dropdown').innerHTML 
-						+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+						document.getElementById('mc-lang-dropdown').innerHTML 
+							= document.getElementById('mc-lang-dropdown').innerHTML 
+							+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
 				});
 			}
 
@@ -191,9 +191,9 @@
 
 					if(val1 == 'Gpp') val2 = 'G++';
 
-				document.getElementById('mc-tool-dropdown').innerHTML
-					= document.getElementById('mc-tool-dropdown').innerHTML 
-					+ `<button type="button" class="mc-button btn btn-default" class="mc-button" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+					document.getElementById('mc-tool-dropdown').innerHTML
+						= document.getElementById('mc-tool-dropdown').innerHTML 
+						+ `<button type="button" class="mc-button btn btn-default" class="mc-button" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
 				});
 			}
 
@@ -204,9 +204,9 @@
 					let val2 = `${val}`;
 					val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
 
-				document.getElementById('mc-role-dropdown').innerHTML
-					= document.getElementById('mc-role-dropdown').innerHTML 
-					+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+					document.getElementById('mc-role-dropdown').innerHTML
+						= document.getElementById('mc-role-dropdown').innerHTML 
+						+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
 				});
 			}
 
@@ -220,7 +220,7 @@
 			function parseProject(project) {
 
 				let content = `
-				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')} mc-project" data-date="${get('date')}">
+				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')}  mc-project ${get('project-size')}" data-date="${get('date')}">
 					<div class="mc-project-content">
 
 						<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
@@ -289,7 +289,7 @@
 							case 'source-url': accumulated += parseSourceURL(project[key]); break;
 							case 'video-url': accumulated += parseVideoURL(project[key]); break;
 							case 'image': accumulated += parseImage(project[key]); break;
-							case 'teamsize': accumulated += parseTeamsize(project[key]); break;
+							case 'team-size': accumulated += parseTeamsize(project[key]); break;
 							case 'date': accumulated += parseDate(project[key]); break;
 							case 'roles': accumulated += parseRoles(project[key]); break;
 							case 'company': accumulated += parseCompany(project[key]); break;
@@ -297,6 +297,7 @@
 							case 'tools': accumulated += parseTools(project[key]); break;
 							case 'actions': accumulated += parseActions(project[key]); break;
 							case 'description': accumulated += parseDescription(project[key]); break;
+							case 'project-size': accumulated += parseProjectSize(project[key]); break;
 							default:
 								console.log('Key "' + key + '" could not be parsed.');
 						}
@@ -401,17 +402,21 @@
 			function parseDescription(key_value) {
 				return key_value;
 			}
-			// function toggleColor(button_id) {
-			//     let filter_button = document.getElementById(button_id);
-			//     if(filter_button.classList.contains("btn-info")) {
-			//       filter_button.classList.remove("btn-info");
-			//       filter_button.classList.add("btn-primary");
-			//     }
-			//     else if(filter_button.classList.contains("btn-primary")) {
-			//       filter_button.classList.remove("btn-primary");
-			//       filter_button.classList.add("btn-info");
-			//     }
-			// }
+			function parseProjectSize (key_value) {
+				// Small (1), medium (2), large (3), etc -- done as a number with increasing value
+				// to allow things to adjust with time.
+				switch(key_value) {
+				case 1:
+					return 'mc-project-sm';
+				case 2:
+					return 'mc-project-md';
+				case 3:
+				default:
+					return 'mc-project-lg';
+				}
+
+				return key_value;
+			}
 		</script>	
 	</body>
 </html>

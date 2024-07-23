@@ -1,4 +1,4 @@
-resumeJSON = 
+projectsJSON = 
 {
 	"projects": [
 		{ 
@@ -9,7 +9,8 @@ resumeJSON =
 			],
 			"website-url":"http://salmonberry.info",
 			"image":"salmonberry.png",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Generalist",
 			],
@@ -30,18 +31,20 @@ resumeJSON =
 			"actions":[
 				"",
 			],
-			"description":"This is partially inspired by brogue, a fun ASCII game - and roguelites aren't my usual, nor is Java, so I figured 'What better than to try and make a multiplayer roguelite with java driving the web app?'"
+			"description":"This is an ASCII only world done in Java, and java isn't my usual - so I figured 'What better than to try and make a small multiplayer experiment in java?'"
 		},
 		{ 
 			"name":"Loam LLC",
 			"short":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers.",
 			"date":[
-				"2019"
+				"2019",
+				"Present"
 			],
 			"website-url":"https://www.loam.net",
 			"image":"loam.png",
-			"teamsize":1,
+			"team-size":1,
 			"company":"<a href=\"https://loam.net\">Loam LLC</a>",
+			"project-size":3,
 			"roles":[
 				"Software Engineer",
 				"Web Developer",
@@ -59,14 +62,15 @@ resumeJSON =
 			"short":"A space simulation and rocket building game I work on at <a href=\"https://startheory.com\">Star Theory</a> that secretly teaches people orbital mechanics!",
 			"date":[
 				"2018",
-				"2019"
+				"2024"
 			],
 			"website-url":"https://www.kerbalspaceprogram.com",
 			"download-url":"https://store.steampowered.com/app/954850/Kerbal_Space_Program_2/",
 			"video-url":"https://www.youtube.com/watch?v=P_nj6wW6Gsc",
 			"image":"ksp2.png",
-			"teamsize":50,
+			"team-size":50,
 			"company":"<a href=\"https://startheory.com\">Star Theory</a>",
+			"project-size":4,
 			"roles":[
 				"Software Engineer",
 			],
@@ -95,7 +99,8 @@ resumeJSON =
 			"download-url":"https://github.com/MatthewCech/URI-Binder/releases",
 			"source-url":"https://github.com/MatthewCech/URI-Binder",
 			"image":"uribinder.png",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Tools Engineer",
 			],
@@ -121,7 +126,8 @@ resumeJSON =
 			],
 			"website-url":"https://digitalgolems.loam.app",
 			"image":"digital-golems.gif",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Systems Engineer",
 				"Gameplay Engineer",
@@ -153,7 +159,8 @@ resumeJSON =
 			"image":"kittybot.jpg",
 			"website-url":"https://kittybot.net",
 			"source-url":"https://github.com/AlexStewartCode/KittyBot",
-			"teamsize":3,
+			"team-size":3,
+			"project-size":2,
 			"roles":[
 				"Generalist",
 			],
@@ -188,7 +195,8 @@ resumeJSON =
 			"website-url":"https://bittorio.com",
 			"download-url":"https://games.digipen.edu/games/bittorio",
 			"image":"bittorio.gif",
-			"teamsize":9,
+			"team-size":9,
+			"project-size":2,
 			"roles":[
 				"Systems Engineer",
 				"Network Engineer",
@@ -230,7 +238,8 @@ resumeJSON =
 			"download-url":"https://store.steampowered.com/app/1141740/",
 			"video-url":"https://www.youtube.com/watch?v=-8Q37ylfy-E",
 			"image":"cauldron.png",
-			"teamsize":16,
+			"team-size":16,
+			"project-size":2,
 			"roles":[
 				"Tools Engineer",
 				"Web Developer",
@@ -269,7 +278,8 @@ resumeJSON =
 			"website-url":"https://rw0.pw",
 			"source-url":"https://github.com/MatthewCech/pw.rw0.www",
 			"image":"rw0.gif",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Gameplay Engineer",
 				"Web Developer",
@@ -298,7 +308,8 @@ resumeJSON =
 			"website-url":"https://dragondropteam.github.io",
 			"image":"dragondrop.png",
 			"company":"<a href=\"https://www.digipen.edu\">DigiPen R&D</a>",
-			"teamsize":4,
+			"team-size":4,
+			"project-size":2,
 			"roles":[
 				"Junior Software Engineer",
 			],
@@ -335,7 +346,8 @@ resumeJSON =
 			"website-url":"https://matthewcech.com",
 			"source-url":"https://github.com/MatthewCech/com.matthewcech.www",
 			"image":"matthewcechfolder.svg",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Web Developer",
 			],
@@ -360,7 +372,8 @@ resumeJSON =
 			],
 			"source-url":"https://github.com/Neko81795/ASideScrollBonanza",
 			"image":"a_sidescrolling_bonanza.gif",
-			"teamsize":2,
+			"team-size":2,
+			"project-size":1,
 			"roles":[
 				"Systems Engineer"
 			],
@@ -381,7 +394,8 @@ resumeJSON =
 				"2015"
 			],
 			"image":"dual_reality.gif",
-			"teamsize":3,
+			"team-size":3,
+			"project-size":1,
 			"roles":[
 				"Gameplay Engineer",
 			],
@@ -404,7 +418,8 @@ resumeJSON =
 			"image":"firetime.png",
 			"website-url":"https://matthewcech.github.io/Firetime/",
 			"source-url":"https://github.com/MatthewCech/Firetime",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Tools Engineer",
 			],
@@ -428,7 +443,8 @@ resumeJSON =
 				"2016"
 			],
 			"image":"grizzybeats.gif",
-			"teamsize":6,
+			"team-size":6,
+			"project-size":1,
 			"roles":[
 				"Systems Engineer"
 			],
@@ -454,7 +470,8 @@ resumeJSON =
 			"image":"windowsonlinux.png",
 			"download-url":"https://docs.google.com/document/d/1skQyK6WXNOHbz5nCQGSu278A_gVS1XNiphWT0AKwqFY/edit?usp=sharing",
 			"source-url":"https://github.com/MatthewCech/Console-Utils-MT",
-			"teamsize":2,
+			"team-size":2,
+			"project-size":1,
 			"roles":[
 				"Systems Engineer",
 			],
@@ -481,7 +498,8 @@ resumeJSON =
 			"image":"consoleutils.png",
 			"download-url":"https://github.com/MatthewCech/Console-Utils",
 			"source-url":"https://github.com/MatthewCech/Console-Utils",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":2,
 			"roles":[
 				"Systems Engineer"
 			],
@@ -506,7 +524,8 @@ resumeJSON =
 			"download-url":"https://asciiplayer.com/",
 			"source-url":"https://github.com/MatthewCech/ASCIIPlayer",
 			"image":"ASCII_Player.png",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":2,
 			"roles":[
 				"Systems Engineer",
 				"Audio Engineer",
@@ -535,7 +554,8 @@ resumeJSON =
 			],
 			"source-url":"https://github.com/MatthewCech/Console-Input",
 			"image":"keyboard.png",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Systems Engineer"
 			],
@@ -561,7 +581,8 @@ resumeJSON =
 				"2012",
 			],
 			"image":"colordodge.gif",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Systems Engineer"
 			],
@@ -582,7 +603,8 @@ resumeJSON =
 				"2015"
 			],
 			"image":"cworld.gif",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Tools Engineer",
 			],
@@ -605,7 +627,8 @@ resumeJSON =
 			"image":"ga.gif",
 			"download-url":"https://docs.google.com/document/d/1AD2NGtHA_cb7JiLFyan80RuBHOjlDIveHyrdZxfa3Dk/edit",
 			"source-url":"https://github.com/MatthewCech/GA-Cpp",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Systems Engineer",
 			],
@@ -626,7 +649,8 @@ resumeJSON =
 				"2014"
 			],
 			"image":"bubbles.gif",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Generalist",
 			],
@@ -649,7 +673,8 @@ resumeJSON =
 			"website-url":"https://theportfolio.pw/",
 			"source-url":"https://github.com/MatthewCech/The-Portfolio",
 			"image":"theportfolio.png",
-			"teamsize":1,
+			"team-size":1,
+			"project-size":1,
 			"roles":[
 				"Web Developer"
 			],

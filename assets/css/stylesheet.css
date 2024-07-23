@@ -5,6 +5,13 @@ body {
 	padding: 0px;
 }
 
+#mc-fill {
+	display: flex;
+	background-color: DodgerBlue;
+	  align-items: center;
+	justify-content: center;
+}
+
 .center-img {
 	/*border-radius: 150px;*/
 	max-width: 250px;
@@ -50,10 +57,24 @@ body {
 	border: 1px solid black;
 	border-radius: 7px;
 	margin: 5px;
-	/*color: rgb(250, 245, 245);*/
 	background-color: rgba(240, 230, 230, 0.3);
-	max-width: 300px;
-	min-height: 285px;
+	    overflow: hidden;
+}
+
+.mc-project-lg {
+	/*color: rgb(250, 245, 245);*/
+	width: 300px;
+	height: 300px;
+}
+
+.mc-project-md {
+	width: 250px;
+	height: 250px;
+}
+
+.mc-project-sm {
+	width: 150px;
+	height: 150px;
 }
 
 .mc-project-content {
