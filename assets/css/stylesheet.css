@@ -5,15 +5,24 @@ body {
 	padding: 0px;
 }
 
-.center-img {
-	max-width: 250px;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: -15px
+@media only screen and (max-width: 968px) {
+	.mc-body {
+		max-width: 656px;
+	}
+}
+@media only screen and (max-width: 656px) {
+	.mc-project {
+		min-width: 100%;
+	}
+	.mc-project-details {
+		width: 80%;
+	}
 }
 
-.mc-top-margin {
-	margin-top: 50px;
+@media only screen and (min-width:657px) {
+	.mc-project-details {
+		width: 203px;
+	}
 }
 
 .mc-body {
@@ -30,125 +39,19 @@ body {
 	flex-wrap: wrap;
 }
 
-.mc-container:after {
-	display: inline-block;
-	width: 100%;
+.mc-top-margin {
+	margin-top: 50px;
 }
 
-.mix:before {
-	display: inline-block;
+.mc-pic-of-me {
+	filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
+	border-radius: 500px;
 }
 
-.mix {
-	position: relative;
-}
-
-.mc-project {
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	margin: 5px;
-	border-radius: 7px;
-
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
-
-	width: 300px;
-	height: 250px;
-}
-
-.mc-project-lg {
-	background-color: rgba(230, 240, 250, 0.35);
-}
-
-.mc-project-md {
-	background-color: rgba(200, 210, 220, 0.30);
-}
-
-.mc-project-sm {
-	background-color: rgba(170, 180, 190, 0.25);
-}
-
-.mc-project-content {
-	padding: 5px;
-	text-align: left;
-}
-
-.mc-project-title {
-	margin-right: 10px;
-	margin-left: 5px;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.mc-title-bar {
-	text-align: right;
-	height: 100%; 
-	/*background-color: rgba(255, 255, 255, 0.4); /* Actual Color */
-	/* background-color: red; /* Actual Color */
-	border-radius: 4px;
-	overflow: hidden;
-	padding: 0px;
-}
-.mc-project-fa-sizing{
-	width: 16px;
-	text-align: center;
-}
-
-.mc-date {
-	font-size: .9em;
-
-	position: absolute;
-	display: inline-block;
-	bottom: 5px;
-	right: 5px;
-
-	font-size: .7em;
-	font-style: italic;
-
-	margin-left: 5px;
-	text-align: right;
-}
-
-.mc-project-short {
-	font-size: .9em;
-	display: inline-block;
-	text-align: left;
-	margin-left: 5px;
-	margin-bottom: 5px;
-	float: none;
-}
-
-.mc-project-stats {
-	margin-left: 5px;
-	font-size: .7em;
-	/*background-color: rgb(100, 150, 100);*/
-	width: 180px;
-	display: inline-block;
-	text-align: left;
-}
-
-.mc-project-icon {
-	width: 80px;
-	position: absolute;
-	border-radius: 7px;
-	bottom: 5px;
-	right: 5px;
-	filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
-}
-
-.mc-vertical-buffer {
-	display: inline-block;
-	height: 100%;
-	margin-top: 40px;
-}
-
-
-/* Removes the top margin */
 .mc-notop {
 	vertical-align:top
 }
 
-/* Custom H4 sizing */
 .mc-h4 {
 	margin: 0px;
 	font-size: 14px;
@@ -172,13 +75,96 @@ body {
 	padding-top: 0px;
 }
 
-@media only screen and (max-width: 968px) {
-	.mc-body {
-		max-width: 656px;
-	}
+.mc-container:after {
+	display: inline-block;
+	width: 100%;
 }
-@media only screen and (max-width: 656px) {
-	.mc-project {
-		min-width: 100%;
-	}
+
+.mix:before {
+	display: inline-block;
+}
+
+.mix {
+	position: relative;
+}
+
+/* ========== ========== Project zone ========== ========== */
+
+.mc-project {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 5px;
+	border-radius: 7px;
+
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+
+	width: 300px;
+	height: 260px;
+}
+
+/* The short text description of what the project is */
+.mc-project-short {
+	font-size: .9em;
+	display: inline-block;
+	text-align: left;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	float: none;
+}
+
+.mc-project-icon {
+	width: 80px;
+	position: absolute;
+	border-radius: 7px;
+	bottom: 5px;
+	right: 5px;
+	filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+}
+
+.mc-project-sm, .mc-project-md, .mc-project-lg, .mc-project-xl {
+	background-color: rgba(240, 240, 250, 0.35);
+}
+
+.mc-project-content {
+	padding: 5px;
+	text-align: left;
+}
+
+.mc-project-title {
+	margin-right: 10px;
+	margin-left: 5px;
+
+	font-weight: bold;
+	text-decoration: none;
+	float: left;
+}
+
+.mc-project-title-bar {
+	text-align: right;
+	height: 100%; 
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+.mc-project-fa-sizing{
+	width: 16px;
+	text-align: center;
+}
+
+.mc-project-stat {
+	margin-left: 5px;
+	font-size: .75em;
+	text-align: left;
+}
+
+.mc-vertical-buffer {
+	display: inline-block;
+	height: 100%;
+	margin-top: 40px;
+}
+
+.mc-project-links {
+	margin-right: 5px;
 }

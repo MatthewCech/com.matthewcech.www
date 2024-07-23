@@ -35,19 +35,21 @@
 			<div>
 				<div class="row justify-content-center">
     				<div class="col-12 col-lg-4">
-						<img class="mc-top-margin img-fluid" style="max-width: 250px; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); border-radius: 200px;" src="/assets/snow-faceplant.jpg" alt="A smiling, upbeat picture of me! I'm face down in the snow so though you really just see my silly outfit and not the smile, but it's there."/>
+						<img class="mc-top-margin mc-pic-of-me img-fluid" style="max-width: 250px;" src="/assets/snow-faceplant.jpg" alt="A smiling, upbeat picture of me! I'm face down in the snow so though you really just see my silly outfit and not the smile, but it's there."/>
     				</div>
-    				<div class="col-12 col-lg-4">
+    				<div class="col-12 col-lg-4 text-start">
     					<div class="mc-top-margin"></div>
 						<!-- Name & Serious title that becomes a silly title after 4 seconds -->
 						<h1>Matthew Cech</h1>
-						<p class="text-muted">Software Engineering Manager and <span id="rotating-text"> Developer</span><p>
+						<p class="text-muted"><span id="rotating-text">Software Engineering Manager</span><p>
 
 						<!-- Links -->
 						<a class="btn btn-outline-dark btn-xl" role="button" href="mailto:contactAmatthewcechDTcom" onclick="this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
 						<a class="btn btn-outline-dark btn-xl" href="https://www.linkedin.com/in/matthewcech/"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></a>
 						<a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></a>
 						<a class="btn btn-outline-dark btn-xl" href="/assets/Cech, Matthew - Resume.pdf" target="_blank"><i class="fa fa-download fa-lg" aria-hidden="true"></i> Resume</a>
+
+						<p>Hey! I'm a Software Engineering Manager and Game Engineer that loves working on all sorts of projects! I'm a big fan of national parks, I hoard plants, and I make watercolor paper by hand.</p>
     				</div>
     			</div>
 			</div>
@@ -241,6 +243,7 @@
 			const projectSizeSmall = 1;
 			const projectSizeMedium = 2;
 			const projectSizeLarge = 3;
+			const projectSizeExtraLarge = 4;
 
 			// Parses a specific project from the object. 
 			// Returns string of the parsed project in HTML.
@@ -253,59 +256,83 @@
 
 
 				let content = `
-				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')}  mc-project ${get('v_project-size-class')}" data-date="${get('date')}" data-size="${get('project-size')}" data-weight="${get('v_adjusted-weight')}">
+				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')} mc-project ${get('v_project-size-class')}" data-date="${get('date')}" data-size="${get('project-size')}" data-weight="${get('v_adjusted-weight')}">
 					<div class="mc-project-content">
 
 						<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
 						<div class="mc-project-title-bar">
-							<div style="float: left;">
-								${project['website-url'] == null || project['website-url'] == "" ? `<span class="mc-project-title">${get('name')}</span>` : `<a href="${get('website-url')}" style="text-decoration: none;"><span class="mc-project-title">${get('name')}</span></a>`}
-							</div>
-							${"<div class=\"mc-date\">" + get('date').replace(' ', ' - ') + "</div>"}
+							<span class="mc-project-title">${get('name')}</span>
 
-							<div class="mc-links">
-								<!--${get('website-url') ? `<a href="${get('website-url')}"><i class="fa fa-link" aria-hidden="true"></i></a>` : ''} -->
+							<div class="mc-project-links">
+								${get('website-url') ? `<a href="${get('website-url')}"><i class="fa fa-link" aria-hidden="true"></i></a>` : ''}
 								${get('download-url') ? `<a href="${get('download-url')}"><i class="fa fa-download" aria-hidden="true"></i></a>` : ''}
 								${get('source-url') ? `<a href="${get('source-url')}"><i class="fa fa-code" aria-hidden="true"></i></a>` : ''}
 								${get('video-url') ? `<a href="${get('video-url')}"><i class="fa fa-video" aria-hidden="true"></i></a>` : ''}
 							</div>
 						</div>
 
-						<!-- ==========[ COMMENT ]: This contains an overview of what the project was. -->
-						<div class="mc-project-short">
-							<p>${get('short')}</p>
+						<!-- ==========[ COMMENT ]: Sizing and spacing info -->
+						<div style="position: relative; margin-left: 5px; margin-top: 3px; margin-bottom: 8px;">
+							<div style="float: left; background: linear-gradient(to left, #9198e5, #e66465); width: ${get('project-size') * 20}px; height: 1px;"></div>
+							<span style="position: absolute; top: -7px; font-size: .6em; color: #9198e5;">&nbsp;${get('v_size-as-text')}</span>
 						</div>
 
-						<!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
-						<div class="mc-proj-body">
-							${get('company') ? 
-							`<div class="mc-notop mc-project-stats">
-								<i class="fa-solid fa-building mc-project-fa-sizing"></i> ${get('company')}
-							</div>` : ''
-							}
-							${get('team-size') && project['team-size'] > 1 ? 
-							`<div class="mc-notop mc-project-stats">
-								<!-- ==========[ COMMENT ]: Note to future self: "\\b" indicates a word boundary in regex which is why it's used here. Don't want to pic up the 1 in 321 or 12. -->
-								<!-- Worth leaving if needed later, and while there's a perf hit it's small:   <i class="fa-solid fa-user-group"></i> ${get('team-size').replace(/\b1\b/, "1 (Solo)")} -->
-								<i class="fa-solid fa-user-group mc-project-fa-sizing"></i> ${get('team-size')}
-							</div>` : ''
-							}
-							<div class="mc-notop mc-project-stats">
-								<i class="fa-solid fa-id-card mc-project-fa-sizing"></i> ${get('roles').replace(/ /g , "<br/><i class='fa-solid fa-id-card mc-project-fa-sizing'></i> ").replace(/_/g , " ").replace("Solo", "Solo/Generalist")}
-							</div>
-							${get('languages') ? 
-							`<div class="mc-notop mc-project-stats">
-								<i class="fa-solid fa-code mc-project-fa-sizing"></i> ${get('languages').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".").replace("Cpp", "C++").replace("Csharp", "C#").replace("HTMLCSS", "HTML/CSS")}
-							</div>` : ''
-							}
-							${get('tools') ? 
-							`<div class="mc-notop mc-project-stats">
-								<i class="fa-solid fa-screwdriver-wrench mc-project-fa-sizing"></i> ${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
-							</div>` : ''
-							}
+						<!-- ==========[ COMMENT ]: This contains an overview description of what the project was. -->
+						<p class="mc-project-short">${get('short')}</p>
 
-							<!-- ==========[ COMMENT ]: Button/Links-->
-							<img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
+						<!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
+						<div>
+							<div class="mc-project-details text-muted">
+
+								${get('roles') ?
+								`<div class="mc-notop mc-project-stat">
+									<i class="fa-solid fa-id-card mc-project-fa-sizing"></i>
+									${get('roles').replace(/ /g , ", ").replace(/_/g , " ").replace("Solo", "Solo/Generalist")}
+								</div>` : ''
+								}
+								
+								${get('company') ? 
+								`<div class="mc-notop mc-project-stat">
+									<i class="fa-solid fa-building mc-project-fa-sizing"></i>
+									${get('company')}
+								</div>` : ''
+								}
+
+								${get('date') ? 
+								`<div class="mc-notop mc-project-stat">
+									<i class="fa-solid fa-calendar mc-project-fa-sizing"></i>
+									${get('date').replace(' ', ' - ')}
+								</div>` : ''
+								}
+
+								${get('team-size') && project['team-size'] > 1 ? 
+								`<div class="mc-notop mc-project-stat">
+									<!-- ==========[ COMMENT ]: Note to future self: "\\b" indicates a word boundary in regex which is why it's used here. Don't want to pic up the 1 in 321 or 12. -->
+									<!-- Worth leaving if needed later, and while there's a perf hit it's small:   <i class="fa-solid fa-user-group"></i> ${get('team-size').replace(/\b1\b/, "1 (Solo)")} -->
+									<i class="fa-solid fa-user-group mc-project-fa-sizing"></i>
+									${get('team-size')}
+								</div>` : ''
+								}
+
+								${get('languages') ? 
+								`<div class="mc-notop mc-project-stat">
+									<i class="fa-solid fa-code mc-project-fa-sizing"></i>
+									${get('languages').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".").replace("Cpp", "C++").replace("Csharp", "C#").replace("HTMLCSS", "HTML/CSS")}
+								</div>` : ''
+								}
+
+								${get('tools') ? 
+								`<div class="mc-notop mc-project-stat">
+									<i class="fa-solid fa-screwdriver-wrench mc-project-fa-sizing"></i>
+									${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
+								</div>` : ''
+								}
+
+							</div>
+							<div>
+								<!-- ==========[ COMMENT ]: Project Icon -->
+								<img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
+							</div>
 						</div>
 					</div>
 				</div>`
@@ -345,6 +372,7 @@
 						switch(key) {
 							case 'v_project-size-class': accumulated += virtual_parseProjectSizeAsClass(project['project-size']); break;
 							case 'v_adjusted-weight': accumulated += virtual_parseAdjustedWeight(project['weight'], project['project-size']); break;
+							case 'v_size-as-text': accumulated += virtual_parseSizeAsText(project['project-size']); break;
 						}
 					}
 
@@ -357,6 +385,7 @@
 			function parseName(key_value) {
 				return key_value;
 			}
+
 			function parseDate(key_value) {
 				let accumulated = '';
 
@@ -369,30 +398,39 @@
 
 				return accumulated;
 			}
+
 			function parseShort(key_value) {
 				return key_value;
 			}
+
 			function parseWebsiteURL(key_value) {
 				return key_value;
 			}
+
 			function parseDownloadURL(key_value) {
 				return key_value;
 			}
+
 			function parseSourceURL(key_value) {
 				return key_value;
 			}
+
 			function parseVideoURL(key_value) {
 				return key_value;
 			}
-			function parseTeamsize (key_value) {
+
+			function parseTeamsize(key_value) {
 				return key_value;
 			}
-			function parseImage (key_value) {
+
+			function parseImage(key_value) {
 				return key_value;
 			}
-			function parseCompany (key_value) {
+
+			function parseCompany(key_value) {
 				return key_value;
 			}
+
 			function parseRoles(key_value) {
 				let accumulated = '';
 
@@ -407,6 +445,7 @@
 
 				return accumulated;
 			}
+
 			function parseLanguages(key_value) {
 				let accumulated = '';
 				
@@ -420,6 +459,7 @@
 
 				return accumulated;
 			}
+
 			function parseTools(key_value) {
 				let accumulated = '';
 				
@@ -436,6 +476,7 @@
 
 				return accumulated;
 			}
+
 			function parseActions(key_value) {
 				let accumulated = '';
 				
@@ -444,35 +485,56 @@
 
 				return accumulated;
 			}
+
 			function parseDescription(key_value) {
 				return key_value;
 			}
+
 			function parseProjectSize(key_value) {
 				return key_value;
 			}
+
 			function parseWeight(key_value) {
 				return key_value;
 			}
+
 			// Uses the number as an index
-			function virtual_parseProjectSizeAsClass (key_value) {
+			function virtual_parseProjectSizeAsClass(key_value) {
 				// Small (1), medium (2), large (3), etc -- done as a number with increasing value
 				// to allow things to adjust with time.
 				switch(key_value) {
-				case projectSizeSmall:
+				case projectSizeExtraLarge:
+					return 'mc-project-xl';
+				case projectSizeLarge:
 					return 'mc-project-sm';
 				case projectSizeMedium:
 					return 'mc-project-md';
-				case projectSizeLarge:
-				default:
-					return 'mc-project-lg';
-				}
 
-				return 'mc-project-lg';
+				case projectSizeSmall:
+				default:
+					return 'mc-project-sm';
+				}
 			}
+
 			// Note that while project size is given a major defference, you can
 			// weight something up very strongly if desired.
-			function virtual_parseAdjustedWeight (weight, project_size) {
+			function virtual_parseAdjustedWeight(weight, project_size) {
 				return project_size * 10 + weight;
+			}
+
+			function virtual_parseSizeAsText(project_size_as_num) {
+				switch(project_size_as_num) {
+					case projectSizeSmall:
+						return 'S';
+					case projectSizeMedium:
+						return 'M';
+					case projectSizeLarge:
+						return 'L';
+					case projectSizeExtraLarge:
+						return 'XL';
+
+					default: return '';
+				}
 			}
 		</script>	
 	</body>

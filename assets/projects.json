@@ -35,7 +35,7 @@ projectsJSON =
 		{ 
 			"name":"Loam LLC",
 			"weight":0,
-			"short":"Loam is a company I founded for solo game and app publishing, art sales, indie resources, and in general helping people with other creative barriers they might be dealing with.",
+			"short":"Loam is a studio I founded for indie game and app publishing, art, and all sorts of other creative stuff I like to do!",
 			"date":[
 				"2019",
 				"Present"
@@ -51,6 +51,8 @@ projectsJSON =
 			],
 			"languages":[
 				"Csharp",
+				"JavaScript",
+				"HTMLCSS"
 			],
 			"actions":[
 				"",
@@ -60,7 +62,7 @@ projectsJSON =
 		{ 
 			"name":"KSP 2",
 			"weight":1,
-			"short":"A 3D Unity space simulation sandbox game I was on from pre-alpha through launch and patches. Late 2021 onward, I was accountable for 5 to 8 engineers at any given time.",
+			"short":"A 3D Unity space simulation and rocket building sandbox game I worked on from pre-alpha through launch and several patches, accountable for between 5 and 8 engineers.",
 			"date":[
 				"2018",
 				"2024"
@@ -69,10 +71,10 @@ projectsJSON =
 			"video-url":"https://www.youtube.com/watch?v=P_nj6wW6Gsc",
 			"image":"ksp2.png",
 			"team-size":52,
-			"company":"<a href=\"https://www.privatedivision.com/\">Private Division</a> (<a href=\"https://www.take2games.com/\">Take-Two</a>)",
+			"company":"<a href=\"https://www.interceptgames.com/\">Intercept Games</a> (<a href=\"https://www.take2games.com/\">Take-Two</a>)",
 			"project-size":4,
 			"roles":[
-				"Software Engineering Manager",
+				"Eng Manager",
 				"Game Engineer",
 			],
 			"languages":[
@@ -84,6 +86,9 @@ projectsJSON =
 				"Visual Studio",
 				"Jira",
 				"Perforce",
+				"Miro",
+				"Rider",
+				".NET"
 			],
 			"actions":[
 				"",
@@ -137,7 +142,7 @@ projectsJSON =
 				"Csharp",
 			],
 			"tools":[
-				"Unity 3D",
+				"Unity",
 				"Visual Studio",
 				"Git",
 			],
@@ -186,7 +191,7 @@ projectsJSON =
 		{ 
 			"name":"Bittorio",
 			"weight":0,
-			"short":"A 2D turned 3D Competitive Puzzle Game done in Unity 3D and available on PC!",
+			"short":"A 2D turned 3D Competitive Puzzle Game done in Unity and available on PC.",
 			"date":[
 				"2016",
 				"2017"
@@ -349,7 +354,7 @@ projectsJSON =
 		{ 
 			"name":"Swap Sizescroll",
 			"weight":0,
-			"short":"Custom C++ 2D Side-scroller engine with demo game.",
+			"short":"A 2D Size-Scroller small team game jam done in a from-scratch custom engine.",
 			"date":[
 				"2016"
 			],
@@ -384,7 +389,7 @@ projectsJSON =
 				"Game Engineer",
 			],
 			"languages":[
-				"Zilch",
+				"Custom",
 			],
 			"tools":[
 				"Zero Engine",
