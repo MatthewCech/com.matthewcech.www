@@ -73,63 +73,58 @@ body {
 	text-align: left;
 }
 
-.mc-title {
+.mc-project-title {
 	margin-right: 10px;
 	margin-left: 5px;
 	font-weight: bold;
 	text-decoration: none;
 }
+
 .mc-title-bar {
 	text-align: right;
 	height: 100%; 
-	background-color: rgba(255, 255, 255, 0.4);
+	/*background-color: rgba(255, 255, 255, 0.4); /* Actual Color */
+	/* background-color: red; /* Actual Color */
 	border-radius: 4px;
 	overflow: hidden;
 	padding: 0px;
 }
+.mc-project-fa-sizing{
+	width: 16px;
+	text-align: center;
+}
 
 .mc-date {
-	margin-top: 0px;
-	margin-right: 7px;
-}
-
-.mc-short {
-	float: none;
 	font-size: .9em;
-	margin-bottom: 5px;
+
+	position: absolute;
+	display: inline-block;
+	bottom: 5px;
+	right: 5px;
+
+	font-size: .7em;
+	font-style: italic;
+
+	margin-left: 5px;
+	text-align: right;
 }
 
-.mc-tools {
+.mc-project-short {
+	font-size: .9em;
+	display: inline-block;
+	text-align: left;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	float: none;
+}
+
+.mc-project-stats {
+	margin-left: 5px;
 	font-size: .7em;
 	/*background-color: rgb(100, 150, 100);*/
 	width: 180px;
 	display: inline-block;
-	margin-top: 5px;
 	text-align: left;
-}
-
-.mc-roles {
-	font-size: .7em;
-	/*background-color: rgb(150, 120, 150);*/
-	width: 200px;
-	display: inline-block;
-	margin-top: 5px;
-	text-align: left;
-}
-
-.mc-links {
-	font-size: .9em;
-	position: absolute;
-	bottom: 5px;
-	left: 5px;
-}
-
-.mc-subheader {
-	margin-left: 5px;
-}
-
-.mc-proj-body {
-	margin-left: 5px;
 }
 
 .mc-project-icon {
@@ -147,7 +142,7 @@ body {
 	margin-top: 40px;
 }
 
-/* General classes for adjusting in a specific way. */
+
 /* Removes the top margin */
 .mc-notop {
 	vertical-align:top

@@ -60,10 +60,10 @@
 			<p style="max-width: 520px; margin-left: auto; margin-right: auto;">If you're looking for the highlights, check out my resume! This is a much longer (but still not comprehensive) list of things I've explored ranging from major multi-year positions at studios down to small solo jams.</p>
 			<!-- Generated mixitup filters -->
 			<div style="margin-bottom: 2px;">
-				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fa fa-filter"></i> Language</button>
-				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-role-dropdown"><i class="fa fa-filter"></i> Role</button>
-				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-tool-dropdown"><i class="fa fa-filter"></i> Tool</button>
-				<button type="button" class="btn btn-warning mc-category mixitup-control-active" data-mixitup-control="" data-filter="all"><i class="fa fa-refresh"></i> Reset</button>
+				<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fa fa-filter"></i> Language</button>
+				<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-role-dropdown"><i class="fa fa-filter"></i> Role</button>
+				<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-tool-dropdown"><i class="fa fa-filter"></i> Tool</button>
+				<button type="button" class="btn btn-outline-dark  mc-category mixitup-control-active" data-mixitup-control="" data-filter="all"><i class="fa fa-refresh"></i> Reset</button>
 			</div>
 			<div id="mc-lang-dropdown" class="collapse"></div>
 			<div id="mc-role-dropdown" class="collapse"></div>
@@ -206,7 +206,7 @@
 
 					document.getElementById('mc-tool-dropdown').innerHTML
 						= document.getElementById('mc-tool-dropdown').innerHTML 
-						+ `<button type="button" class="mc-button btn btn-default" class="mc-button" data-mixitup-control data-filter=".${rawValue}">${buttonText}</button>`;
+						+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${rawValue}">${buttonText}</button>`;
 				});
 			}
 			function cleanTools(val) {
@@ -257,52 +257,54 @@
 					<div class="mc-project-content">
 
 						<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
-						<div class="mc-title-bar">
+						<div class="mc-project-title-bar">
 							<div style="float: left;">
-								${project['website-url'] == null || project['website-url'] == "" ? `<span class="mc-title">${get('name')}</span>` : `<a href="${get('website-url')}" style="text-decoration: none;"><span class="mc-title">${get('name')}</span></a>`}
+								${project['website-url'] == null || project['website-url'] == "" ? `<span class="mc-project-title">${get('name')}</span>` : `<a href="${get('website-url')}" style="text-decoration: none;"><span class="mc-project-title">${get('name')}</span></a>`}
 							</div>
 							${"<div class=\"mc-date\">" + get('date').replace(' ', ' - ') + "</div>"}
+
+							<div class="mc-links">
+								<!--${get('website-url') ? `<a href="${get('website-url')}"><i class="fa fa-link" aria-hidden="true"></i></a>` : ''} -->
+								${get('download-url') ? `<a href="${get('download-url')}"><i class="fa fa-download" aria-hidden="true"></i></a>` : ''}
+								${get('source-url') ? `<a href="${get('source-url')}"><i class="fa fa-code" aria-hidden="true"></i></a>` : ''}
+								${get('video-url') ? `<a href="${get('video-url')}"><i class="fa fa-video" aria-hidden="true"></i></a>` : ''}
+							</div>
 						</div>
 
 						<!-- ==========[ COMMENT ]: This contains an overview of what the project was. -->
-						<div class="mc-subheader">
-							<div>
-								<p class="mc-short">${get('short')}</p>
-							</div>
+						<div class="mc-project-short">
+							<p>${get('short')}</p>
 						</div>
 
 						<!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
 						<div class="mc-proj-body">
 							${get('company') ? 
-							`<div class="mc-roles mc-notop ">
-								<h4 class="mc-h4">Company:</h4>
-								<div class="mc-subheader">
-									${get('company')}
-								</div>
+							`<div class="mc-notop mc-project-stats">
+								<i class="fa-solid fa-building mc-project-fa-sizing"></i> ${get('company')}
 							</div>` : ''
 							}
-							<div class="mc-roles mc-notop ">
-								<h4 class="mc-h4">Role${(get('roles').split(" ").length > 1) ? 's' : ''}:</h4>
-								<div class="mc-subheader">
-									${get('roles').replace(/ /g , "<br/>").replace(/_/g , " ")}
-								</div>
+							${get('team-size') && project['team-size'] > 1 ? 
+							`<div class="mc-notop mc-project-stats">
+								<!-- ==========[ COMMENT ]: Note to future self: "\\b" indicates a word boundary in regex which is why it's used here. Don't want to pic up the 1 in 321 or 12. -->
+								<!-- Worth leaving if needed later, and while there's a perf hit it's small:   <i class="fa-solid fa-user-group"></i> ${get('team-size').replace(/\b1\b/, "1 (Solo)")} -->
+								<i class="fa-solid fa-user-group mc-project-fa-sizing"></i> ${get('team-size')}
+							</div>` : ''
+							}
+							<div class="mc-notop mc-project-stats">
+								<i class="fa-solid fa-id-card mc-project-fa-sizing"></i> ${get('roles').replace(/ /g , "<br/><i class='fa-solid fa-id-card mc-project-fa-sizing'></i> ").replace(/_/g , " ").replace("Solo", "Solo/Generalist")}
 							</div>
+							${get('languages') ? 
+							`<div class="mc-notop mc-project-stats">
+								<i class="fa-solid fa-code mc-project-fa-sizing"></i> ${get('languages').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".").replace("Cpp", "C++").replace("Csharp", "C#").replace("HTMLCSS", "HTML/CSS")}
+							</div>` : ''
+							}
 							${get('tools') ? 
-							`<div class="mc-tools mc-notop">
-								<h4 class="mc-h4">Tools:</h4>
-								<div class="mc-subheader">
-									${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
-								</div>
+							`<div class="mc-notop mc-project-stats">
+								<i class="fa-solid fa-screwdriver-wrench mc-project-fa-sizing"></i> ${get('tools').replace(/ /g , ', ').replace(/_/g , " ").replace(/-/g , ".")}
 							</div>` : ''
 							}
 
-							<!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
-							<div class="mc-links">
-								<!--${get('website-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('website-url')}"><i class="fa fa-link" aria-hidden="true"></i></a>` : ''} -->
-								${get('download-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('download-url')}"><i class="fa fa-download" aria-hidden="true"></i></a>` : ''}
-								${get('source-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('source-url')}"><i class="fa fa-code" aria-hidden="true"></i></a>` : ''}
-								${get('video-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('video-url')}"><i class="fa fa-video" aria-hidden="true"></i></a>` : ''}
-							</div>
+							<!-- ==========[ COMMENT ]: Button/Links-->
 							<img class="mc-project-icon img-responsive" src="images/${get('image')}" alt="${get('image').replace('.','-')}">
 						</div>
 					</div>

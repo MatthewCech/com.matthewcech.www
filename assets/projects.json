@@ -60,7 +60,7 @@ projectsJSON =
 		{ 
 			"name":"KSP 2",
 			"weight":1,
-			"short":"A 3D Unity space simulation and rocket building sandbox game! Six years with a great team, from pre-alpha through launch and patches. Late 2021 onward, I was accountable for 5 to 8 engineers at any given time.",
+			"short":"A 3D Unity space simulation sandbox game I was on from pre-alpha through launch and patches. Late 2021 onward, I was accountable for 5 to 8 engineers at any given time.",
 			"date":[
 				"2018",
 				"2024"
@@ -279,7 +279,7 @@ projectsJSON =
 			],
 			"tools":[
 				"Git",
-				"Github Pages",
+				"Cloudflare",
 				"Phaser.js"
 			],
 			"actions":[
@@ -343,7 +343,6 @@ projectsJSON =
 			"tools":[
 				"Git",
 				"Bootstrap",
-				"Github Pages",
 				"Cloudflare"
 			],
 		},
@@ -447,7 +446,7 @@ projectsJSON =
 			"description":"A 2.5D arena brawler game for up to four players locally. I was primarily in charge of designing and implementing the core of the game engine. Later contributions included the audio system and visualizers using FMOD.",
 		},
 		{ 
-			"name":"*Nix Windows",
+			"name":"Windows on Linux",
 			"weight":0,
 			"short":"Academic exploration into the requirements for multithreading techniques using a from-scratch ASCII window manager.",
 			"date":[
