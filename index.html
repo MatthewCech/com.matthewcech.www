@@ -68,6 +68,7 @@
 			<div id="mc-lang-dropdown" class="collapse"></div>
 			<div id="mc-role-dropdown" class="collapse"></div>
 			<div id="mc-tool-dropdown" class="collapse"></div>
+			<div id="mc-size-dropdown" class="collapse"></div>
 
 		</div>
 		<!-- Body to fill with tiles of projects -->
@@ -210,6 +211,14 @@
 				});
 			}
 
+			function populateSizes() {
+
+			}
+
+			const projectSizeSmall = 1;
+			const projectSizeMedium = 2;
+			const projectSizeLarge = 3;
+
 			// Parses a specific project from the object. 
 			// Returns string of the parsed project in HTML.
 			// Note that this is file-specific!
@@ -219,6 +228,7 @@
 			//
 			function parseProject(project) {
 
+
 				let content = `
 				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')}  mc-project ${get('project-size')}" data-date="${get('date')}">
 					<div class="mc-project-content">
@@ -226,11 +236,11 @@
 						<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
 						<div class="mc-title-bar">
 							<div style="float: left;">
-								<span class="mc-title">${get('name')}</span>
+								<a href="${get('website-url')}"><span class="mc-title">${get('name')}</span></a>
 							</div>
-							<div class="mc-date">
-								${get('date').replace(' ', ' - ')}
-							</div>
+							${project['project-size'] > projectSizeSmall ?
+								"<div class=\"mc-date\">" + get('date').replace(' ', ' - ') + "</div>"
+								: " " }
 						</div>
 
 						<!-- ==========[ COMMENT ]: This contains an overview of what the project was. -->
@@ -267,7 +277,7 @@
 
 							<!-- ==========[ COMMENT ]: These are going at the bottom in a more fixed format. -->
 							<div class="mc-links">
-								${get('website-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('website-url')}"><i class="fa fa-link" aria-hidden="true"></i></a>` : ''} 
+								<!--${get('website-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('website-url')}"><i class="fa fa-link" aria-hidden="true"></i></a>` : ''} -->
 								${get('download-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('download-url')}"><i class="fa fa-download" aria-hidden="true"></i></a>` : ''}
 								${get('source-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('source-url')}"><i class="fa fa-code" aria-hidden="true"></i></a>` : ''}
 								${get('video-url') ? `<a class="btn btn-outline-dark" role="button" href="${get('video-url')}"><i class="fa fa-video" aria-hidden="true"></i></a>` : ''}
@@ -406,16 +416,16 @@
 				// Small (1), medium (2), large (3), etc -- done as a number with increasing value
 				// to allow things to adjust with time.
 				switch(key_value) {
-				case 1:
+				case projectSizeSmall:
 					return 'mc-project-sm';
-				case 2:
+				case projectSizeMedium:
 					return 'mc-project-md';
-				case 3:
+				case projectSizeLarge:
 				default:
 					return 'mc-project-lg';
 				}
 
-				return key_value;
+				return 'mc-project-lg';
 			}
 		</script>	
 	</body>

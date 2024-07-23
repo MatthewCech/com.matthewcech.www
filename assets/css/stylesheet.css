@@ -8,17 +8,15 @@ body {
 #mc-fill {
 	display: flex;
 	background-color: DodgerBlue;
-	  align-items: center;
+	align-items: center;
 	justify-content: center;
 }
 
 .center-img {
-	/*border-radius: 150px;*/
 	max-width: 250px;
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-bottom: -15px
-	/*border:5px solid #FFF;*/
 }
 
 .mc-top-margin {
@@ -58,7 +56,7 @@ body {
 	border-radius: 7px;
 	margin: 5px;
 	background-color: rgba(240, 230, 230, 0.3);
-	    overflow: hidden;
+	overflow: hidden;
 }
 
 .mc-project-lg {
@@ -86,28 +84,24 @@ body {
 .mc-title {
 	font-size: 1.1em;
 	margin-right: 10px;
-	/*background-color: rgb(100, 100, 200);*/
+	background-color: rgb(100, 100, 200);
 	margin-left: 5px;
 	font-weight: bold;
 }
 
 .mc-title-bar {
-	/*background-color: rgb(120, 180, 220);*/
 	text-align: right;
 	height: 100%; 
-	overflow: auto;
 	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgb(255, 180, 220);
 	border-radius: 4px;
+	overflow: hidden;
 }
 
 .mc-date {
 	margin-top: 0px;
-	font-size: .9em;
 	margin-right: 7px;
-	position: relative;
-	top: 50%;
-	transform: translateY(15%);
-	/*background-color: rgb(100, 150, 200);*/
+	background-color: rgb(100, 150, 200);
 }
 
 .mc-short {
