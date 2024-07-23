@@ -100,7 +100,7 @@ body {
 	margin-right: auto;
 
 	width: 300px;
-	height: 260px;
+	height: 270px;
 }
 
 /* The short text description of what the project is */
@@ -113,16 +113,21 @@ body {
 	float: none;
 }
 
+/* This is the list of stats and stuff, specifcally the whole list. Mostly controlled by media tags. */
+.mc-project-details {
+	margin-top: 4px;
+}
+
 .mc-project-icon {
 	width: 80px;
 	position: absolute;
 	border-radius: 7px;
-	bottom: 5px;
-	right: 5px;
+	bottom: 7px;
+	right: 7px;
 	filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
 }
 
-.mc-project-sm, .mc-project-md, .mc-project-lg, .mc-project-xl {
+.mc-project-xs, .mc-project-sm, .mc-project-md, .mc-project-lg, .mc-project-xl {
 	background-color: rgba(240, 240, 250, 0.35);
 }
 
@@ -131,6 +136,16 @@ body {
 	text-align: left;
 }
 
+/* Top section of a project pane */
+.mc-project-title-bar {
+	text-align: right;
+	height: 100%; 
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+/* Within the title bar, this is the name of the project */
 .mc-project-title {
 	margin-right: 10px;
 	margin-left: 5px;
@@ -140,12 +155,12 @@ body {
 	float: left;
 }
 
-.mc-project-title-bar {
-	text-align: right;
-	height: 100%; 
-	border-radius: 4px;
-	overflow: hidden;
-	padding: 0px;
+/* Within the tile bar, these are the right-side links */
+.mc-project-links {
+	margin-right: 5px;
+}
+.mc-project-links, a {
+	margin-left: 5px;
 }
 
 .mc-project-fa-sizing{
@@ -163,8 +178,4 @@ body {
 	display: inline-block;
 	height: 100%;
 	margin-top: 40px;
-}
-
-.mc-project-links {
-	margin-right: 5px;
 }

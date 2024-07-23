@@ -37,7 +37,7 @@
     				<div class="col-12 col-lg-4">
 						<img class="mc-top-margin mc-pic-of-me img-fluid" style="max-width: 250px;" src="/assets/snow-faceplant.jpg" alt="A smiling, upbeat picture of me! I'm face down in the snow so though you really just see my silly outfit and not the smile, but it's there."/>
     				</div>
-    				<div class="col-12 col-lg-4 ">
+    				<div class="col-12 col-lg-4 text-start">
     					<div class="mc-top-margin"></div>
 						<!-- Name & Serious title that becomes a silly title after 4 seconds -->
 						<h1>Matthew Cech</h1>
@@ -49,29 +49,30 @@
 						<a class="btn btn-outline-dark btn-xl" href="https://github.com/MatthewCech"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></a>
 						<a class="btn btn-outline-dark btn-xl" href="/assets/Cech, Matthew - Resume.pdf" target="_blank"><i class="fa fa-download fa-lg" aria-hidden="true"></i> Resume</a>
 
-						<p>Hey! I'm a <strong>Software Engineering Manager and Game Engineer</strong> that loves working on all sorts of projects! I'm a big fan of national parks, I hoard plants, and I make watercolor paper by hand.</p>
+						<p>Hey! I'm a <strong>Software Engineering Manager</strong> and <strong>Game Engineer</strong> that loves working on all sorts of projects! I'm a big fan of national parks, I hoard plants, and I make watercolor paper by hand!</p>
     				</div>
     			</div>
 			</div>
 		</div>
-		
-		<hr class="mc-top-margin" style="max-width: 150px; margin-left: auto; margin-right: auto;"/>
 
-		<div class="mc-top-margin mc-body">
-			<h3>Some Stuff I've Done</h3>
-			<p style="max-width: 520px; margin-left: auto; margin-right: auto;">If you're looking for the highlights, check out my resume! This is a much longer list of things I've explored ranging from major multi-year positions at studios down to small solo jams. This list is less curated but more comprehensive than other places.</p>
-			<!-- Generated mixitup filters -->
-			<div style="margin-bottom: 2px;">
-				<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fa fa-filter"></i> Language</button>
-				<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-role-dropdown"><i class="fa fa-filter"></i> Role</button>
-				<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-tool-dropdown"><i class="fa fa-filter"></i> Tool</button>
-				<button type="button" class="btn btn-outline-dark  mc-category mixitup-control-active" data-mixitup-control="" data-filter="all"><i class="fa fa-refresh"></i> Reset</button>
+		<div class="mc-top-margin" style="max-width: 150px; height: 1px; margin-left: auto; margin-right: auto; background: #56595C;"></div>
+
+		<div class="mc-top-margin mc-body text-start">
+			<div style="padding-left: 10px; padding-right: 10px;">
+				<h3>Some Stuff I've Done</h3>
+				<p style="margin-left: auto; margin-right: auto;">If you're looking for the highlights, check out my resume! This is a much longer list of things I've explored ranging from major multi-year positions at studios down to small solo jams. This list is less curated but more comprehensive than other places, with some items linked just for my own quick access.</p>
+				<!-- Generated mixitup filters -->
+				<div style="margin-bottom: 2px;">
+					<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fa fa-filter"></i> Language</button>
+					<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-role-dropdown"><i class="fa fa-filter"></i> Role</button>
+					<button type="button" class="btn btn-outline-dark  mc-category" data-toggle="collapse" data-target="#mc-tool-dropdown"><i class="fa fa-filter"></i> Tool</button>
+					<button type="button" class="btn btn-outline-dark  mc-category mixitup-control-active" data-mixitup-control="" data-filter="all"><i class="fa fa-refresh"></i> Reset</button>
+				</div>
+				<div id="mc-lang-dropdown" class="collapse"></div>
+				<div id="mc-role-dropdown" class="collapse"></div>
+				<div id="mc-tool-dropdown" class="collapse"></div>
+				<div id="mc-size-dropdown" class="collapse"></div>
 			</div>
-			<div id="mc-lang-dropdown" class="collapse"></div>
-			<div id="mc-role-dropdown" class="collapse"></div>
-			<div id="mc-tool-dropdown" class="collapse"></div>
-			<div id="mc-size-dropdown" class="collapse"></div>
-
 			<div id="mc-fill" class="mc-top-margin"></div>
 		</div>
 
@@ -240,6 +241,7 @@
 				return val;
 			}
 
+			const projectSizeExtraSmall = 0;
 			const projectSizeSmall = 1;
 			const projectSizeMedium = 2;
 			const projectSizeLarge = 3;
@@ -264,16 +266,16 @@
 							<span class="mc-project-title">${get('name')}</span>
 
 							<div class="mc-project-links">
-								${get('website-url') ? `<a href="${get('website-url')}"><i class="fa fa-link" aria-hidden="true"></i></a>` : ''}
-								${get('download-url') ? `<a href="${get('download-url')}"><i class="fa fa-download" aria-hidden="true"></i></a>` : ''}
-								${get('source-url') ? `<a href="${get('source-url')}"><i class="fa fa-code" aria-hidden="true"></i></a>` : ''}
-								${get('video-url') ? `<a href="${get('video-url')}"><i class="fa fa-video" aria-hidden="true"></i></a>` : ''}
+								${get('website-url') ? `<a href="${get('website-url')}"><i class="fa fa-link""></i></a>` : ''}
+								${get('download-url') ? `<a href="${get('download-url')}"><i class="fa fa-download"></i></a>` : ''}
+								${get('source-url') ? `<a href="${get('source-url')}"><i class="fa fa-code"></i></a>` : ''}
+								${get('video-url') ? `<a href="${get('video-url')}"><i class="fa fa-video"></i></a>` : ''}
 							</div>
 						</div>
 
 						<!-- ==========[ COMMENT ]: Sizing and spacing info -->
 						<div style="position: relative; margin-left: 5px; margin-top: 3px; margin-bottom: 8px;">
-							<div style="float: left; background: linear-gradient(to left, #9198e5, #e66465); width: ${get('project-size') * 20}px; height: 1px;"></div>
+							<div style="float: left; background: linear-gradient(to left, #9198e5, #e66465); width: ${get('project-size') * 20 + 5}px; height: 1px;"></div>
 							<span style="position: absolute; top: -7px; font-size: .6em; color: #9198e5;">&nbsp;${get('v_size-as-text')}</span>
 						</div>
 
@@ -506,13 +508,15 @@
 				case projectSizeExtraLarge:
 					return 'mc-project-xl';
 				case projectSizeLarge:
-					return 'mc-project-sm';
+					return 'mc-project-lg';
 				case projectSizeMedium:
 					return 'mc-project-md';
-
 				case projectSizeSmall:
-				default:
 					return 'mc-project-sm';
+
+
+				default:
+					return 'mc-project-xs';
 				}
 			}
 
@@ -524,6 +528,8 @@
 
 			function virtual_parseSizeAsText(project_size_as_num) {
 				switch(project_size_as_num) {
+					case projectSizeExtraSmall:
+						return 'XS';
 					case projectSizeSmall:
 						return 'S';
 					case projectSizeMedium:

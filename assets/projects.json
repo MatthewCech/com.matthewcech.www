@@ -658,7 +658,30 @@ projectsJSON =
 				"Eclipse",
 				"Minueto"
 			],
-			"description":"One of the larger solo engines I created when I just started learning about game engine architecture! Used minueto (http://www.cs.mcgill.ca/~minueto/), a basic Java game framework, and I ended up implementing particles, effects, and engine structure over it!",
+			"description":"A solo engine I created when I just started learning about game engine architecture! Used minueto (http://www.cs.mcgill.ca/~minueto/), a basic Java game framework, and I ended up implementing particles, effects, and common engine structures like game objects, levels, and scenes over it!",
+		},
+		{
+			"name":"Desktop Yule",
+			"weight":0,
+			"short":"A little desktop yule log displayed in command prompt. Drag your files in and watch it burn 'em!",
+			"date":[
+				"2024",
+			],
+			"image":"yule.png",
+			"source-url":"https://github.com/MatthewCech/Yule",
+			"team-size":1,
+			"project-size":0,
+			"roles":[
+				"Solo",
+			],
+			"languages":[
+				"Cpp",
+			],
+			"tools":[
+				"Visual Studio",
+				"Git"
+			],
+			"description":"",
 		},
 	],
 };
