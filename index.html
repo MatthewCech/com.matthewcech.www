@@ -57,7 +57,7 @@
 
 		<div class="mc-top-margin mc-body">
 			<h3>Some Stuff I've Done</h3>
-			<p style="max-width: 500px; margin-left: auto; margin-right: auto;">If you're looking for the highlights, check out my resume. This is a long, but still not comprehensive, list of things I've explored ranging from small solo jams to large multi-year major positions at studios.</p>
+			<p style="max-width: 500px; margin-left: auto; margin-right: auto;">If you're looking for the highlights, check out my resume! This is a much longer (but still not comprehensive) list of things I've explored ranging from small solo jams to large multi-year major positions at studios.</p>
 			<!-- Generated mixitup filters -->
 			<div style="margin-bottom: 2px;">
 				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fa fa-filter"></i> Language</button>
@@ -72,6 +72,10 @@
 
 			<div id="mc-fill" class="mc-top-margin"></div>
 		</div>
+
+		<br/>
+		<br/>
+		<br/>
 		<!-- Body to fill with tiles of projects -->
 
 		<!--===[ SCRIPT ZONE ]=================================-->    
@@ -139,7 +143,10 @@
 							},
 					load: {
 							sort: 'date:desc'
-						}
+						},
+					animation: {
+     				   		duration: 300
+    					}
 					});
 			}
 
@@ -230,13 +237,13 @@
 
 
 				let content = `
-				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')}  mc-project ${get('project-size')}" data-date="${get('date')}">
+				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')}  mc-project ${get('v_project-size-class')}" data-date="${get('date')}">
 					<div class="mc-project-content">
 
 						<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
 						<div class="mc-title-bar">
 							<div style="float: left;">
-								<a href="${get('website-url')}" style="text-decoration: none;"><span class="mc-title">${get('name')}</span></a>
+								${project['website-url'] == null || project['website-url'] == "" ? `<span class="mc-title">${get('name')}</span>` : `<a href="${get('website-url')}" style="text-decoration: none;"><span class="mc-title">${get('name')}</span></a>`}
 							</div>
 							${project['project-size'] > projectSizeSmall ?
 								"<div class=\"mc-date\">" + get('date').replace(' ', ' - ') + "</div>"
@@ -291,6 +298,7 @@
 					let accumulated = "";
 
 					if(project.hasOwnProperty(key)) {
+						// Keys that have a 1 to 1 mapping to a JSON key.
 						switch(key) {
 							case 'name': accumulated += parseName(project[key]); break;
 							case 'short': accumulated += parseShort(project[key]); break;
@@ -309,7 +317,16 @@
 							case 'description': accumulated += parseDescription(project[key]); break;
 							case 'project-size': accumulated += parseProjectSize(project[key]); break;
 							default:
-								console.log('Key "' + key + '" could not be parsed.');
+								console.log('Key "' + key + '" could not be parsed for project ' + project);
+						}
+					}
+					else
+					{
+						// Virtual keys! To not find a virtual key isn't an error, and we have no default case here.
+						// Virtual keys may be based on actual keys, but they aren't actually in the JSON.
+						// Prepend with v_ to make it extra clear.
+						switch(key) {
+							case 'v_project-size-class': accumulated += parseProjectSizeAsClass(project['project-size']); break;
 						}
 					}
 
@@ -412,7 +429,12 @@
 			function parseDescription(key_value) {
 				return key_value;
 			}
-			function parseProjectSize (key_value) {
+			function parseProjectSize(key_value) {
+				return key_value;
+			}
+
+			// Uses the number as an index
+			function parseProjectSizeAsClass (key_value) {
 				// Small (1), medium (2), large (3), etc -- done as a number with increasing value
 				// to allow things to adjust with time.
 				switch(key_value) {
