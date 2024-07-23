@@ -4,7 +4,7 @@ projectsJSON =
 		{ 
 			"name":"Salmonberry",
 			"weight":0,
-			"short":"An experimental multiplayer roguelite game made with a custom Java server solution designed for multiple client styles.",
+			"short":"An experimental multiplayer ascii lobby made with a custom Java server solution designed for obscure client styles.",
 			"date":[
 				"2019"
 			],
@@ -52,7 +52,13 @@ projectsJSON =
 			"languages":[
 				"Csharp",
 				"JavaScript",
-				"HTMLCSS"
+				"HTMLCSS",
+			],
+			"tools":[
+				"Visual Studio",
+				"Rider",
+				"Cloudflare",
+				"Git",
 			],
 			"actions":[
 				"",
@@ -62,7 +68,7 @@ projectsJSON =
 		{ 
 			"name":"KSP 2",
 			"weight":1,
-			"short":"A 3D Unity space simulation and rocket building sandbox game I worked on from pre-alpha through launch and several patches, accountable for between 5 and 8 engineers.",
+			"short":"A 3D Unity space simulation sandbox game I worked on from pre-alpha through launch and several patches, accountable for between 5 and 8 engineers starting late 2021.",
 			"date":[
 				"2018",
 				"2024"
@@ -124,14 +130,73 @@ projectsJSON =
 			"description":"URI Binder is an easy-to-use .NET tool for windows to help create and set up a custom URI for an existing application.",
 		},
 		{ 
+			"name":"Bubbles (Line Zen)",
+			"weight":0,
+			"short":"A mellow puzzle game about collecting bubbles by drawing lines featuring both handmade and generated challenges, Available on Itch.io and Google Play store.",
+			"date":[
+				"2021",
+				"2022",
+			],
+			"website-url":"https://loamnet.itch.io/bubbles",
+			"download-url":"https://loamnet.itch.io/bubbles",
+			"source-url":"https://github.com/LoamNet/net.loam.bubbles",
+			"image":"icon-linezen.png",
+			"team-size":1,
+			"project-size":2,
+			"roles":[
+				"Solo",
+			],
+			"languages":[
+				"Csharp",
+			],
+			"tools":[
+				"Unity",
+				"Visual Studio",
+				"Git",
+			],
+			"actions":[
+			],
+			"description":"",
+		},
+		{ 
+			"name":"Rat",
+			"weight":1,
+			"short":"How much rat can you rat in 30 seconds? Can you make it to the top of the online rat-based rat highscores? Done as a game jam!",
+			"date":[
+				"2022",
+			],
+			"website-url":"https://loamnet.itch.io/bubbles",
+			"download-url":"https://loamnet.itch.io/bubbles",
+			"source-url":"https://github.com/LoamNet/net.loam.bubbles",
+			"image":"icon-rat.png",
+			"team-size":2,
+			"project-size":1,
+			"roles":[
+				"Game Engineer",
+			],
+			"languages":[
+				"Csharp",
+			],
+			"tools":[
+				"Unity",
+				"Visual Studio",
+				"Git",
+				"NGINX",
+				"Node.js",
+				"Digital Ocean"
+			],
+			"actions":[
+			],
+			"description":"",
+		},
+		{ 
 			"name":"Digital Golems",
 			"weight":0,
-			"short":"2D turn-based puzzle game designed for Android mobile and still in development.",
+			"short":"2D turn-based puzzle combat game focusing on grid based gameplay and careful planning.",
 			"date":[
 				"2018",
 				"2019",
 			],
-			"website-url":"https://digitalgolems.loam.app",
 			"image":"digital-golems.gif",
 			"team-size":1,
 			"project-size":1,
@@ -205,8 +270,8 @@ projectsJSON =
 				"Game Engineer",
 			],
 			"languages":[
-				"Cpp",
 				"Csharp",
+				"Cpp",
 				"JavaScript",
 			],
 			"tools":[
@@ -228,10 +293,10 @@ projectsJSON =
 		}, 
 		{ 
 			"name":"Cures & Curios",
-			"weight":0,
-			"short":"VR Potion Crafting Game for HTC Vive, downloadable on Steam.",
+			"weight":-1,
+			"short":"VR Potion Crafting Game for HTC Vive done as an academic project, downloadable on Steam.",
 			"date":[
-				"2017",
+				"2017-2018",
 			],
 			"website-url":"https://curesandcurios.com",
 			"download-url":"https://store.steampowered.com/app/1141740/",
@@ -328,10 +393,10 @@ projectsJSON =
 		{ 
 			"name":"matthewcech.com",
 			"weight":0,
-			"short":"My playground of a website, and where you are now!",
+			"short":"My playground of a website, and where you are now! Written by hand, and exploring a few different data representation ideas.",
 			"date":[
 				"2017",
-				"2019"
+				"Present"
 			],
 			"website-url":"https://matthewcech.com",
 			"source-url":"https://github.com/MatthewCech/com.matthewcech.www",
@@ -352,9 +417,9 @@ projectsJSON =
 			],
 		},
 		{ 
-			"name":"Swap Sizescroll",
+			"name":"A Sizescrolling Bonanza",
 			"weight":0,
-			"short":"A 2D Size-Scroller small team game jam done in a from-scratch custom engine.",
+			"short":"A 2D Size-Scroller small team game jam done in a from-scratch custom engine! Survive/run as long as you can without getting stuck.",
 			"date":[
 				"2016"
 			],
@@ -377,7 +442,7 @@ projectsJSON =
 		{ 
 			"name":"Dual Reality",
 			"weight":0,
-			"short":"Mellow 2D Side-scrolling puzzle game.",
+			"short":"Mellow 2D Side-scrolling puzzle game done as an academic project.",
 			"date":[
 				"2014",
 				"2015"
@@ -400,12 +465,11 @@ projectsJSON =
 		{ 
 			"name":"Firetime",
 			"weight":0,
-			"short":"Time tracking and estimation software with C# desktop application and online proof-of-concept.",
+			"short":"Time tracking and estimation software with C# desktop application prototype taken online. I used it for a few years after creation to improve project estimations.",
 			"date":[
 				"2016"
 			],
 			"image":"firetime.png",
-			"website-url":"https://matthewcech.github.io/Firetime/",
 			"source-url":"https://github.com/MatthewCech/Firetime",
 			"team-size":1,
 			"project-size":1,
@@ -427,7 +491,7 @@ projectsJSON =
 		{ 
 			"name":"Grizzly Beats",
 			"weight":0,
-			"short":"2.5D multiplayer areana brawler written in a custom C++ engine.",
+			"short":"2.5D multiplayer areana brawler written in a custom C++ engine as an academic project.",
 			"date":[
 				"2015",
 				"2016"
@@ -440,7 +504,7 @@ projectsJSON =
 			],
 			"languages":[
 				"Cpp",
-				"Zilch",
+				"Custom",
 				"Lua"
 			],
 			"tools":[
@@ -533,7 +597,7 @@ projectsJSON =
 		{
 			"name":"Color Dodge",
 			"weight":-1,
-			"short":"C# arena game about collecting colors from clouds.",
+			"short":"2D game about collecting colors from clouds, written using winforms of all things. This was an old early attempt to create some form of game with what few things I knew, and holds a special place in my heart.",
 			"date":[
 				"2012",
 			],
@@ -574,9 +638,9 @@ projectsJSON =
 			"description":"An earlier experiement with procedurally generated worlds! Written in C to get myself more familiar with the language and how it worked as I was learning the basics!",
 		},
 		{
-			"name":"Bubbles",
+			"name":"Time Bubble",
 			"weight":0,
-			"short":"Arena game with time slowing and enemy management focus done in Java.",
+			"short":"2D Arena game with time slowing and enemy management done in Java.",
 			"date":[
 				"2013",
 				"2014"
@@ -592,7 +656,6 @@ projectsJSON =
 			],
 			"tools":[
 				"Eclipse",
-				"Netbeans",
 				"Minueto"
 			],
 			"description":"One of the larger solo engines I created when I just started learning about game engine architecture! Used minueto (http://www.cs.mcgill.ca/~minueto/), a basic Java game framework, and I ended up implementing particles, effects, and engine structure over it!",
