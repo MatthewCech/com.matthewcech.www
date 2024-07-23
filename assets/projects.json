@@ -22,7 +22,6 @@ projectsJSON =
 			],
 			"tools":[
 				"Git",
-				"Java",
 				"Digital Ocean",
 				"Eclipse",
 				"Visual Studio",
@@ -84,8 +83,6 @@ projectsJSON =
 				"Visual Studio",
 				"Jira",
 				"Perforce",
-				"Zoom",
-				"Slack",
 			],
 			"actions":[
 				"",
@@ -141,7 +138,6 @@ projectsJSON =
 			"tools":[
 				"Unity 3D",
 				"Visual Studio",
-				"Sublime Text",
 				"Git",
 				"Android SDK",
 			],
@@ -176,7 +172,6 @@ projectsJSON =
 			"tools":[
 				"Eclipse",
 				"NodeJS",
-				"Sublime Text",
 				"Git",
 				"Discord API",
 				"SQLite",
@@ -187,12 +182,11 @@ projectsJSON =
 				"Explored multi-machine server monitoring and database management techniques",
 				"Created showcase website with monitoring, blog, and help features"
 			],
-			"description":"Kitty Bot is a cat-themed discord chat bot designed to provide users with entertaining image processing feautres, code compilation features, games, poll functionaltiy, and other standard management feautres comperable to slack utility functionality. The bot was designed with scaleable multithreaded command execution in mind, and so it can scale to fully utilize server resources when under heavy load.",
 		},
 		{ 
 			"name":"Bittorio",
 			"weight":0,
-			"short":"3D Competitive Puzzle Game done in Unity 3D, on PC and soon XBox.",
+			"short":"A 2D turned 3D Competitive Puzzle Game done in Unity 3D and available on PC!",
 			"date":[
 				"2016",
 				"2017"
@@ -214,12 +208,9 @@ projectsJSON =
 				"Unity 3D",
 				"Visual Studio",
 				"Git",
-				"Sublime Text",
-				"Slack",
 				"Node.js",
 				"AWS",
 				"NGINX",
-				"Socket.io",
 				"MobaXTerm"
 			],
 			"actions":[
@@ -236,7 +227,6 @@ projectsJSON =
 			"short":"VR Potion Crafting Game for HTC Vive, downloadable on Steam.",
 			"date":[
 				"2017",
-				"2018"
 			],
 			"website-url":"https://curesandcurios.com",
 			"download-url":"https://store.steampowered.com/app/1141740/",
@@ -253,15 +243,11 @@ projectsJSON =
 				"HTMLCSS",
 			],
 			"tools":[
-				"Presskit",
 				"Unreal",
 				"Visual Studio",
 				"Perforce",
-				"Sublime Text",
 				"AWS",
-				"Slack",
 				"NGINX",
-				"Github Pages",
 				"MobaXTerm",
 			],
 			"actions":[
@@ -292,7 +278,6 @@ projectsJSON =
 				"HTMLCSS",
 			],
 			"tools":[
-				"Sublime Text",
 				"Git",
 				"Github Pages",
 				"Phaser.js"
@@ -324,16 +309,11 @@ projectsJSON =
 				"C"
 			],
 			"tools":[
-				"Sublime Text",
-				"Webstorm",
 				"Jira",
 				"Git",
-				"Git flow",
 				"Phaser.js",
 				"Arduino IDE",
 				"Electron.js",
-				"Gulp",
-				"Yarn"
 			],
 			"actions":[
 				"Created plethora of test projects, anywhere from terrain generation to touch-based games!"
@@ -361,9 +341,7 @@ projectsJSON =
 				"HTMLCSS",
 			],
 			"tools":[
-				"Sublime Text",
 				"Git",
-				"Git flow",
 				"Bootstrap",
 				"Github Pages",
 				"Cloudflare"
@@ -412,7 +390,6 @@ projectsJSON =
 			"tools":[
 				"Zero Engine",
 				"SVN",
-				"Slack",
 			],
 			"description":"Mellow 2D puzzle-platformer in which platforms have to be manipulated to finish building the two parts of a level. This project had me working primarily as a gameplay Engineer, and introduced me to a variety of event-driven design styles.",
 		},
@@ -466,7 +443,6 @@ projectsJSON =
 				"Visual Studio",
 				"Git",
 				"Premake",
-				"Slack",
 			],
 			"description":"A 2.5D arena brawler game for up to four players locally. I was primarily in charge of designing and implementing the core of the game engine. Later contributions included the audio system and visualizers using FMOD.",
 		},
@@ -489,11 +465,8 @@ projectsJSON =
 				"Cpp",
 			],
 			"tools":[
-				"Clang",
-				"Gpp",
 				"Git",
 				"Premake",
-				"Sublime Text",
 				"MobaXTerm"
 			],
 			"description":"12 custom projects exploring different aspects of the development and use of multithreading. This was based on the console-utils project i have, but we soon discovered that by redesigning from the ground up, we could massively improve performance.",
@@ -526,11 +499,11 @@ projectsJSON =
 		},
 		{ 
 			"name":"ASCIIPlayer",
-			"weight":0,
+			"weight":1,
 			"short":"Lightweight command line audio visualizer written in C++.",
 			"date":[
 				"2016",
-				"2018"
+				"Present"
 			],
 			"website-url":"https://asciiplayer.com",
 			"download-url":"https://asciiplayer.com/",
@@ -548,12 +521,8 @@ projectsJSON =
 			"tools":[
 				"Visual Studio",
 				"Git",
-				"Git flow",
 				"Premake",
-				"Gpp",
-				"Clang",
 				"MobaXTerm",
-				"Cygwin",
 			],
 			"description":"Lightweight music player that runs on the command line. Console visualization uses a console drawing library I wrote to efficiently display rapidly updating characters with similarities between frames. Check it out on asciiplayer.com, or thumb through the source that's available on GitHub!",
 		},
@@ -597,9 +566,6 @@ projectsJSON =
 				"C",
 			],
 			"tools":[
-				"Sublime Text",
-				"Gpp",
-				"Cygwin"
 			],
 			"description":"An earlier experiement with procedurally generated worlds! Written in C to get myself more familiar with the language and how it worked as I was learning the basics!",
 		},

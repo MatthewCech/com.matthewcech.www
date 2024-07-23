@@ -57,7 +57,7 @@
 
 		<div class="mc-top-margin mc-body">
 			<h3>Some Stuff I've Done</h3>
-			<p style="max-width: 500px; margin-left: auto; margin-right: auto;">If you're looking for the highlights, check out my resume! This is a much longer (but still not comprehensive) list of things I've explored ranging from small solo jams to large multi-year major positions at studios.</p>
+			<p style="max-width: 520px; margin-left: auto; margin-right: auto;">If you're looking for the highlights, check out my resume! This is a much longer (but still not comprehensive) list of things I've explored ranging from major multi-year positions at studios down to small solo jams.</p>
 			<!-- Generated mixitup filters -->
 			<div style="margin-bottom: 2px;">
 				<button type="button" class="btn btn-info mc-category" data-toggle="collapse" data-target="#mc-lang-dropdown"><i class="fa fa-filter"></i> Language</button>
@@ -142,10 +142,11 @@
 							control: '[data-mixitup-control]'
 							},
 					load: {
-							sort: 'date:desc'
+							sort: 'weight:desc'
 						},
 					animation: {
-     				   		duration: 300
+     				   		duration: 300,
+     				   		effects: 'fade scale(0.5)'
     					}
 					});
 			}
@@ -177,49 +178,64 @@
 			// Takes all the parsed langauges and generates buttons / filters for them
 			function populateLanguages() {
 				allLanguages.forEach(function(val) {
-					let val1 = `${val}`;
-					let val2 = `${val}`;
+					let rawValue = `${val}`;
+					let buttonText = `${val}`;
 
-					if(val1 == 'Cpp') val2 = 'C++';
-					if(val1 == 'Csharp') val2 = 'C#';
-					if(val1 == 'HTMLCSS') val2 = 'HTML/CSS';
+					buttonText = cleanLanguages(rawValue);
 
-						document.getElementById('mc-lang-dropdown').innerHTML 
-							= document.getElementById('mc-lang-dropdown').innerHTML 
-							+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+					document.getElementById('mc-lang-dropdown').innerHTML 
+						= document.getElementById('mc-lang-dropdown').innerHTML 
+						+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${rawValue}">${buttonText}</button>`;
 				});
+			}
+			function cleanLanguages(val) {
+				if(val == 'Cpp') val = 'C++';
+				else if(val == 'Csharp') val = 'C#';
+				else if(val == 'HTMLCSS') val = 'HTML/CSS';
+
+				return val;
 			}
 
 			// Takes all the parsed tools and generates buttons / filters for them
 			function populateTools() {
 				allTools.forEach(function(val) {
-					let val1 = `${val}`;
-					let val2 = `${val}`; 
-					val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
+					let rawValue = `${val}`;
+					let buttonText = `${val}`; 
 
-					if(val1 == 'Gpp') val2 = 'G++';
+					buttonText = cleanTools(rawValue);
 
 					document.getElementById('mc-tool-dropdown').innerHTML
 						= document.getElementById('mc-tool-dropdown').innerHTML 
-						+ `<button type="button" class="mc-button btn btn-default" class="mc-button" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+						+ `<button type="button" class="mc-button btn btn-default" class="mc-button" data-mixitup-control data-filter=".${rawValue}">${buttonText}</button>`;
 				});
+			}
+			function cleanTools(val) {
+				if(val == 'Gpp') val = 'G++';
+
+				val = val.replace(/_/g , " ").replace(/-/g , ".");
+				
+				return val;
 			}
 
 			// Takes all the parsed roles and generates buttons / filters for them
 			function populateRoles() {
 				allRoles.forEach(function(val) {
-					let val1 = `${val}`;
-					let val2 = `${val}`;
-					val2 = val2.replace(/_/g , " ").replace(/-/g , ".")
+					let rawValue = `${val}`;
+					let buttonText = `${val}`;
+
+					buttonText = cleanRoles(rawValue);
 
 					document.getElementById('mc-role-dropdown').innerHTML
 						= document.getElementById('mc-role-dropdown').innerHTML 
-						+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${val1}">${val2}</button>`;
+						+ `<button type="button" class="mc-button btn btn-default" data-mixitup-control data-filter=".${rawValue}">${buttonText}</button>`;
 				});
 			}
+			function cleanRoles(val) {
+				if(val == 'Solo') val = 'Solo/Generalist';
 
-			function populateSizes() {
+				val = val.replace(/_/g , " ").replace(/-/g , ".");
 
+				return val;
 			}
 
 			const projectSizeSmall = 1;
@@ -237,7 +253,7 @@
 
 
 				let content = `
-				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')}  mc-project ${get('v_project-size-class')}" data-date="${get('date')}">
+				<div class="item mix ${get('languages')} ${get('tools')} ${get('roles')}  mc-project ${get('v_project-size-class')}" data-date="${get('date')}" data-size="${get('project-size')}" data-weight="${get('v_adjusted-weight')}">
 					<div class="mc-project-content">
 
 						<!-- ==========[ COMMENT ]: The title and date range of the project in question -->
@@ -301,6 +317,7 @@
 						// Keys that have a 1 to 1 mapping to a JSON key.
 						switch(key) {
 							case 'name': accumulated += parseName(project[key]); break;
+							case 'weight': accumulated += parseWeight(project[key]); break;
 							case 'short': accumulated += parseShort(project[key]); break;
 							case 'website-url': accumulated += parseWebsiteURL(project[key]); break;
 							case 'download-url': accumulated += parseDownloadURL(project[key]); break;
@@ -326,7 +343,8 @@
 						// Virtual keys may be based on actual keys, but they aren't actually in the JSON.
 						// Prepend with v_ to make it extra clear.
 						switch(key) {
-							case 'v_project-size-class': accumulated += parseProjectSizeAsClass(project['project-size']); break;
+							case 'v_project-size-class': accumulated += virtual_parseProjectSizeAsClass(project['project-size']); break;
+							case 'v_adjusted-weight': accumulated += virtual_parseAdjustedWeight(project['weight'], project['project-size']); break;
 						}
 					}
 
@@ -432,9 +450,11 @@
 			function parseProjectSize(key_value) {
 				return key_value;
 			}
-
+			function parseWeight(key_value) {
+				return key_value;
+			}
 			// Uses the number as an index
-			function parseProjectSizeAsClass (key_value) {
+			function virtual_parseProjectSizeAsClass (key_value) {
 				// Small (1), medium (2), large (3), etc -- done as a number with increasing value
 				// to allow things to adjust with time.
 				switch(key_value) {
@@ -448,6 +468,11 @@
 				}
 
 				return 'mc-project-lg';
+			}
+			// Note that while project size is given a major defference, you can
+			// weight something up very strongly if desired.
+			function virtual_parseAdjustedWeight (weight, project_size) {
+				return project_size * 10 + weight;
 			}
 		</script>	
 	</body>

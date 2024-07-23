@@ -18,10 +18,10 @@ body {
 
 .mc-body {
 	text-align: center;
-	max-width: 968px;
+	max-width: 968px; /* 968px is the size of the media tag used elsewhere, but this is the size of the overall element + padding for 3x the large elements. */
 	margin-left: auto;
 	margin-right: auto;
-	  				background-color: rgba(255,0,0,0.1);
+	background-color: rgba(255,0,0,0.1); /* Debug */
 }
 
 .mc-container {
@@ -44,11 +44,10 @@ body {
 
 .mc-project {
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	/* margin: 2px; */
+	margin: 5px;
 	border-radius: 7px;
 	background-color: rgba(240, 230, 230, 0.4);
 	overflow: hidden;
-	float:left;
 }
 
 .mc-project-lg {
