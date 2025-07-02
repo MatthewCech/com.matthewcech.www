@@ -80,7 +80,7 @@ projectsJSON =
 			"company":"<a href=\"https://www.zenimaxonline.com/\">ZOS</a> (<a href=\"https://www.zenimax.com/\">ZeniMax / Bethesda</a>)",
 			"project-size":4,
 			"roles":[
-				"Gameplay Engineer",
+				"Game Engineer",
 			],
 			"languages":[
 				"Cpp"
