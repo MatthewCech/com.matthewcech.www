@@ -66,9 +66,41 @@ projectsJSON =
 			"description":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers. It allows people to more easily offer their services and showcase their work, and I do everything from creating physical goods, to providing consulting services and assisting with donations for digital artists!"
 		},
 		{ 
+			"name":"Zenimax Online Studios",
+			"weight":1,
+			"short":"An unannounced MMORPG in a custom engine, I provided engineering support for dialogue and cinematics.",
+			"date":[
+				"2024",
+				"2025"
+			],
+			"website-url":"https://www.zenimaxonline.com/",
+			"video-url":"",
+			"image":"zos.png",
+			"team-size":350,
+			"company":"<a href=\"https://www.zenimaxonline.com/\">ZOS</a> (<a href=\"https://www.zenimax.com/\">ZeniMax / Bethesda</a>)",
+			"project-size":4,
+			"roles":[
+				"Gameplay Engineer",
+			],
+			"languages":[
+				"Cpp"
+			],
+			"tools":[
+				"Visual Studio",
+				"Jira",
+				"Perforce",
+				"Miro",
+				"TeamCity"
+			],
+			"actions":[
+				"",
+			],
+			"description":"This was an unannounced MMORPG featuring a sprawing multiplayer world. Because it had a heavy emphasis on RPG elements, I provided gameplay engineering support for the dialogue systems and cinematics needs of the project."
+		},
+		{ 
 			"name":"KSP 2",
 			"weight":1,
-			"short":"A 3D Unity space simulation sandbox game I worked on from pre-alpha through launch and several patches, accountable for between 5 and 8 engineers starting late 2021.",
+			"short":"A 3D Unity space simulation sandbox game I worked on from pre-alpha through launch and several patches, managing between 5 and 8 engineers starting late 2021.",
 			"date":[
 				"2018",
 				"2024"
