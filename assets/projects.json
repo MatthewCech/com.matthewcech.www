@@ -66,9 +66,41 @@ projectsJSON =
 			"description":"Loam is a company I founded to help indie creators with resources, publishing, and other content creation barriers. It allows people to more easily offer their services and showcase their work, and I do everything from creating physical goods, to providing consulting services and assisting with donations for digital artists!"
 		},
 		{ 
-			"name":"Zenimax Online Studios",
+			"name":"Elder Scrolls Online",
 			"weight":1,
-			"short":"An unannounced MMORPG in a custom engine, I provided engineering support for dialogue and cinematics.",
+			"short":"I currently work on bringing the Elder Scrolls series to life in a live MMO! I create new gameplay feature groundwork and upkeep existing features for many disciplines.",
+			"date":[
+				"2025",
+				"2026"
+			],
+			"website-url":"https://www.elderscrollsonline.com/en-us/home",
+			"download-url":"https://elderscrolls-a.akamaihd.net/products/BNA_Launcher/Install_ESO.exe",
+			"video-url":"https://www.youtube.com/watch?v=ojDai6GBR8Y",
+			"image":"eso.png",
+			"team-size":300,
+			"company":"<a href=\"https://www.zenimaxonline.com/\">ZOS</a> (<a href=\"https://www.zenimax.com/\">ZeniMax / Bethesda</a>)",
+			"project-size":4,
+			"roles":[
+				"Game Engineer",
+			],
+			"languages":[
+				"Cpp"
+			],
+			"tools":[
+				"Visual Studio",
+				"Perforce",
+				"Jira",
+				"Custom"
+			],
+			"actions":[
+				"",
+			],
+			"description":"Elder Scrolls Online is an established MMO, and Working on maintaining a live service game with such a history has come with a range of different and unique challenges. It's been neat to upkeep and contribute to a project of this scale, and the skills I've been developing to make precision updates to the code or understand the context have been helpful elsewhere."
+		},
+		{ 
+			"name":"(Unannounced)",
+			"weight":1,
+			"short":"I worked on an unannounced MMORPG in a custom C++ ECS engine. I did engineering support for dialogue and cinematic systems, plus content tools.",
 			"date":[
 				"2024",
 				"2025"
@@ -197,9 +229,8 @@ projectsJSON =
 			"date":[
 				"2022",
 			],
-			"website-url":"https://loamnet.itch.io/bubbles",
-			"download-url":"https://loamnet.itch.io/bubbles",
-			"source-url":"https://github.com/LoamNet/net.loam.bubbles",
+			"website-url":"https://loamnet.itch.io/rat",
+			"download-url":"https://loamnet.itch.io/rat",
 			"image":"icon-rat.png",
 			"team-size":2,
 			"project-size":1,
